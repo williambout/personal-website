@@ -1,0 +1,23 @@
+@mixin font-system {
+	font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin bp($point) {
+  @if $point==desktop {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }
+  @if $point==tablet {
+    @media (max-width: 1020px) {
+      @content;
+    }
+  }
+  @else if $point==phone {
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+}
