@@ -1,5 +1,11 @@
-@mixin font-system {
-	font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
+@mixin font-gtamerica-light {
+	font-family: GTAmerica-Light, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font-gtamerica-medium {
+	font-family: GTAmerica-Medium, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

@@ -29,6 +29,7 @@ const paths = {
   js: './src/assets/js/*.js',
   vendor: './vendor/',
   img: './src/assets/images/**',
+  fonts: './src/assets/fonts/**',
   icons: './src/assets/icons/*',
   build: './build/'
 }
@@ -90,6 +91,12 @@ gulp.task('images', () => {
     .pipe(gulp.dest('build/assets/images'))
 });
 
+// Copying Fonts
+gulp.task('fonts', () => {
+  return gulp.src(paths.fonts)
+    .pipe(gulp.dest('build/assets/fonts'))
+});
+
 gulp.task('icons', () => {
   return gulp.src(paths.icons)
   .pipe(svgmin(function (file) {
@@ -123,7 +130,7 @@ gulp.task('clean:build', () => {
 // ---------------
 
 gulp.task('default', (callback) => {
-  runSequence(['html', 'sass', 'images', 'icons', 'browserSync', 'watch'],
+  runSequence(['html', 'fonts', 'sass', 'images', 'icons', 'browserSync', 'watch'],
     callback
   )
 })
@@ -131,7 +138,7 @@ gulp.task('default', (callback) => {
 gulp.task('build', (callback) => {
   runSequence(
     'clean:build',
-    ['html', 'sass', 'images', 'icons'],
+    ['html', 'fonts', 'sass', 'images', 'icons'],
     callback
   )
 })

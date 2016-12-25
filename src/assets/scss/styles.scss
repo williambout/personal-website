@@ -1,10 +1,11 @@
 @import '../../../node_modules/reset-css/_reset.scss';
+@import 'fonts';
 @import 'mixins';
 
 body,
 html {
   color: #767676;
-  @include font-system;
+  @include font-gtamerica-light;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -30,7 +31,7 @@ html {
   padding: 100px 0;
   font-size: 22px;
   line-height: 1.5;
-  min-height: 40vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
 
@@ -65,7 +66,7 @@ html {
       width: 14px;
       bottom: 7px;
       left: 0;
-      background: #595959;
+      background: currentColor;
     }
 
     &:after {
@@ -133,8 +134,8 @@ h3 {
   color: #2F2F2F;
   letter-spacing: 1.52px;
   text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  @include font-gtamerica-medium;
 }
 
 li {
@@ -142,8 +143,7 @@ li {
 }
 
 a {
-  color: rgba(7,7,7,0.75);
-  font-weight: 500;
+  color: rgba(7,7,7,0.80);
   text-decoration: none;
 }
 
@@ -206,14 +206,14 @@ a:link, a:visited  {
   .soon {
     font-size: 8Px;
     color: #F0F1F2;
-    letter-spacing: 1px;
     position: relative;
     z-index: 1;
-    text-transform: uppercase;
     text-align: center;
-    font-weight: bold;
+    @include font-gtamerica-medium;
+    letter-spacing: 1.1px;
     margin-right: 10px;
     margin-left: 10px;
+    text-transform: uppercase;
 
     &:after {
       content: '';
@@ -230,14 +230,13 @@ a:link, a:visited  {
   }
 
   .description {
-    font-style: italic;
-    font-weight: 100;
     opacity: 0.5;
     padding-left: 0.5em;
     display: block;
     min-width: 100%;
-    margin-top: 4px;
+    margin-top: 6px;
     margin-left: 24px;
+    line-height: 1.3;
   }
 }
 
