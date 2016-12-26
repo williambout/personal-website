@@ -144,6 +144,7 @@ gulp.task('build', (callback) => {
 
 gulp.task('deploy', () => {
   return gulp.src('./build/**/*')
+    .pipe(file('CNAME', 'williambout.me'))
     .pipe(ghPages({
       "remoteUrl" : "git@github.com:williambout/personal-website.git"
     }));
