@@ -88,6 +88,10 @@ html {
       margin-bottom: -1rem;
     }
 
+    @include bp(small-phone) {
+      margin-bottom: 1rem;
+    }
+
     img {
       max-width: 300px;
       max-height: 300px;

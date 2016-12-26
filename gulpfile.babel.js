@@ -17,6 +17,7 @@ import svgstore from 'gulp-svgstore'
 import svgmin from 'gulp-svgmin'
 import path from 'path'
 import includes from 'gulp-file-include'
+import file from 'gulp-file'
 
 const paths = {
   sass: './src/assets/scss/**/*.scss',

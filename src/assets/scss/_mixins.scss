@@ -26,4 +26,9 @@
       @content;
     }
   }
+	@else if $point==small-phone {
+		@media (max-width: 375px) {
+			@content;
+		}
+	}
 }
