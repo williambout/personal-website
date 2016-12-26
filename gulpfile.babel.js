@@ -3,24 +3,19 @@
 import gulp from 'gulp'
 import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
-import sourcemaps from 'gulp-sourcemaps'
 import browserSync from 'browser-sync'
 import useref from 'gulp-useref'
 import uglify from 'gulp-uglify'
-import gulpIf from 'gulp-if'
-import cssnano from 'gulp-cssnano'
 import imagemin from 'gulp-imagemin'
 import cache from 'gulp-cache'
 import del from 'del'
 import runSequence from 'run-sequence'
 import pxtorem from 'gulp-pxtorem'
 import ghPages from 'gulp-gh-pages'
-import file from 'gulp-file'
 import htmlmin from 'gulp-htmlmin'
 import svgstore from 'gulp-svgstore'
 import svgmin from 'gulp-svgmin'
 import path from 'path'
-import cheerio from 'gulp-cheerio'
 import includes from 'gulp-file-include'
 
 const paths = {
@@ -78,6 +73,7 @@ gulp.task('html', () => {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(htmlmin())
     .pipe(gulp.dest(paths.build))
     .pipe(browserSync.stream());
 })
