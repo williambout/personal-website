@@ -2,6 +2,9 @@
 @import 'fonts';
 @import 'mixins';
 
+@import 'navigation';
+@import 'photos';
+
 body,
 html {
   color: #767676;
@@ -140,10 +143,6 @@ h3 {
   text-transform: uppercase;
   margin-bottom: 24px;
   @include font-gtamerica-medium;
-}
-
-li {
-  margin-top: 10px;
 }
 
 a {

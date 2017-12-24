@@ -1,0 +1,51 @@
+#photos {
+	.instagram-gallery {
+		display: flex;
+		max-height: calc(245px + 24px);
+		scroll-snap-type: mandatory;
+		overflow-x: scroll;
+	}
+	.instagram-post {
+		position: relative;
+		max-height: 100%;
+		scroll-snap-align: start;
+		padding-bottom: 24px;
+		transform: translate3d(0,0,0);
+
+		& + .instagram-post {
+			margin-left: 40px;
+		}
+
+		.image {
+			display: block;
+			max-height: 100%;
+			width: auto;
+			position: relative;
+			z-index: 10;
+			border-radius: 6px;
+		}
+
+		.shadow {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: scale(0.80);
+			transform-origin: center center;
+			background-size: cover;
+			filter: blur(20px);
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: rgba(0,0,0 ,0.1);
+				z-index: 5;
+			}
+		}
+	}
+}

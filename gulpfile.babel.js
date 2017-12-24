@@ -18,6 +18,7 @@ import svgmin from 'gulp-svgmin'
 import path from 'path'
 import includes from 'gulp-file-include'
 import file from 'gulp-file'
+import concat from 'gulp-concat';
 
 const paths = {
   sass: './src/assets/scss/**/*.scss',
@@ -27,7 +28,10 @@ const paths = {
   img: './src/assets/images/**',
   fonts: './src/assets/fonts/**',
   icons: './src/assets/icons/*',
-  build: './build/'
+  build: './build/',
+  jsLibraires: [
+    './node_modules/instafeed.js/instafeed.js'
+  ]
 }
 
 const config = {
@@ -57,6 +61,12 @@ gulp.task('sass', () => {
     .pipe(browserSync.stream());
 })
 
+gulp.task('js', () => {
+  return gulp.src([...paths.jsLibraires, paths.js])
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('./build/assets/js'))
+})
+
 // Watchers
 gulp.task('watch', () => {
   gulp.watch(paths.sass, ['sass']);
@@ -69,10 +79,10 @@ gulp.task('watch', () => {
 // ------------------
 
 gulp.task('html', () => {
-  return gulp.src('src/*.html')
+  return gulp.src('src/**/*.html')
     .pipe(includes({
       prefix: '@@',
-      basepath: '@file'
+      basepath: './src'
     }))
     .pipe(htmlmin())
     .pipe(gulp.dest(paths.build))
@@ -127,7 +137,7 @@ gulp.task('clean:build', () => {
 // ---------------
 
 gulp.task('default', (callback) => {
-  runSequence(['html', 'fonts', 'sass', 'images', 'icons', 'browserSync', 'watch'],
+  runSequence(['html', 'fonts', 'sass', 'js', 'images', 'icons', 'browserSync', 'watch'],
     callback
   )
 })
@@ -135,7 +145,7 @@ gulp.task('default', (callback) => {
 gulp.task('build', (callback) => {
   runSequence(
     'clean:build',
-    ['html', 'fonts', 'sass', 'images', 'icons'],
+    ['html', 'fonts', 'sass', 'js', 'images', 'icons'],
     callback
   )
 })

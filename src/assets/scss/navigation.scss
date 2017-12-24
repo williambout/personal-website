@@ -1,0 +1,15 @@
+#navigation-bar {
+	background-color: white;
+	border-bottom: 1px solid black;
+	position: sticky;
+	top: 0;
+
+	@media (-webkit-min-device-pixel-ratio: 2) {
+		border-bottom: 0.5px solid rgba(0,0,0, 0.2);
+	}
+
+	@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(2em);
+	}
+}

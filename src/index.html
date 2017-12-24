@@ -1,19 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="ORUs3Vm_u5azG_NoTOeH3XjTjzJ5KqsGUXzvZSWhvLQ" />
-    <title>William Bout</title>
-    <!--build:css assets/css/styles.min.css-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!--endbuild-->
-    <link rel="preload" href="assets/fonts/GTAmerica-Light.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/GTAmerica-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  </head>
-
+  @@include('inc/head.html')
   <body>
+    @@include('inc/navigation.html')
     <section class="introduction">
       <div class="wrapper">
         <article class="text">
@@ -93,23 +82,6 @@
     <div class="visuallyhidden">
       @@include('inc/icons.svg')
     </div>
-    <script>
-      var currentHour = new Date().getHours();
-      var greeting = 'Hi';
-
-      if (currentHour >= 18) {
-        greeting = 'Good evening';
-      } else if (currentHour >= 12) {
-        greeting = 'Good afternoon';
-      } else {
-        greeting = 'Good morning';
-      }
-
-      document.addEventListener('DOMContentLoaded', function () {
-        var greetingEl = document.querySelector('.greeting');
-        greetingEl.innerHTML = greeting;
-      }, false);
-    </script>
     <script>
       (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
