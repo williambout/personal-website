@@ -4,6 +4,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+@mixin font-gtamerica-regular {
+	font-family: GTAmerica-Regular, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 @mixin font-gtamerica-medium {
 	font-family: GTAmerica-Medium, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
