@@ -3,11 +3,12 @@
   @@include('inc/head.html')
   <body>
     @@include('inc/navigation.html')
-    <section id="photos" class="first-section">
+    <section id="photos">
       <div class="wrapper">
         <h2>Photos</h2>
         <h3>Last posts on Instagram</h3>
       </div>
+      <div class="instagram-feed-container"></div>
     </section>
     <section id="unsplash">
       <div class="wrapper">
@@ -16,20 +17,21 @@
             <h3>More on Unsplash</h3>
             <p class="description">Some of my photos are available for free in high resolution</p>
           </div>
-          <ul class="stats">
-            <li>
-              <span class="number">24</span>
-              <span class="label">Photos</span>
-            </li>
-            <li>
-              <span class="number">152</span>
-              <span class="label">Likes</span>
-            </li>
-            <li>
-              <span class="number">7</span>
-              <span class="label">Collections</span>
-            </li>
-          </ul>
+          <div class="right">
+            <ul class="stats">
+              <li>
+                <span id="photos-counter" class="number">-</span>
+                <span class="label">Photos</span>
+              </li>
+              <li>
+                <span id="collections-counter" class="number">-</span>
+                <span class="label">Collections</span>
+              </li>
+            </ul>
+            <svg class="chevron" width=13 height=24>
+              <use xlink:href="#link-arrow"/>
+            </svg>
+          </div>
         </a>
       </div>
     </section>
@@ -37,11 +39,11 @@
       <div class="wrapper">
         <div class="posts-container">
           <article>
-            <h3>Gear I use</h3>
+            <h4>Gear I use</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Animum autem reliquis rebus ita perfecit, ut corpus; Quod quidem iam fit etiam in Academia. Duo Reges: constructio interrete. Omnes enim iucundum motum, quo sensus hilaretur. Ab hoc autem quaedam non melius quam veteres, quaedam omnino Sigma 16mm . Tu vero, inquam, ducas licet, si sequetur;</p>
           </article>
           <article>
-            <h3>Gear I use</h3>
+            <h4>Gear I use</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Animum autem reliquis rebus ita perfecit, ut corpus; Quod quidem iam fit etiam in Academia. Duo Reges: constructio interrete. Omnes enim iucundum motum, quo sensus hilaretur. Ab hoc autem quaedam non melius quam veteres, quaedam omnino Sigma 16mm . Tu vero, inquam, ducas licet, si sequetur;</p>
           </article>
         </div>
@@ -53,6 +55,7 @@
     <div class="visuallyhidden">
       @@include('inc/icons.svg')
     </div>
+    <script src="../assets/js/vendors.js"></script>
     <script src="../assets/js/app.js"></script>
   </body>
 

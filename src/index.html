@@ -5,100 +5,13 @@
     @@include('inc/navigation.html')
     <section class="introduction">
       <div class="wrapper">
-        <article class="text">
-          <p>
-            <span class="greeting">Hi</span>👋<br/>
-            I’m William, a 🇫🇷 Designer living in San&nbsp;Francisco. I’m mostly interested in photography and electronic music.<br/><br/>
-            I’m currently working at
-            <a href="https://frontapp.com">Front</a>.
-          </p>
-          <a class="email" href="mailto:hello@williambout.me">hello@williambout.me</a>
-        </article>
-        <article class="avatar">
-          <img width="300" height="300" src="assets/images/avatar.jpg" srcset="assets/images/avatar.jpg 300w, assets/images/avatar@2x.jpg 600w, assets/images/avatar@3x.jpg 900w" alt="">
+        <article>
+          <span>William Bout</span>
+          <span>Product Designer</span>
+          <span>Currently working at Front</span>
         </article>
       </div>
     </section>
-    <footer>
-      <div class="wrapper">
-        <article class="projects">
-          <h3>Projects</h3>
-          <ul>
-            <li>
-              <div class="icon">
-                <svg width=12 height=20>
-                  <use xlink:href="#iphone"/>
-                </svg>
-              </div>
-              <span class="title">Splash</span>
-              <span class="soon">Soon</span>
-              <span class="description">An iOS client for Unsplash</span>
-            </li>
-            <li>
-              <div class="icon">
-                <svg width=19 height=17>
-                  <use xlink:href="#react"/>
-                </svg>
-              </div>
-              <a href="https://github.com/williambout/react-native-proximity">React Native Proximity</a>
-              <span class="description">A React Native library for iOS</span>
-            </li>
-            <li>
-              <div class="icon">
-                <svg width=17 height=14>
-                  <use xlink:href="#editor"/>
-                </svg>
-              </div>
-              <a href="http://atom.io/packages/nucleon">Nucleon for Atom</a>
-              <span class="description">Handcrafted file icons for Atom</span>
-            </li>
-          </ul>
-        </article>
-        <article class="links">
-          <h3>Links</h3>
-          <ul>
-            <li>
-              <a href="http://twitter.com/williambout">Twitter</a>
-            </li>
-            <li>
-              <a href="http://instagram.com/williambout/">Instagram</a>
-            </li>
-            <li>
-              <a href="http://dribbble.com/williambout/">Dribbble</a>
-            </li>
-            <li>
-              <a href="http://unsplash.com/@williambout">Unsplash</a>
-            </li>
-            <li>
-              <a href="http://github.com/williambout">Github</a>
-            </li>
-            <li>
-              <a href="http://facebook.com/william.bout">Facebook</a>
-            </li>
-          </ul>
-        </article>
-      </div>
-    </footer>
-    <div class="visuallyhidden">
-      @@include('inc/icons.svg')
-    </div>
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        },
-        i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-      ga('create', 'UA-64469338-3', 'auto');
-      ga('send', 'pageview');
-    </script>
+    @@include('inc/footer.html')
   </body>
-
 </html>

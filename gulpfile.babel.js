@@ -29,7 +29,9 @@ const paths = {
   fonts: './src/assets/fonts/**',
   icons: './src/assets/icons/*',
   build: './build/',
-  jsLibraires: [
+  vendors: [
+    './node_modules/unsplash-js/dist/unsplash.min.js',
+    './node_modules/animejs/anime.min.js',
     './node_modules/instafeed.js/instafeed.js'
   ]
 }
@@ -62,10 +64,18 @@ gulp.task('sass', () => {
 })
 
 gulp.task('js', () => {
-  return gulp.src([...paths.jsLibraires, paths.js])
+  return gulp.src(paths.js)
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./build/assets/js'))
 })
+
+gulp.task('vendors', () => {
+  return gulp.src([...paths.vendors])
+    .pipe(concat('vendors.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/assets/js'))
+})
+
 
 // Watchers
 gulp.task('watch', () => {
@@ -137,7 +147,7 @@ gulp.task('clean:build', () => {
 // ---------------
 
 gulp.task('default', (callback) => {
-  runSequence(['html', 'fonts', 'sass', 'js', 'images', 'icons', 'browserSync', 'watch'],
+  runSequence(['html', 'fonts', 'sass', 'vendors', 'js', 'images', 'icons', 'browserSync', 'watch'],
     callback
   )
 })
@@ -145,7 +155,7 @@ gulp.task('default', (callback) => {
 gulp.task('build', (callback) => {
   runSequence(
     'clean:build',
-    ['html', 'fonts', 'sass', 'js', 'images', 'icons'],
+    ['html', 'fonts', 'sass', 'vendors', 'js', 'images', 'icons'],
     callback
   )
 })

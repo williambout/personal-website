@@ -16,10 +16,6 @@ h3 + p {
   margin-top: 12px;
 }
 
-p {
-  line-height: 1.6;
-}
-
 ::selection {
   background: rgba(97,160,234,0.25);
   color: #62A1EA;
@@ -113,10 +109,6 @@ p {
   }
 }
 
-.first-section {
-  margin-top: 80px;
-}
-
 footer {
   background: #F5F7F8;
   padding: 70px 0;
@@ -148,8 +140,26 @@ h2 {
 }
 
 h3 {
+  @include font-gtamerica-regular;
   font-size: 20px;
   color: #B0B5BD;
+}
+
+h4 {
+  @include font-gtamerica-regular;
+  font-size: 20px;
+  color: #3E3F41;
+
+  & + p {
+    margin-top: 27px;
+  }
+}
+
+p {
+  @include font-gtamerica-light;
+  font-size: 16px;
+  color: #989A9C;
+  line-height: 1.6;
 }
 
 a {
