@@ -28,84 +28,26 @@ h3 + p {
 }
 
 .introduction {
-  padding: 100px 0;
-  font-size: 22px;
-  line-height: 1.5;
-  min-height: 50vh;
+  min-height: calc(100vh - 70px);
   display: flex;
-  align-items: center;
-
-  @include bp(phone) {
-    padding: 9% 0;
-  }
+  margin-top: 0;
 
   .wrapper {
-    @include bp(phone) {
-      flex-direction: column-reverse;
-    }
+    display: flex;
+    margin: auto;
   }
 
-  .greeting {
-    padding-right: 10px;
+  h1 {
+    margin-top: -10px;
   }
 
-  .email {
-    position: relative;
-    font-size: 14px;
-    color: #595959;
-    letter-spacing: -0.16px;
-    padding-left: 19px;
-    margin-top: 20px;
+  aside {
+    margin-right: 60px;
+  }
+
+  article, aside {
     display: inline-flex;
-    font-weight: normal;
-
-    &:before {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 14px;
-      bottom: 7px;
-      left: 0;
-      background: currentColor;
-    }
-
-    &:after {
-      content: none;
-    }
-  }
-
-  .text {
-    flex: 4;
-  }
-
-  .avatar {
-    flex: 2;
-    padding-left: 40px;
-
-    @include bp(phone) {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: -1rem;
-    }
-
-    @include bp(small-phone) {
-      margin-bottom: 1rem;
-    }
-
-    img {
-      max-width: 300px;
-      max-height: 300px;
-
-      @include bp(tablet) {
-        max-width: 200px;
-        max-height: 200px;
-      }
-
-      @include bp(phone) {
-        max-width: 100px;
-        max-height: 100px;
-      }
-    }
+    flex-direction: column;
   }
 }
 
@@ -131,6 +73,14 @@ footer {
     }
   }
 }
+
+h1 {
+  @include font-gtamerica-medium;
+  font-size: 55px;
+  color: #262729;
+  margin-bottom: 16px;
+}
+
 
 h2 {
   @include font-gtamerica-regular;
