@@ -3,7 +3,9 @@
 @import 'mixins';
 
 @import 'navigation';
+@import 'footer';
 @import 'photos';
+@import 'work';
 
 body,
 html {
@@ -48,29 +50,6 @@ h3 + p {
   article, aside {
     display: inline-flex;
     flex-direction: column;
-  }
-}
-
-footer {
-  background: #F5F7F8;
-  padding: 70px 0;
-
-  @include bp(phone) {
-    padding: 50px 0;
-  }
-
-  .links,
-  .projects {
-    flex: 1
-  }
-
-  .projects {
-    padding-right: 100px;
-
-    @include bp(phone) {
-      padding-right: 0;
-      padding-bottom: 40px;
-    }
   }
 }
 

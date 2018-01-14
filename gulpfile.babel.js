@@ -67,6 +67,7 @@ gulp.task('js', () => {
   return gulp.src(paths.js)
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./build/assets/js'))
+    .pipe(browserSync.stream());
 })
 
 gulp.task('vendors', () => {

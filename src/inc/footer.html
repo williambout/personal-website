@@ -1,9 +1,30 @@
 <footer>
-
+  <div class="wrapper">
+    <div id="now-playing">
+      <div id="vinyl" class="circle">
+        <span class="center"></span>
+        <svg class="reflection" width=40 height=40>
+          <use xlink:href="#reflection"/>
+        </svg>
+      </div>
+      <div class="song">
+        <p class="artist">Sebastien Tellier</p>
+        <p class="title">La Ritournelle</p>
+      </div>
+    </div>
+    <div id="current-location">
+      <div id="map" class="circle">
+        <span class="center"></span>
+      </div>
+      <p>San Francisco</p>
+    </div>
+  </div>
 </footer>
 <div class="visuallyhidden">
   @@include('inc/icons.svg')
 </div>
+<script src="../assets/js/vendors.js"></script>
+<script src="../assets/js/app.js"></script>
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
