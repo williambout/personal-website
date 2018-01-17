@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const animateStar = () => {
     const ox = getRandomInt(0, nucleonBounds.width);
-    const oy = getRandomInt(0, nucleonBounds.height);
-    const dx = getRandomInt(ox, ox + 200);
-    const dy = getRandomInt(oy, oy + 200);
+    const oy = getRandomInt(0, nucleonBounds.height - 300);
+    const dx = getRandomInt(ox + 250, ox + 350);
+    const dy = getRandomInt(oy - 50, oy + 50);
 
     fallingStar.setAttribute('x1', ox);
     fallingStar.setAttribute('x2', ox);
@@ -97,7 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
     gradient.setAttribute('y1', oy);
     gradient.setAttribute('y2', dy);
 
-    var basicTimeline = anime.timeline();
+    const basicTimeline = anime.timeline({
+      duration: 2000,
+      complete: () => {
+        setTimeout(animateStar(), getRandomInt(2500, 4000))
+      }
+    });
 
     basicTimeline
       .add({
@@ -121,5 +126,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
-  setInterval(animateStar, 3000);
+  animateStar();
 });
