@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const gradient = document.getElementById('star-gradient');
     const nucleonBounds = nucleon.getBoundingClientRect();
 
+    const generateStars = () => {
+
+    };
+
     const animateStar = () => {
       const ox = getRandomInt(0, nucleonBounds.width);
       const oy = getRandomInt(0, nucleonBounds.height - 300);
@@ -130,4 +134,54 @@ document.addEventListener('DOMContentLoaded', () => {
         collectionsCounter.innerHTML = user.total_collections;
       });
    }
+  // Footer
+  const songs = [
+    {
+      artist: 'Sebastien Tellier',
+      title: 'La Ritournelle',
+      duration: 6000
+    },
+    {
+      artist: 'Sebastien Tellier',
+      title: 'Comment revoir Oursinet ? (Darius Remix)',
+      duration: 6480
+    },
+    {
+      artist: 'Todd Terje',
+      title: 'Inspector Norse',
+      duration: 6000
+    },
+    {
+      artist: 'Vanderkraft',
+      title: 'Ce Bon Vieux Jean Lassalle',
+      duration: 6000
+    },
+    {
+      artist: 'Hugues Rey',
+      title: 'Existence',
+      duration: 6000
+    },
+    {
+      artist: 'Vladimir Cauchemar',
+      title: 'Aulos',
+      duration: 6000
+    },
+    {
+      artist: 'Jacques',
+      title: 'Tout Est Magnifique',
+      duration: 6000
+    }
+  ];
+
+  const currentlyPlaying = () => {
+    // Yes, everything is fake 🙂
+    const randomSong = songs[Math.floor(Math.random() * songs.length)];
+    const artistEl = document.querySelector('#now-playing .artist');
+    const titleEl = document.querySelector('#now-playing .title');
+
+    artistEl.innerHTML = randomSong.artist;
+    titleEl.innerHTML = randomSong.title;
+  };
+
+  currentlyPlaying();
 });

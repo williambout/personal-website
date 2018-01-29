@@ -16,6 +16,10 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+section {
+	margin-top: 80px;
+}
+
 ::selection {
   background: rgba(97,160,234,0.25);
   color: #62A1EA;
@@ -40,6 +44,10 @@ h2 {
   font-size: 30px;
   color: #262729;
   margin-bottom: 16px;
+
+  &.light {
+    color: white;
+  }
 }
 
 h3 {
@@ -67,6 +75,10 @@ p {
   font-size: 16px;
   color: #989A9C;
   line-height: 1.6;
+
+  &.light {
+    color: rgba(255,255,255,0.60);
+  }
 }
 
 a {
@@ -87,43 +99,6 @@ a:link, a:visited  {
     &:after {
       opacity: 0.2;
     }
-  }
-}
-
-.projects {
-  & li {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 12px;
-    flex-wrap: wrap;
-  }
-
-  .icon {
-    display: inline-flex;
-    min-height: 24px;
-    min-width: 24px;
-    justify-content: center;
-    align-items: center;
-    margin-right: 8px;
-  }
-
-  .title {
-    @extend a;
-
-    &:after {
-      content: none;
-    }
-  }
-
-  .description {
-    opacity: 0.5;
-    padding-left: 0.5em;
-    display: block;
-    min-width: 100%;
-    margin-top: 6px;
-    margin-left: 24px;
-    line-height: 1.3;
   }
 }
 

@@ -24,9 +24,9 @@
 
 #nucleon {
   min-height: 715px;
-  background-image: radial-gradient(50% -25%, #7B80A0 0%, #101225 100%) linear-gradient(-180deg, #101225 0%, #7B80A0 100%);
-  background-image: linear-gradient(-180deg, #101225 0%, #7B80A0 100%);
+  background-image: linear-gradient(-180deg, rgba(16,18,37,0.50) 0%, rgba(123,128,160,0.50) 100%), radial-gradient(circle at bottom center, #7B80A0 0%, #101225 100%);
   position: relative;
+  background-size: cover;
 
   .falling-container {
     position: absolute;
