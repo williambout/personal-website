@@ -1,5 +1,3 @@
-'use strict';
-
 import gulp from 'gulp'
 import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
@@ -27,7 +25,7 @@ const paths = {
   vendor: './vendor/',
   img: './src/assets/images/**',
   fonts: './src/assets/fonts/**',
-  icons: './src/assets/icons/*',
+  icons: './src/assets/icons/**',
   build: './build/',
   vendors: [
     './node_modules/unsplash-js/dist/unsplash.min.js',
@@ -81,7 +79,7 @@ gulp.task('vendors', () => {
 // Watchers
 gulp.task('watch', () => {
   gulp.watch(paths.sass, ['sass']);
-  gulp.watch(['src/**/*.html'], ['html']);
+  gulp.watch(['src/**/*.html', paths.icons], ['html']);
   gulp.watch(paths.icons, ['icons', 'html']);
   gulp.watch(paths.js, ['js']);
 })
@@ -117,17 +115,6 @@ gulp.task('fonts', () => {
 
 gulp.task('icons', () => {
   return gulp.src(paths.icons)
-  .pipe(svgmin(function (file) {
-      var prefix = path.basename(file.relative, path.extname(file.relative));
-      return {
-          plugins: [{
-              cleanupIDs: {
-                  prefix: prefix + '-',
-                  minify: true
-              }
-          }]
-      }
-  }))
   .pipe(svgstore())
     .pipe(gulp.dest('./src/inc/'))
     .pipe(browserSync.stream());

@@ -1,3 +1,27 @@
+.introduction {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  margin-top: 0;
+
+  .wrapper {
+    display: flex;
+    margin: auto;
+  }
+
+  h1 {
+    margin-top: -10px;
+  }
+
+  aside {
+    margin-right: 60px;
+  }
+
+  article, aside {
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
+
 #nucleon {
   min-height: 715px;
   background-image: radial-gradient(50% -25%, #7B80A0 0%, #101225 100%) linear-gradient(-180deg, #101225 0%, #7B80A0 100%);

@@ -29,19 +29,14 @@ footer {
 
 		#vinyl {
 			animation: rotating 2s linear infinite;
-
-			.center:before {
-				content: '';
-				width: 2px;
-				height: 2px;
-				background: #989A9C;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				border-radius: 50%;
-			}
 		}
+
+    .turntable {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+    }
 
 		.artist {
 			font-family: GTAmerica-Medium;
