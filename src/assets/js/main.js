@@ -2,12 +2,36 @@ document.addEventListener('DOMContentLoaded', () => {
   //Home
   if (window.location.pathname === '/') {
     const nucleon = document.getElementById('nucleon');
+    const starsContainer = document.querySelector('.stars-container');
     const fallingStar = document.getElementById('falling-star');
     const gradient = document.getElementById('star-gradient');
     const nucleonBounds = nucleon.getBoundingClientRect();
 
     const generateStars = () => {
+      const screenWidth = window.innerWidth;
+      const numberOfStars = Math.floor(screenWidth/24);
 
+      for (var i = 0; i < numberOfStars; i++) {
+        const x = getRandomInt(0, nucleonBounds.width);
+        const y = getRandomInt(0, nucleonBounds.height);
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.classList.add('star');
+        circle.setAttributeNS(null, 'cx', x);
+        circle.setAttributeNS(null, 'cy', y);
+        circle.setAttributeNS(null, 'r', 1);
+        circle.setAttributeNS(null, 'style', 'fill: #FFFFFF; fill-opacity: 0.2; stroke="none"' );
+        starsContainer.appendChild(circle);
+      }
+
+      anime({
+        targets: '.star',
+        opacity: [.2, 1],
+        delay: (el, i) => i * 400,
+        duration: (el, i) => i * 50 + 50,
+        easing: 'linear',
+        direction: 'alternate',
+        loop: true
+      })
     };
 
     const animateStar = () => {
@@ -55,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
     animateStar();
+    generateStars();
   }
   //Photos
   if (window.location.pathname === '/photos/') {
@@ -169,6 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       artist: 'Jacques',
       title: 'Tout Est Magnifique',
+      duration: 6000
+    },
+    {
+      artist: 'Flowers',
+      title: 'Distal',
       duration: 6000
     }
   ];
