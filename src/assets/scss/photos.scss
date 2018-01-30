@@ -27,10 +27,9 @@
 
 		&.-loading:after {
 			opacity: 1;
-			transform: scale(1);
 		}
 
-		@keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+		@keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); } }
 
 		.instagram-feed {
 			margin-top: 40px;
