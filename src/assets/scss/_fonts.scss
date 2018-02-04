@@ -11,6 +11,19 @@
 }
 
 @font-face {
+  font-family: 'GTAmerica-Thin-Italic';
+  src: url('../fonts/GTAmerica-Thin-Italic.eot');
+  src: url('../fonts/GTAmerica-Thin-Italic.woff2') format('woff2'),
+       url('../fonts/GTAmerica-Thin-Italic.woff') format('woff'),
+       url('../fonts/GTAmerica-Thin-Italic.ttf') format('truetype'),
+       url('../fonts/GTAmerica-Thin-Italic.svg#GTAmerica-Thin-Italic') format('svg'),
+       url('../fonts/GTAmerica-Thin-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: 'GTAmerica-Light';
   src: url('../fonts/GTAmerica-Light.eot');
   src: url('../fonts/GTAmerica-Light.woff2') format('woff2'),

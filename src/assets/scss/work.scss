@@ -22,6 +22,15 @@
   }
 }
 
+.project {
+  .platform {
+    margin-top: 1em;
+    @include font-gtamerica-thin-italic;
+    font-size: 16px;
+    color: #B0B5BD;
+  }
+}
+
 #nucleon {
   min-height: 715px;
   background-image: linear-gradient(-180deg, rgba(16,18,37,0.50) 0%, rgba(123,128,160,0.50) 100%), radial-gradient(circle at bottom center, #7B80A0 0%, #101225 100%);

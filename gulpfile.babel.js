@@ -19,7 +19,7 @@ import file from 'gulp-file'
 import concat from 'gulp-concat';
 
 const paths = {
-  sass: './src/assets/scss/**/*.scss',
+  sass: './src/assets/scss/styles.scss',
   css: './build/assets/css',
   js: './src/assets/js/*.js',
   vendor: './vendor/',
