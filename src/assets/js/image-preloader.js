@@ -1,12 +1,13 @@
-(function (global) {
-
-  'use strict';
+(function(global) {
+  "use strict";
 
   function defer() {
-    var resolve, reject, promise = new Promise(function (a, b) {
-      resolve = a;
-      reject = b;
-    });
+    var resolve,
+      reject,
+      promise = new Promise(function(a, b) {
+        resolve = a;
+        reject = b;
+      });
 
     return {
       resolve: resolve,
@@ -19,7 +20,7 @@
    * Image preloader
    * @param {Object} options
    */
-  var ImagePreloader = function (options) {
+  var ImagePreloader = function(options) {
     this.options = options || {};
     this.options.parallel = this.options.parallel || false;
     this.items = [];
@@ -32,7 +33,7 @@
    * @param  {Array} array - Array of images to add the queue
    * @return {Promise}
    */
-  ImagePreloader.prototype.queue = function (array) {
+  ImagePreloader.prototype.queue = function(array) {
     if (!Array.isArray(array)) {
       array = [array];
     }
@@ -59,8 +60,8 @@
    * @param  {String} path - Image url
    * @return {Promise}
    */
-  ImagePreloader.prototype.preloadImage = function (path) {
-    return new Promise(function (resolve, reject) {
+  ImagePreloader.prototype.preloadImage = function(path) {
+    return new Promise(function(resolve, reject) {
       var image = new Image();
       image.onload = resolve;
       image.onerror = resolve;
@@ -76,28 +77,25 @@
    * parallel, depending on the `parallel` options.
    * @return {Promise}
    */
-  ImagePreloader.prototype.preload = function () {
-    var deck, decks = [];
+  ImagePreloader.prototype.preload = function() {
+    var deck,
+      decks = [];
 
     if (this.options.parallel) {
-
       for (var i = 0; i < this.max; i++) {
-        this.items.forEach(function (item) {
-          if (typeof item.collection[i] !== 'undefined') {
+        this.items.forEach(function(item) {
+          if (typeof item.collection[i] !== "undefined") {
             item.collection[i] = this.preloadImage(item.collection[i]);
           }
         }, this);
       }
-
     } else {
-
-      this.items.forEach(function (item) {
+      this.items.forEach(function(item) {
         item.collection = item.collection.map(this.preloadImage);
       }, this);
-
     }
 
-    this.items.forEach(function (item) {
+    this.items.forEach(function(item) {
       deck = Promise.all(item.collection)
         .then(item.deferred.resolve.bind(item.deferred))
         .catch(console.log.bind(console));
@@ -109,5 +107,4 @@
   };
 
   global.ImagePreloader = ImagePreloader;
-
-}(window));
+})(window);

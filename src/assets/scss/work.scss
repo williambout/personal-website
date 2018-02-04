@@ -16,26 +16,56 @@
     margin-right: 60px;
   }
 
-  article, aside {
+  article,
+  aside {
     display: inline-flex;
     flex-direction: column;
   }
 }
 
 .project {
+  .project-title {
+    padding-left: 40px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      top: 4px;
+      left: 0;
+    }
+  }
+
   .platform {
     margin-top: 1em;
     @include font-gtamerica-thin-italic;
     font-size: 16px;
-    color: #B0B5BD;
+    color: #b0b5bd;
+  }
+}
+
+#front {
+  .project-title:before {
+    background-image: linear-gradient(-134deg, #ee605a 0%, #ed815a 100%);
   }
 }
 
 #nucleon {
-  min-height: 715px;
-  background-image: linear-gradient(-180deg, rgba(16,18,37,0.50) 0%, rgba(123,128,160,0.50) 100%), radial-gradient(circle at bottom center, #7B80A0 0%, #101225 100%);
+  background-image: linear-gradient(
+      -180deg,
+      rgba(16, 18, 37, 0.5) 0%,
+      rgba(123, 128, 160, 0.5) 100%
+    ),
+    radial-gradient(circle at bottom center, #7b80a0 0%, #101225 100%);
   position: relative;
   background-size: cover;
+
+  .project-title:before {
+    background-image: linear-gradient(45deg, #1cd6b7 0%, #3ed692 100%);
+  }
 
   .stars-container {
     position: absolute;
@@ -43,5 +73,11 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+#prototypes {
+  .project-title:before {
+    background-image: linear-gradient(-134deg, #64c8e8 0%, #649be8 100%);
   }
 }

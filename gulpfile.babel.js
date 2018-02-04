@@ -78,7 +78,7 @@ gulp.task('vendors', () => {
 
 // Watchers
 gulp.task('watch', () => {
-  gulp.watch(paths.sass, ['sass']);
+  gulp.watch('src/**/*.scss', ['sass']);
   gulp.watch(['src/**/*.html', paths.icons], ['html']);
   gulp.watch(paths.icons, ['icons', 'html']);
   gulp.watch(paths.js, ['js']);

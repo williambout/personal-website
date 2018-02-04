@@ -1,25 +1,29 @@
 @mixin font-gtamerica-thin-italic {
-	font-family: GTAmerica-Thin-Italic, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: GTAmerica-Thin-Italic, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin font-gtamerica-light {
-	font-family: GTAmerica-Light, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: GTAmerica-Light, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin font-gtamerica-regular {
-	font-family: GTAmerica-Regular, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: GTAmerica-Regular, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin font-gtamerica-medium {
-	font-family: GTAmerica-Medium, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: GTAmerica-Medium, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin bp($point) {
@@ -32,15 +36,13 @@
     @media (max-width: 1020px) {
       @content;
     }
-  }
-  @else if $point==phone {
+  } @else if $point==phone {
     @media (max-width: 500px) {
       @content;
     }
+  } @else if $point==small-phone {
+    @media (max-width: 375px) {
+      @content;
+    }
   }
-	@else if $point==small-phone {
-		@media (max-width: 375px) {
-			@content;
-		}
-	}
 }
