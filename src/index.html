@@ -5,30 +5,45 @@
     @@include('inc/navigation.html')
     <section class="introduction">
       <div class="wrapper">
-        <aside>
-          <svg class="grid" width="100" height="346">
-            <use xlink:href="#grid"/>
-          </svg>
-        </aside>
         <article>
           <h1>William Bout</h1>
           <h2>Product Designer</h2>
           <h3>Currently working at Front</h3>
         </article>
       </div>
+      <aside>
+       <svg class="grid" width="251" height="843">
+         <use xlink:href="#dots"/>
+       </svg>
+     </aside>
     </section>
     <section class="project" id="front">
       <div class="wrapper">
-        <h2 class="project-title">Front</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Fortitudinis quaedam praecepta sunt ac paene leges, quae effeminari virum vetant in dolore. Quid enim est a Chrysippo praetermissum in Stoicis? Duo Reges: constructio interrete. Facit enim ille duo seiuncta ultima bonorum, quae ut essent vera, coniungi debuerunt;</p>
-        <p class="platform">iOS, Android</p>
+        <div class="column">
+          <h2 class="project-title">Front</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Fortitudinis quaedam praecepta sunt ac paene leges, quae effeminari virum vetant in dolore. Quid enim est a Chrysippo praetermissum in Stoicis? Duo Reges: constructio interrete. Facit enim ille duo seiuncta ultima bonorum, quae ut essent vera, coniungi debuerunt;</p>
+          <p class="platform">iOS, Android</p>
+        </div>
+      </div>
+      <div class="wrapper screenshot-wrapper">
+        <img width="303" height="468" class="screenshot" src="assets/images/front-android.png" srcset="assets/images/front-android.png 303w, assets/images/front-android@2x.png 606w" alt="">
+        <img width="324" height="468" class="screenshot" src="assets/images/front-ios.png" srcset="assets/images/front-ios.png 324w, assets/images/front-ios@2x.png 648w" alt="">
+        <img width="1254" height="468" class="screenshot" src="assets/images/front-desktop.png" srcset="assets/images/front-desktop.png 1254w, assets/images/front-desktop@2x.png 2508w" alt="">
       </div>
     </section>
     <section class="project" id="nucleon">
       <div class="wrapper">
-        <h2 class="project-title light">Nucleon</h2>
-        <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Fortitudinis quaedam praecepta sunt ac paene leges, quae effeminari virum vetant in dolore. Quid enim est a Chrysippo praetermissum in Stoicis? Duo Reges: constructio interrete. Facit enim ille duo seiuncta ultima bonorum, quae ut essent vera, coniungi debuerunt;</p>
-        <p class="platform">iOS, Android</p>
+        <div class="column">
+          <h2 class="project-title light">Nucleon</h2>
+          <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Fortitudinis quaedam praecepta sunt ac paene leges, quae effeminari virum vetant in dolore. Quid enim est a Chrysippo praetermissum in Stoicis? Duo Reges: constructio interrete. Facit enim ille duo seiuncta ultima bonorum, quae ut essent vera, coniungi debuerunt;</p>
+          <p class="platform">Atom</p>
+        </div>
+        <div class="column">
+          <a class="button" href="#">Get</a>
+        </div>
+      </div>
+      <div class="wrapper screenshot-wrapper">
+        <img width="928" height="295" class="centered-screenshot" src="assets/images/atom-nucleon.png" srcset="assets/images/atom-nucleon.png 928w, assets/images/atom-nucleon@2x.png 1856w" alt="">
       </div>
     <svg  class="stars-container" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
@@ -42,9 +57,19 @@
     </section>
     <section class="project" id="prototypes">
       <div class="wrapper">
-        <h2 class="project-title">Prototypes</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Fortitudinis quaedam praecepta sunt ac paene leges, quae effeminari virum vetant in dolore. Quid enim est a Chrysippo praetermissum in Stoicis? Duo Reges: constructio interrete. Facit enim ille duo seiuncta ultima bonorum, quae ut essent vera, coniungi debuerunt;</p>
-        <p class="platform">iOS, Android</p>
+        <div class="column">
+          <h2 class="project-title">Prototypes</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Fortitudinis quaedam praecepta sunt ac paene leges, quae effeminari virum vetant in dolore. Quid enim est a Chrysippo praetermissum in Stoicis? Duo Reges: constructio interrete. Facit enim ille duo seiuncta ultima bonorum, quae ut essent vera, coniungi debuerunt;</p>
+          <p class="platform">iOS, Android</p>
+        </div>
+      </div>
+      <div class="wrapper screenshot-wrapper">
+        <div class="prototype">
+          <a href="#" class="link">Comming soon</a>
+        </div>
+        <div class="prototype">
+          <a href="#" class="link">Comming soon</a>
+        </div>
       </div>
     </section>
     @@include('inc/footer.html')

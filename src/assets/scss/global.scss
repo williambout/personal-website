@@ -8,11 +8,10 @@ html {
 }
 
 section {
-  padding-top: 80px;
-
-  h3,
-  p {
-    max-width: 50%;
+  .column {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -73,28 +72,6 @@ p {
 
   &.light {
     color: rgba(255, 255, 255, 0.6);
-  }
-}
-
-a {
-  color: rgba(7, 7, 7, 0.8);
-  text-decoration: none;
-}
-
-a:link,
-a:visited {
-  position: relative;
-  z-index: 1;
-  line-height: normal;
-  transition: color 0.15s ease;
-  -webkit-tap-highlight-color: rgba(97, 160, 234, 0.25);
-
-  &:hover {
-    color: #62a1ea;
-
-    &:after {
-      opacity: 0.2;
-    }
   }
 }
 

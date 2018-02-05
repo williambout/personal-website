@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="257" height="706" viewBox="0 0 257 706">
+  <defs>
+    <linearGradient id="dots-a" x1="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#3CAFFF"/>
+      <stop offset="100%" stop-color="#1C77FF"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(3 -68)">
+    <g stroke="#000" stroke-opacity=".05" stroke-width="5" transform="translate(0 296)">
+      <circle cx="199.5" cy="51.5" r="51.5"/>
+      <circle cx="199.5" cy="199.5" r="51.5"/>
+      <circle cx="51.5" cy="51.5" r="51.5"/>
+      <circle cx="51.5" cy="199.5" r="51.5"/>
+    </g>
+    <g stroke="#000" stroke-opacity=".05" stroke-width="5" transform="translate(0 592)">
+      <circle cx="199.5" cy="51.5" r="51.5"/>
+      <circle cx="199.5" cy="199.5" r="51.5"/>
+      <circle cx="51.5" cy="51.5" r="51.5"/>
+      <circle cx="51.5" cy="199.5" r="51.5"/>
+    </g>
+    <circle cx="199.5" cy="51.5" r="51.5" stroke="#000" stroke-opacity=".05" stroke-width="5"/>
+    <circle cx="199.5" cy="199.5" r="51.5" stroke="#000" stroke-opacity=".05" stroke-width="5"/>
+    <circle cx="51.5" cy="51.5" r="51.5" stroke="#000" stroke-opacity=".05" stroke-width="5"/>
+    <circle cx="51.5" cy="199.5" r="51.5" fill="url(#dots-a)"/>
+  </g>
+</svg>
