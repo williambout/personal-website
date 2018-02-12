@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const setActive = item => {
+    document.querySelector(`[data-menu=${item}]`).classList.add("-active");
+  };
   //Home
   if (window.location.pathname === "/") {
+    setActive("work");
     const nucleon = document.getElementById("nucleon");
     const starsContainer = document.querySelector(".stars-container");
     const fallingStar = document.getElementById("falling-star");
@@ -87,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   //Photos
   if (window.location.pathname === "/photos/") {
+    setActive("photos");
     const instagramPostHeight = 245;
     const instagramFeedEl = document.querySelector(".instagram-feed-container");
 
@@ -175,42 +180,46 @@ document.addEventListener("DOMContentLoaded", () => {
         collectionsCounter.innerHTML = user.total_collections;
       });
   }
+  //About
+  if (window.location.pathname === "/about/") {
+    setActive("about");
+  }
   // Footer
   const songs = [
     {
       artist: "Sebastien Tellier",
       title: "La Ritournelle",
-      duration: 6000
+      duration: 1000
     },
     {
       artist: "Sebastien Tellier",
       title: "Comment revoir Oursinet ? (Darius Remix)",
-      duration: 6480
+      duration: 1000
     },
     {
       artist: "Todd Terje",
       title: "Inspector Norse",
-      duration: 6000
+      duration: 1000
     },
     {
       artist: "Vanderkraft",
       title: "Ce Bon Vieux Jean Lassalle",
-      duration: 6000
+      duration: 1000
     },
     {
       artist: "Hugues Rey",
       title: "Existence",
-      duration: 6000
+      duration: 1000
     },
     {
       artist: "Vladimir Cauchemar",
       title: "Aulos",
-      duration: 6000
+      duration: 1000
     },
     {
       artist: "Jacques",
       title: "Tout Est Magnifique",
-      duration: 6000
+      duration: 1000
     },
     {
       artist: "Flowers",
@@ -219,15 +228,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  const currentlyPlaying = () => {
-    // Yes, everything is fake 🙂
-    const randomSong = songs[Math.floor(Math.random() * songs.length)];
-    const artistEl = document.querySelector("#now-playing .artist");
-    const titleEl = document.querySelector("#now-playing .title");
+  const startPlayer = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        // Yes, everything is fake 🙂
+        const randomSong = songs[Math.floor(Math.random() * songs.length)];
+        const artistEl = document.querySelector("#now-playing .artist");
+        const titleEl = document.querySelector("#now-playing .title");
 
-    artistEl.innerHTML = randomSong.artist;
-    titleEl.innerHTML = randomSong.title;
+        artistEl.innerHTML = randomSong.artist;
+        titleEl.innerHTML = randomSong.title;
+        setTimeout(() => {
+          return resolve();
+        }, randomSong.duration);
+      } catch (e) {
+        return reject(e);
+      }
+    }).then(startPlayer());
   };
 
-  currentlyPlaying();
+  startPlayer();
 });

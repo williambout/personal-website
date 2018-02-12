@@ -4,6 +4,7 @@
   display: flex;
   margin-top: 0;
   overflow: hidden;
+  padding-top: 0;
 
   .wrapper {
     display: flex;
@@ -30,7 +31,6 @@
 
 .project {
   overflow: hidden;
-  padding-top: 80px;
 
   .wrapper {
     display: flex;
@@ -82,6 +82,10 @@
     .screenshot + .screenshot {
       margin-left: 80px;
     }
+  }
+
+  & + footer {
+    margin-top: 0;
   }
 }
 

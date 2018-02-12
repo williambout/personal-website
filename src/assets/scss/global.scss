@@ -1,6 +1,7 @@
 body,
 html {
   color: #767676;
+  background: white;
   @include font-gtamerica-light;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
@@ -8,11 +9,17 @@ html {
 }
 
 section {
+  padding-top: 80px;
+
   .column {
     flex: 0 1 50%;
     display: flex;
     flex-direction: column;
   }
+}
+
+footer {
+  margin-top: 80px;
 }
 
 ::selection {
@@ -73,6 +80,10 @@ p {
   &.light {
     color: rgba(255, 255, 255, 0.6);
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 .visuallyhidden {
