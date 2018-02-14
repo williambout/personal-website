@@ -18,10 +18,6 @@ section {
   }
 }
 
-footer {
-  margin-top: 80px;
-}
-
 ::selection {
   background: rgba(97, 160, 234, 0.25);
   color: #62a1ea;
@@ -84,6 +80,11 @@ p {
 
 a {
   text-decoration: none;
+  @extend p;
+
+  &:hover {
+    color: #656769;
+  }
 }
 
 .visuallyhidden {
