@@ -16,6 +16,11 @@
     margin-top: -10px;
   }
 
+  h2 {
+    color: #838a96;
+    margin-bottom: 40px;
+  }
+
   aside {
     height: 100%;
     position: absolute;
@@ -95,6 +100,7 @@
         @include bp(tablet) {
           display: block;
           height: 40vh;
+          min-height: 275px;
           width: auto;
           transform: none;
         }
@@ -235,7 +241,7 @@
         color: #3e3f41;
         line-height: 48px;
         background: #ffffff;
-        box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+        box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.15);
       }
     }
   }
