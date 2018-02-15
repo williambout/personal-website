@@ -8,6 +8,10 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 20px;
+
+    @include bp(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .circle {
@@ -94,6 +98,10 @@ footer {
     grid-template-columns: 1fr 1fr;
     justify-self: flex-end;
     grid-column-gap: 80px;
+
+    @include bp(phone) {
+      grid-row: auto;
+    }
   }
 }
 

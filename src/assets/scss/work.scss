@@ -35,6 +35,10 @@
 
   .wrapper {
     display: flex;
+
+    @include bp(phone) {
+      flex-direction: column;
+    }
   }
 
   .project-title {
@@ -80,8 +84,43 @@
     position: relative;
     z-index: 10;
 
-    .screenshot + .screenshot {
-      margin-left: 80px;
+    &.overflow {
+      @include bp(tablet) {
+        display: block;
+        transform: none;
+      }
+
+      .centered-screenshot {
+        @include bp(tablet) {
+          display: block;
+          height: auto;
+          width: auto;
+          transform: none;
+        }
+      }
+    }
+
+    @include bp(phone) {
+      flex-direction: row;
+      transform: translateX(-100px);
+    }
+
+    .centered-screenshot {
+      width: 100%;
+      height: auto;
+    }
+
+    .screenshot {
+      @include bp(phone) {
+        max-height: 50vh;
+        width: auto;
+        margin-top: -50px;
+        transform: rotate(25deg) translate3d(0, 80px, 0);
+      }
+
+      & + .screenshot {
+        margin-left: 80px;
+      }
     }
   }
 

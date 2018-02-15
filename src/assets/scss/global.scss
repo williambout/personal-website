@@ -11,10 +11,18 @@ html {
 section {
   padding-top: 80px;
 
+  @include bp(phone) {
+    padding-top: 10vw;
+  }
+
   .column {
     flex: 0 1 50%;
     display: flex;
     flex-direction: column;
+
+    @include bp(phone) {
+      flex-basis: 100%;
+    }
   }
 }
 
