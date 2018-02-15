@@ -3,6 +3,10 @@ footer {
   padding: 80px 0;
   margin-top: 80px;
 
+  @include bp(phone) {
+    padding: 10vw 0;
+  }
+
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,7 +19,7 @@ footer {
   }
 
   .circle {
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     position: relative;
     background: #989a9c;
@@ -55,12 +59,11 @@ footer {
       font-family: GTAmerica-Medium;
       font-size: 16px;
       color: #3e3f41;
-      line-height: 1;
-      padding-bottom: 5px;
+      line-height: 1.4;
     }
 
     .title {
-      line-height: 1;
+      line-height: 1.4;
     }
   }
 
@@ -100,7 +103,11 @@ footer {
     grid-column-gap: 80px;
 
     @include bp(phone) {
+      margin-top: 20px;
       grid-row: auto;
+      grid-column: 1;
+      grid-template-columns: 1fr;
+      justify-self: flex-start;
     }
   }
 }
