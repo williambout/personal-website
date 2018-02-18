@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
     <title>logo</title>
     <desc>Created with Sketch.</desc>
@@ -16,10 +16,10 @@
                 <g id="Group-4">
                     <g id="Group-5">
                         <g id="logo">
-                            <circle id="Oval" fill="#303132" cx="19" cy="19" r="19"></circle>
-                            <rect id="Rectangle-7" fill="url(#linearGradient-1)" transform="translate(26.250000, 19.736860) scale(-1, 1) rotate(-30.000000) translate(-26.250000, -19.736860) " x="23.75" y="11.7368603" width="5" height="16" rx="2.5"></rect>
-                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(11.750000, 19.736860) scale(-1, 1) rotate(-330.000000) translate(-11.750000, -19.736860) " x="9.25" y="11.7368603" width="5" height="16" rx="2.5"></rect>
-                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(20.750000, 19.736860) scale(-1, 1) rotate(-330.000000) translate(-20.750000, -19.736860) " x="18.25" y="11.7368603" width="5" height="16" rx="2.5"></rect>
+                            <circle id="Oval" fill="#303132" cx="20" cy="20" r="20"></circle>
+                            <rect id="Rectangle-7" fill="url(#linearGradient-1)" transform="translate(27.250000, 20.736860) scale(-1, 1) rotate(-30.000000) translate(-27.250000, -20.736860) " x="24.75" y="12.7368603" width="5" height="16" rx="2.5"></rect>
+                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(12.750000, 20.736860) scale(-1, 1) rotate(-330.000000) translate(-12.750000, -20.736860) " x="10.25" y="12.7368603" width="5" height="16" rx="2.5"></rect>
+                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(21.750000, 20.736860) scale(-1, 1) rotate(-330.000000) translate(-21.750000, -20.736860) " x="19.25" y="12.7368603" width="5" height="16" rx="2.5"></rect>
                         </g>
                     </g>
                 </g>

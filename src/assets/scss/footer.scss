@@ -56,14 +56,37 @@ footer {
     }
 
     .artist {
-      font-family: GTAmerica-Medium;
-      font-size: 16px;
-      color: #3e3f41;
-      line-height: 1.4;
+      position: relative;
+
+      span {
+        @include font-gtamerica-medium;
+        font-size: 16px;
+        color: #3e3f41;
+        line-height: 1.4;
+      }
     }
 
     .title {
       line-height: 1.4;
+      position: relative;
+    }
+
+    .artist,
+    .title {
+      overflow: hidden;
+      min-height: 25px;
+      min-width: 400px;
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        will-change: transform;
+      }
+
+      .current {
+        opacity: 1;
+      }
     }
   }
 

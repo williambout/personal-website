@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
         preloader.preload(imagesToPreload).then(() => buildPostEls());
 
         const buildPostEls = () => {
-          console.log("buildPostEls");
           const galleryEl = document.createElement("ul");
           galleryEl.classList.add("instagram-feed");
 
@@ -175,7 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const collectionsCounter = document.getElementById(
           "collections-counter"
         );
-        console.log(photosCounter, user.total_photos);
         photosCounter.innerHTML = user.total_photos;
         collectionsCounter.innerHTML = user.total_collections;
       });
@@ -185,67 +183,70 @@ document.addEventListener("DOMContentLoaded", () => {
     setActive("about");
   }
   // Footer
-  const songs = [
-    {
-      artist: "Sebastien Tellier",
-      title: "La Ritournelle",
-      duration: 1000
-    },
-    {
-      artist: "Sebastien Tellier",
-      title: "Comment revoir Oursinet ? (Darius Remix)",
-      duration: 1000
-    },
-    {
-      artist: "Todd Terje",
-      title: "Inspector Norse",
-      duration: 1000
-    },
-    {
-      artist: "Vanderkraft",
-      title: "Ce Bon Vieux Jean Lassalle",
-      duration: 1000
-    },
-    {
-      artist: "Hugues Rey",
-      title: "Existence",
-      duration: 1000
-    },
-    {
-      artist: "Vladimir Cauchemar",
-      title: "Aulos",
-      duration: 1000
-    },
-    {
-      artist: "Jacques",
-      title: "Tout Est Magnifique",
-      duration: 1000
-    },
-    {
-      artist: "Flowers",
-      title: "Distal",
-      duration: 6000
-    }
-  ];
 
-  const startPlayer = () => {
-    return new Promise((resolve, reject) => {
-      try {
-        // Yes, everything is fake 🙂
-        const randomSong = songs[Math.floor(Math.random() * songs.length)];
-        const artistEl = document.querySelector("#now-playing .artist");
-        const titleEl = document.querySelector("#now-playing .title");
+  const pusher = new Pusher("210e93e9b7e54b53fb9f", {
+    cluster: "us2",
+    encrypted: true
+  });
 
-        artistEl.innerHTML = randomSong.artist;
-        titleEl.innerHTML = randomSong.title;
-        setTimeout(() => {
-          return resolve();
-        }, randomSong.duration);
-      } catch (e) {
-        return reject(e);
+  let previousArtistEl, previousTitleEl, currentArtistEl, currentTitleEl;
+  const artistElContainer = document.querySelector(
+    "#now-playing .song .artist"
+  );
+  const titleElContainer = document.querySelector("#now-playing .song .title");
+
+  var channel = pusher.subscribe("player");
+  channel.bind("new-song", function(data) {
+    previousArtistEl = currentArtistEl;
+    previousTitleEl = currentTitleEl;
+
+    currentArtistEl = document.createElement("span");
+    currentArtistEl.innerHTML = data.song.artist;
+    currentArtistEl.style.transform.translateY = "30px";
+
+    currentTitleEl = document.createElement("span");
+    currentTitleEl.innerHTML = data.song.title;
+    currentTitleEl.style.transform.translateY = "30px";
+
+    artistElContainer.appendChild(currentArtistEl);
+    titleElContainer.appendChild(currentTitleEl);
+
+    var basicTimeline = anime.timeline({
+      duration: 800,
+      complete: () => {
+        if (previousArtistEl && previousTitleEl) {
+          previousArtistEl.remove();
+          previousTitleEl.remove();
+        }
       }
-    }).then(startPlayer());
-  };
+    });
 
-  startPlayer();
+    basicTimeline
+      .add({
+        targets: currentArtistEl,
+        translateY: [30, 0],
+        offset: 0,
+        easing: "easeOutExpo"
+      })
+      .add({
+        targets: currentTitleEl,
+        translateY: [30, 0],
+        offset: 0,
+        delay: 200,
+        easing: "easeOutExpo"
+      })
+      .add({
+        targets: previousArtistEl,
+        translateY: [0, -30],
+        offset: 0,
+        easing: "easeOutExpo"
+      })
+      .add({
+        targets: previousTitleEl,
+        translateY: [0, -30],
+        offset: 0,
+        delay: 200,
+        easing: "easeOutExpo"
+      });
+  });
 });

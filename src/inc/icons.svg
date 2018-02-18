@@ -39,7 +39,7 @@
             <path d="M2,2 L10.118746,11.8409043 C10.1949549,11.9332787 10.1949549,12.0667213 10.118746,12.1590957 L2,22" id="link-arrow"/>
         </g>
     </g>
-</symbol><symbol id="logo" viewBox="0 0 38 38">
+</symbol><symbol id="logo" viewBox="0 0 40 40">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
     <title>logo</title>
     <desc>Created with Sketch.</desc>
@@ -50,10 +50,10 @@
                 <g id="Group-4">
                     <g id="Group-5">
                         <g id="logo">
-                            <circle id="Oval" fill="#303132" cx="19" cy="19" r="19"/>
-                            <rect id="Rectangle-7" fill="url(#linearGradient-1)" transform="translate(26.250000, 19.736860) scale(-1, 1) rotate(-30.000000) translate(-26.250000, -19.736860) " x="23.75" y="11.7368603" width="5" height="16" rx="2.5"/>
-                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(11.750000, 19.736860) scale(-1, 1) rotate(-330.000000) translate(-11.750000, -19.736860) " x="9.25" y="11.7368603" width="5" height="16" rx="2.5"/>
-                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(20.750000, 19.736860) scale(-1, 1) rotate(-330.000000) translate(-20.750000, -19.736860) " x="18.25" y="11.7368603" width="5" height="16" rx="2.5"/>
+                            <circle id="Oval" fill="#303132" cx="20" cy="20" r="20"/>
+                            <rect id="Rectangle-7" fill="url(#linearGradient-1)" transform="translate(27.250000, 20.736860) scale(-1, 1) rotate(-30.000000) translate(-27.250000, -20.736860) " x="24.75" y="12.7368603" width="5" height="16" rx="2.5"/>
+                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(12.750000, 20.736860) scale(-1, 1) rotate(-330.000000) translate(-12.750000, -20.736860) " x="10.25" y="12.7368603" width="5" height="16" rx="2.5"/>
+                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(21.750000, 20.736860) scale(-1, 1) rotate(-330.000000) translate(-21.750000, -20.736860) " x="19.25" y="12.7368603" width="5" height="16" rx="2.5"/>
                         </g>
                     </g>
                 </g>

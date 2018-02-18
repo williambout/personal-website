@@ -6,6 +6,7 @@
     "animejs": "^2.2.0",
     "image-preloader": "^1.1.1",
     "instafeed.js": "^1.4.1",
+    "pusher-js": "^4.2.2",
     "reset-css": "^2.2.0",
     "unsplash-js": "^4.8.0"
   },

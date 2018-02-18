@@ -86,7 +86,8 @@ h4 {
   }
 }
 
-p {
+p,
+span {
   @include font-gtamerica-light;
   font-size: 16px;
   color: #989a9c;
