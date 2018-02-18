@@ -3,7 +3,13 @@
       <stop offset="0%" stop-color="#3CAFFF"/>
       <stop offset="100%" stop-color="#1C77FF"/>
     </linearGradient>
-  </defs><symbol id="dots" viewBox="0 0 257 706">
+  
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#B3B3B3" offset="0%"/>
+            <stop stop-color="#B3B3B3" offset="50%"/>
+            <stop stop-color="#7E7E7E" offset="100%"/>
+        </linearGradient>
+    </defs><symbol id="dots" viewBox="0 0 257 706">
   
   <g fill="none" fill-rule="evenodd" transform="translate(3 -68)">
     <g stroke="#000" stroke-opacity=".05" stroke-width="5" transform="translate(0 296)">
@@ -31,6 +37,27 @@
     <g id="Photos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1137.000000, -690.000000)" stroke-linecap="round" stroke-opacity="0.899994339">
         <g id="Group-5" transform="translate(1137.000000, 690.000000)" stroke="#FFFFFF" stroke-width="4">
             <path d="M2,2 L10.118746,11.8409043 C10.1949549,11.9332787 10.1949549,12.0667213 10.118746,12.1590957 L2,22" id="link-arrow"/>
+        </g>
+    </g>
+</symbol><symbol id="logo" viewBox="0 0 38 38">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    
+    <g id="Navigation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-237.000000, -17.000000)">
+        <g id="Group-3">
+            <g transform="translate(237.000000, 17.000000)">
+                <g id="Group-4">
+                    <g id="Group-5">
+                        <g id="logo">
+                            <circle id="Oval" fill="#303132" cx="19" cy="19" r="19"/>
+                            <rect id="Rectangle-7" fill="url(#linearGradient-1)" transform="translate(26.250000, 19.736860) scale(-1, 1) rotate(-30.000000) translate(-26.250000, -19.736860) " x="23.75" y="11.7368603" width="5" height="16" rx="2.5"/>
+                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(11.750000, 19.736860) scale(-1, 1) rotate(-330.000000) translate(-11.750000, -19.736860) " x="9.25" y="11.7368603" width="5" height="16" rx="2.5"/>
+                            <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(20.750000, 19.736860) scale(-1, 1) rotate(-330.000000) translate(-20.750000, -19.736860) " x="18.25" y="11.7368603" width="5" height="16" rx="2.5"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
         </g>
     </g>
 </symbol><symbol id="turntable" viewBox="0 0 40 40">

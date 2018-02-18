@@ -15,6 +15,14 @@ section {
     padding-top: 10vw;
   }
 
+  &.first {
+    padding-top: 150px;
+
+    @include bp(phone) {
+      padding-top: calc(10vw + 70px);
+    }
+  }
+
   .column {
     flex: 0 1 50%;
     display: flex;
