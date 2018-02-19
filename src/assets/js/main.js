@@ -184,10 +184,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // Footer
 
-  const pusher = new Pusher("210e93e9b7e54b53fb9f", {
-    cluster: "us2",
-    encrypted: true
+  const feeds = new Feeds({
+    instanceLocator: "v1:us1:8cc9ec15-34ee-4c5c-bcdb-43e7d1b81e9c"
   });
+
+  const player = feeds.feed("player");
 
   let previousArtistEl, previousTitleEl, currentArtistEl, currentTitleEl;
   const artistElContainer = document.querySelector(
@@ -195,16 +196,27 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   const titleElContainer = document.querySelector("#now-playing .song .title");
 
-  var channel = pusher.subscribe("player");
-  channel.bind("new-song", function(data) {
+  player.subscribe({
+    previousItems: 1,
+    onItem: item => newSong(item.data)
+  });
+
+  const newSong = data => {
     previousArtistEl = currentArtistEl;
     previousTitleEl = currentTitleEl;
 
+    if (previousArtistEl && previousTitleEl) {
+      previousArtistEl.classList.remove("current");
+      previousTitleEl.classList.remove("current");
+    }
+
     currentArtistEl = document.createElement("span");
+    currentArtistEl.classList.add("current");
     currentArtistEl.innerHTML = data.song.artist;
     currentArtistEl.style.transform.translateY = "30px";
 
     currentTitleEl = document.createElement("span");
+    currentTitleEl.classList.add("current");
     currentTitleEl.innerHTML = data.song.title;
     currentTitleEl.style.transform.translateY = "30px";
 
@@ -212,41 +224,54 @@ document.addEventListener("DOMContentLoaded", () => {
     titleElContainer.appendChild(currentTitleEl);
 
     var basicTimeline = anime.timeline({
-      duration: 800,
       complete: () => {
-        if (previousArtistEl && previousTitleEl) {
-          previousArtistEl.remove();
-          previousTitleEl.remove();
-        }
+        const artistsToRemove = document.querySelectorAll(
+          ".song .artist span:not(.current)"
+        );
+        [...artistsToRemove].forEach(node => node.remove());
+        const titlesToRemove = document.querySelectorAll(
+          ".song .title span:not(.current)"
+        );
+        [...titlesToRemove].forEach(node => node.remove());
       }
     });
 
     basicTimeline
-      .add({
-        targets: currentArtistEl,
-        translateY: [30, 0],
-        offset: 0,
-        easing: "easeOutExpo"
-      })
-      .add({
-        targets: currentTitleEl,
-        translateY: [30, 0],
-        offset: 0,
-        delay: 200,
-        easing: "easeOutExpo"
-      })
-      .add({
-        targets: previousArtistEl,
-        translateY: [0, -30],
-        offset: 0,
-        easing: "easeOutExpo"
-      })
-      .add({
-        targets: previousTitleEl,
-        translateY: [0, -30],
-        offset: 0,
-        delay: 200,
-        easing: "easeOutExpo"
-      });
-  });
+      .add(
+        {
+          targets: currentArtistEl,
+          translateY: [30, 0],
+          easing: "easeOutExpo"
+        },
+        0
+      )
+      .add(
+        {
+          targets: currentTitleEl,
+          translateY: [30, 0],
+          delay: 200,
+          easing: "easeOutExpo"
+        },
+        0
+      )
+      .add(
+        {
+          targets: previousArtistEl,
+          translateY: [0, -30],
+          offset: 0,
+          easing: "easeOutExpo"
+        },
+        0
+      )
+      .add(
+        {
+          targets: previousTitleEl,
+          translateY: [0, -30],
+          offset: 0,
+          delay: 200,
+          easing: "easeOutExpo"
+        },
+        0
+      );
+  };
 });

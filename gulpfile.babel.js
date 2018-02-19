@@ -29,9 +29,9 @@ const paths = {
   build: "./build/",
   vendors: [
     "./node_modules/unsplash-js/dist/unsplash.min.js",
-    "./node_modules/animejs/anime.min.js",
+    "./node_modules/animejs/lib/anime.min.js",
     "./node_modules/instafeed.js/instafeed.js",
-    "./node_modules/pusher-js/dist/web/pusher.min.js",
+    "./node_modules/pusher-feeds-client/target/pusher-feeds-client.js"
   ]
 };
 
@@ -78,7 +78,6 @@ gulp.task("vendors", () => {
   return gulp
     .src([...paths.vendors])
     .pipe(concat("vendors.js"))
-    .pipe(uglify())
     .pipe(gulp.dest("./build/assets/js"));
 });
 
