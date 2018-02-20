@@ -30,9 +30,8 @@ footer {
       width: 12px;
       height: 12px;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 14px;
+      left: 14px;
       background: #f5f7f8;
       border-radius: 50%;
       z-index: 10;
@@ -49,9 +48,12 @@ footer {
     }
 
     .turntable {
+      width: 12px;
+      height: 12px;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       z-index: 20;
     }
 
