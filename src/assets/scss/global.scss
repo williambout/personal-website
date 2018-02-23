@@ -96,6 +96,15 @@ span {
   &.light {
     color: rgba(255, 255, 255, 0.6);
   }
+
+  b {
+    @include font-gtamerica-medium;
+    color: #656769;
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 a {

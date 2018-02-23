@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Photos
   if (window.location.pathname === "/photos/") {
     setActive("photos");
-    const instagramPostHeight = 245;
+    const instagramPostHeight = 300;
     const instagramFeedEl = document.querySelector(".instagram-feed-container");
 
     const unsplash = new Unsplash.default({
