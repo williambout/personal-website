@@ -32,15 +32,20 @@
       @content;
     }
   }
+
   @if $point==tablet {
     @media (max-width: 1020px) {
       @content;
     }
-  } @else if $point==phone {
+  }
+
+  @else if $point==phone {
     @media (max-width: 500px) {
       @content;
     }
-  } @else if $point==small-phone {
+  }
+
+  @else if $point==small-phone {
     @media (max-width: 375px) {
       @content;
     }

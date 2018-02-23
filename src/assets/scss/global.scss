@@ -2,7 +2,9 @@ body,
 html {
   color: #767676;
   background: white;
+
   @include font-gtamerica-light;
+
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
@@ -48,6 +50,7 @@ section {
 
 h1 {
   @include font-gtamerica-medium;
+
   font-size: 55px;
   font-size: calc(2.5em + 0.8vw);
   color: #262729;
@@ -56,6 +59,7 @@ h1 {
 
 h2 {
   @include font-gtamerica-regular;
+
   font-size: 30px;
   font-size: calc(1.2em + 0.8vw);
   color: #262729;
@@ -68,6 +72,7 @@ h2 {
 
 h3 {
   @include font-gtamerica-regular;
+
   font-size: 20px;
   color: #b0b5bd;
 
@@ -78,6 +83,7 @@ h3 {
 
 h4 {
   @include font-gtamerica-regular;
+
   font-size: 20px;
   color: #3e3f41;
 
@@ -89,6 +95,7 @@ h4 {
 p,
 span {
   @include font-gtamerica-light;
+
   font-size: 16px;
   color: #989a9c;
   line-height: 1.6;
@@ -99,6 +106,7 @@ span {
 
   b {
     @include font-gtamerica-medium;
+
     color: #656769;
   }
 
@@ -109,6 +117,7 @@ span {
 
 a {
   text-decoration: none;
+
   @extend p;
 
   &:hover {
