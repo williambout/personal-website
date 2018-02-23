@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My personal webiste",
   "dependencies": {
-    "animejs": "juliangarnier/anime#3.0.0",
+    "animejs": "github:juliangarnier/anime#3.0.0",
     "image-preloader": "^1.1.1",
     "instafeed.js": "^1.4.1",
     "pusher-feeds-client": "^0.10.0",
