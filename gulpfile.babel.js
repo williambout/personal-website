@@ -13,6 +13,7 @@ import svgstore from "gulp-svgstore";
 import includes from "gulp-file-include";
 import file from "gulp-file";
 import concat from "gulp-concat";
+import responsive from "gulp-responsive";
 
 const paths = {
 	sass: "./src/assets/scss/styles.scss",
@@ -116,6 +117,114 @@ gulp.task("images", () => {
 		.pipe(gulp.dest("build/assets/images"));
 });
 
+gulp.task("responsive-images", () => {
+	return gulp
+		.src("./src/assets/images/responsive/**/*.{jpg,png}")
+		.pipe(
+			responsive({
+				"*": [
+					{
+						// image-small.jpg is 200 pixels wide
+						width: 200,
+						rename: {
+							suffix: "-small",
+							extname: ".jpg"
+						}
+					},
+					{
+						// image-small@2x.jpg is 400 pixels wide
+						width: 200 * 2,
+						rename: {
+							suffix: "-small@2x",
+							extname: ".jpg"
+						}
+					},
+					{
+						// image-large.jpg is 480 pixels wide
+						width: 480,
+						rename: {
+							suffix: "-large",
+							extname: ".jpg"
+						}
+					},
+					{
+						// image-large@2x.jpg is 960 pixels wide
+						width: 480 * 2,
+						rename: {
+							suffix: "-large@2x",
+							extname: ".jpg"
+						}
+					},
+					{
+						// image-extralarge.jpg is 1280 pixels wide
+						width: 1280,
+						rename: {
+							suffix: "-extralarge",
+							extname: ".jpg"
+						}
+					},
+					{
+						// image-extralarge@2x.jpg is 2560 pixels wide
+						width: 1280 * 2,
+						rename: {
+							suffix: "-extralarge@2x",
+							extname: ".jpg"
+						}
+					},
+					{
+						// image-small.webp is 200 pixels wide
+						width: 200,
+						rename: {
+							suffix: "-small",
+							extname: ".webp"
+						}
+					},
+					{
+						// image-small@2x.webp is 400 pixels wide
+						width: 200 * 2,
+						rename: {
+							suffix: "-small@2x",
+							extname: ".webp"
+						}
+					},
+					{
+						// image-large.webp is 480 pixels wide
+						width: 480,
+						rename: {
+							suffix: "-large",
+							extname: ".webp"
+						}
+					},
+					{
+						// image-large@2x.webp is 960 pixels wide
+						width: 480 * 2,
+						rename: {
+							suffix: "-large@2x",
+							extname: ".webp"
+						}
+					},
+					{
+						// image-extralarge.webp is 1280 pixels wide
+						width: 1280,
+						rename: {
+							suffix: "-extralarge",
+							extname: ".webp"
+						}
+					},
+					{
+						// image-extralarge@2x.webp is 2560 pixels wide
+						width: 1280 * 2,
+						rename: {
+							suffix: "-extralarge@2x",
+							extname: ".webp"
+						}
+					}
+				]
+			})
+		)
+		.pipe(gulp.dest("build/assets/images"));
+});
+
 // Copying Fonts
 gulp.task("fonts", () => {
 	return gulp.src(paths.fonts).pipe(gulp.dest("build/assets/fonts"));
@@ -151,6 +260,7 @@ gulp.task("default", callback => {
 			"sass",
 			"vendors",
 			"js",
+			"responsive-images",
 			"images",
 			"icons",
 			"browserSync",
@@ -163,7 +273,16 @@ gulp.task("default", callback => {
 gulp.task("build", callback => {
 	runSequence(
 		"clean:build",
-		["html", "fonts", "sass", "vendors", "js", "images", "icons"],
+		[
+			"html",
+			"fonts",
+			"sass",
+			"vendors",
+			"js",
+			"responsive-images",
+			"images",
+			"icons"
+		],
 		callback
 	);
 });

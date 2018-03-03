@@ -31,6 +31,7 @@
 		"gulp-inject": "^4.2.0",
 		"gulp-pxtorem": "^2.0.0",
 		"gulp-rename": "^1.2.2",
+		"gulp-responsive": "^2.9.0",
 		"gulp-sass": "^3.1.0",
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-svgmin": "^1.2.3",

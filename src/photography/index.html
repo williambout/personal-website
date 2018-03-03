@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('inc/head.html')
+  <body>
+    @@include('inc/navigation.html')
+    <section id="photos" class="first">
+      <div class="wrapper">
+        <h2>Photography</h2>
+        <h3>Last posts on Instagram</h3>
+      </div>
+      <div class="instagram-feed-container"></div>
+    </section>
+    <section id="unsplash">
+      <div class="wrapper">
+        <a class="more-button" href="http://unsplash.com/@williambout" target="_blank">
+          <div>
+            <h3>More on Unsplash</h3>
+            <p class="description">Some of my photos are available for free in high resolution</p>
+          </div>
+          <div class="right">
+            <ul class="stats">
+              <li>
+                <span id="photos-counter" class="number">-</span>
+                <span class="label">Photos</span>
+              </li>
+              <li>
+                <span id="collections-counter" class="number">-</span>
+                <span class="label">Collections</span>
+              </li>
+            </ul>
+            <svg class="chevron" width=13 height=24>
+              <use xlink:href="#link-arrow"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section id="posts">
+      <div class="wrapper">
+        <div class="posts-container">
+          <article>
+            <h4>Gear I use</h4>
+            <p>I see my gear as tools that's helping me to take the picture I want. In order to have some flexibility, I use 3 cameras:</p>
+            <ul>
+              <li>
+                <p>A camera I have all the time with me: <b>iPhone X<b></p>
+                <p>I use a couple of apps in order to extends it's capabilities: for shooting, I use <a href="https://halide.cam">Halide</a>. For editing I use <a href="https://itunes.apple.com/us/app/focos/id1274938524?mt=8">Focos</a> and <a href="http://darkroom.co">Darkroom</a>.</p>
+              </li>
+              <li>
+                <p>A camera: <b>Sony a6000<b></p>
+              </li>
+              <li>
+                <p>A camera that can fly: <b>DJI Mavic Air<b></p>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h4>Gear I use</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Animum autem reliquis rebus ita perfecit, ut corpus; Quod quidem iam fit etiam in Academia. Duo Reges: constructio interrete. Omnes enim iucundum motum, quo sensus hilaretur. Ab hoc autem quaedam non melius quam veteres, quaedam omnino Sigma 16mm . Tu vero, inquam, ducas licet, si sequetur;</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    @@include('inc/footer.html')
+  </body>
+
+</html>

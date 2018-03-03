@@ -38,14 +38,6 @@
 .project {
   overflow: hidden;
 
-  .wrapper {
-    display: flex;
-
-    @include bp(phone) {
-      flex-direction: column;
-    }
-  }
-
   .project-title {
     padding-left: 40px;
     position: relative;
