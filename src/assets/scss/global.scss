@@ -48,8 +48,10 @@ section {
   margin: 0 auto;
   display: flex;
 
-  @include bp(phone) {
-    flex-direction: column;
+  &.-phone-column {
+    @include bp(phone) {
+      flex-direction: column;
+    }
   }
 }
 

@@ -124,98 +124,66 @@ gulp.task("responsive-images", () => {
 		responsive({
 			"*": [
 				{
-					// image-small.jpg is 200 pixels wide
-					width: 200,
+					width: 250,
+					quality: 90,
 					rename: {
 						suffix: "-small",
 						extname: ".jpg"
 					}
 				},
 				{
-					// image-small@2x.jpg is 400 pixels wide
-					width: 200 * 2,
+					width: 500,
+					quality: 90,
 					rename: {
-						suffix: "-small@2x",
+						suffix: "-medium",
 						extname: ".jpg"
 					}
 				},
 				{
-					// image-large.jpg is 480 pixels wide
-					width: 480,
+					width: 1000,
+					quality: 90,
 					rename: {
 						suffix: "-large",
 						extname: ".jpg"
 					}
 				},
 				{
-					// image-large@2x.jpg is 960 pixels wide
-					width: 480 * 2,
-					rename: {
-						suffix: "-large@2x",
-						extname: ".jpg"
-					}
-				},
-				{
-					// image-extralarge.jpg is 1280 pixels wide
-					width: 1280,
+					width: 2000,
+					quality: 90,
 					rename: {
 						suffix: "-extralarge",
 						extname: ".jpg"
 					}
 				},
 				{
-					// image-extralarge@2x.jpg is 2560 pixels wide
-					width: 1280 * 2,
-					rename: {
-						suffix: "-extralarge@2x",
-						extname: ".jpg"
-					}
-				},
-				{
-					// image-small.webp is 200 pixels wide
-					width: 200,
+					width: 250,
+					quality: 90,
 					rename: {
 						suffix: "-small",
 						extname: ".webp"
 					}
 				},
 				{
-					// image-small@2x.webp is 400 pixels wide
-					width: 200 * 2,
+					width: 500,
+					quality: 90,
 					rename: {
-						suffix: "-small@2x",
+						suffix: "-medium",
 						extname: ".webp"
 					}
 				},
 				{
-					// image-large.webp is 480 pixels wide
-					width: 480,
+					width: 1000,
+					quality: 90,
 					rename: {
 						suffix: "-large",
 						extname: ".webp"
 					}
 				},
 				{
-					// image-large@2x.webp is 960 pixels wide
-					width: 480 * 2,
-					rename: {
-						suffix: "-large@2x",
-						extname: ".webp"
-					}
-				},
-				{
-					// image-extralarge.webp is 1280 pixels wide
-					width: 1280,
+					width: 2000,
+					quality: 90,
 					rename: {
 						suffix: "-extralarge",
-						extname: ".webp"
-					}
-				},
-				{
-					// image-extralarge@2x.webp is 2560 pixels wide
-					width: 1280 * 2,
-					rename: {
-						suffix: "-extralarge@2x",
 						extname: ".webp"
 					}
 				}
