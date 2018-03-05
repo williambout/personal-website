@@ -92,8 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		generateStars();
 	}
 	// Photos
-	if (window.location.pathname === "/photos/") {
-		setActive("photos");
+	if (window.location.pathname === "/photography/") {
+		setActive("photography");
 		const instagramPostHeight = 300;
 		const instagramFeedEl = document.querySelector(".instagram-feed-container");
 

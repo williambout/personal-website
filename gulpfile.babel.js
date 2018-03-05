@@ -14,6 +14,8 @@ import includes from "gulp-file-include";
 import file from "gulp-file";
 import concat from "gulp-concat";
 import responsive from "gulp-responsive";
+import uglify from "gulp-uglify";
+import pump from "pump";
 
 const paths = {
 	sass: "./src/assets/scss/styles.scss",
@@ -25,8 +27,8 @@ const paths = {
 	icons: "./src/assets/icons/**",
 	build: "./build/",
 	vendors: [
-		"./node_modules/unsplash-js/dist/unsplash.min.js",
 		"./node_modules/animejs/lib/anime.min.js",
+		"./node_modules/unsplash-js/dist/unsplash.min.js",
 		"./node_modules/instafeed.js/instafeed.js",
 		"./node_modules/pusher-feeds-client/target/pusher-feeds-client.js"
 	]
@@ -48,34 +50,35 @@ gulp.task("browserSync", () => {
 });
 
 gulp.task("sass", () => {
-	return gulp
-		.src(paths.sass)
-		.pipe(sass())
-		.pipe(pxtorem())
-		.pipe(
-			autoprefixer({
-				browsers: ["last 2 versions"],
-				cascade: false,
-				grid: false
-			})
-		)
-		.pipe(gulp.dest(paths.css))
-		.pipe(browserSync.stream());
+	pump([
+		gulp.src(paths.sass),
+		sass(),
+		pxtorem(),
+		autoprefixer({
+			browsers: ["last 2 versions"],
+			cascade: false,
+			grid: false
+		}),
+		gulp.dest(paths.css),
+		browserSync.stream()
+	]);
 });
 
 gulp.task("js", () => {
-	return gulp
-		.src(paths.js)
-		.pipe(concat("app.js"))
-		.pipe(gulp.dest("./build/assets/js"))
-		.pipe(browserSync.stream());
+	pump([
+		gulp.src(paths.js),
+		concat("app.js"),
+		gulp.dest("./build/assets/js"),
+		browserSync.stream()
+	]);
 });
 
 gulp.task("vendors", () => {
-	return gulp
-		.src([...paths.vendors])
-		.pipe(concat("vendors.js"))
-		.pipe(gulp.dest("./build/assets/js"));
+	pump([
+		gulp.src(paths.vendors),
+		concat("vendors.js"),
+		gulp.dest("./build/assets/js")
+	]);
 });
 
 // Watchers
@@ -90,152 +93,150 @@ gulp.task("watch", () => {
 // ------------------
 
 gulp.task("html", () => {
-	return gulp
-		.src("src/**/*.html")
-		.pipe(
-			includes({
-				prefix: "@@",
-				basepath: "./src"
-			})
-		)
-		.pipe(htmlmin())
-		.pipe(gulp.dest(paths.build))
-		.pipe(browserSync.stream());
+	pump([
+		gulp.src("src/**/*.html"),
+		includes({
+			prefix: "@@",
+			basepath: "./src"
+		}),
+		htmlmin(),
+		gulp.dest(paths.build),
+		browserSync.stream()
+	]);
 });
 
 // Optimizing Images
 gulp.task("images", () => {
-	return gulp
-		.src(paths.img)
-		.pipe(
-			cache(
-				imagemin({
-					interlaced: true
-				})
-			)
-		)
-		.pipe(gulp.dest("build/assets/images"));
+	pump([
+		gulp.src(paths.img),
+		cache(
+			imagemin({
+				interlaced: true
+			})
+		),
+		gulp.dest("build/assets/images")
+	]);
 });
 
 gulp.task("responsive-images", () => {
-	return gulp
-		.src("./src/assets/images/responsive/**/*.{jpg,png}")
-		.pipe(
-			responsive({
-				"*": [
-					{
-						// image-small.jpg is 200 pixels wide
-						width: 200,
-						rename: {
-							suffix: "-small",
-							extname: ".jpg"
-						}
-					},
-					{
-						// image-small@2x.jpg is 400 pixels wide
-						width: 200 * 2,
-						rename: {
-							suffix: "-small@2x",
-							extname: ".jpg"
-						}
-					},
-					{
-						// image-large.jpg is 480 pixels wide
-						width: 480,
-						rename: {
-							suffix: "-large",
-							extname: ".jpg"
-						}
-					},
-					{
-						// image-large@2x.jpg is 960 pixels wide
-						width: 480 * 2,
-						rename: {
-							suffix: "-large@2x",
-							extname: ".jpg"
-						}
-					},
-					{
-						// image-extralarge.jpg is 1280 pixels wide
-						width: 1280,
-						rename: {
-							suffix: "-extralarge",
-							extname: ".jpg"
-						}
-					},
-					{
-						// image-extralarge@2x.jpg is 2560 pixels wide
-						width: 1280 * 2,
-						rename: {
-							suffix: "-extralarge@2x",
-							extname: ".jpg"
-						}
-					},
-					{
-						// image-small.webp is 200 pixels wide
-						width: 200,
-						rename: {
-							suffix: "-small",
-							extname: ".webp"
-						}
-					},
-					{
-						// image-small@2x.webp is 400 pixels wide
-						width: 200 * 2,
-						rename: {
-							suffix: "-small@2x",
-							extname: ".webp"
-						}
-					},
-					{
-						// image-large.webp is 480 pixels wide
-						width: 480,
-						rename: {
-							suffix: "-large",
-							extname: ".webp"
-						}
-					},
-					{
-						// image-large@2x.webp is 960 pixels wide
-						width: 480 * 2,
-						rename: {
-							suffix: "-large@2x",
-							extname: ".webp"
-						}
-					},
-					{
-						// image-extralarge.webp is 1280 pixels wide
-						width: 1280,
-						rename: {
-							suffix: "-extralarge",
-							extname: ".webp"
-						}
-					},
-					{
-						// image-extralarge@2x.webp is 2560 pixels wide
-						width: 1280 * 2,
-						rename: {
-							suffix: "-extralarge@2x",
-							extname: ".webp"
-						}
+	pump([
+		gulp.src("./src/assets/images/responsive/**/*.{jpg,png}"),
+		responsive({
+			"*": [
+				{
+					// image-small.jpg is 200 pixels wide
+					width: 200,
+					rename: {
+						suffix: "-small",
+						extname: ".jpg"
 					}
-				]
-			})
-		)
-		.pipe(gulp.dest("build/assets/images"));
+				},
+				{
+					// image-small@2x.jpg is 400 pixels wide
+					width: 200 * 2,
+					rename: {
+						suffix: "-small@2x",
+						extname: ".jpg"
+					}
+				},
+				{
+					// image-large.jpg is 480 pixels wide
+					width: 480,
+					rename: {
+						suffix: "-large",
+						extname: ".jpg"
+					}
+				},
+				{
+					// image-large@2x.jpg is 960 pixels wide
+					width: 480 * 2,
+					rename: {
+						suffix: "-large@2x",
+						extname: ".jpg"
+					}
+				},
+				{
+					// image-extralarge.jpg is 1280 pixels wide
+					width: 1280,
+					rename: {
+						suffix: "-extralarge",
+						extname: ".jpg"
+					}
+				},
+				{
+					// image-extralarge@2x.jpg is 2560 pixels wide
+					width: 1280 * 2,
+					rename: {
+						suffix: "-extralarge@2x",
+						extname: ".jpg"
+					}
+				},
+				{
+					// image-small.webp is 200 pixels wide
+					width: 200,
+					rename: {
+						suffix: "-small",
+						extname: ".webp"
+					}
+				},
+				{
+					// image-small@2x.webp is 400 pixels wide
+					width: 200 * 2,
+					rename: {
+						suffix: "-small@2x",
+						extname: ".webp"
+					}
+				},
+				{
+					// image-large.webp is 480 pixels wide
+					width: 480,
+					rename: {
+						suffix: "-large",
+						extname: ".webp"
+					}
+				},
+				{
+					// image-large@2x.webp is 960 pixels wide
+					width: 480 * 2,
+					rename: {
+						suffix: "-large@2x",
+						extname: ".webp"
+					}
+				},
+				{
+					// image-extralarge.webp is 1280 pixels wide
+					width: 1280,
+					rename: {
+						suffix: "-extralarge",
+						extname: ".webp"
+					}
+				},
+				{
+					// image-extralarge@2x.webp is 2560 pixels wide
+					width: 1280 * 2,
+					rename: {
+						suffix: "-extralarge@2x",
+						extname: ".webp"
+					}
+				}
+			]
+		}),
+		gulp.dest("build/assets/images")
+	]);
 });
 
 // Copying Fonts
 gulp.task("fonts", () => {
-	return gulp.src(paths.fonts).pipe(gulp.dest("build/assets/fonts"));
+	pump([gulp.src(paths.fonts), gulp.dest("build/assets/fonts")]);
 });
 
 gulp.task("icons", () => {
-	return gulp
-		.src(paths.icons)
-		.pipe(svgstore())
-		.pipe(gulp.dest("./src/inc/"))
-		.pipe(browserSync.stream());
+	pump([
+		gulp.src(paths.icons),
+		svgstore(),
+		gulp.dest("./src/inc/"),
+		browserSync.stream()
+	]);
 });
 
 // Cleaning
@@ -291,12 +292,11 @@ gulp.task("build", callback => {
 // ---------------
 
 gulp.task("deploy", () => {
-	return gulp
-		.src("./build/**/*")
-		.pipe(file("CNAME", "williambout.me"))
-		.pipe(
-			ghPages({
-				remoteUrl: "git@github.com:williambout/personal-website.git"
-			})
-		);
+	pump([
+		gulp.src("./build/**/*"),
+		file("CNAME", "williambout.me"),
+		ghPages({
+			remoteUrl: "git@github.com:williambout/personal-website.git"
+		})
+	]);
 });
