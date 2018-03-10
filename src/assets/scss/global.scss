@@ -36,6 +36,18 @@ section {
   }
 }
 
+article {
+  ul {
+    li + li {
+      margin-top: 1em;
+    }
+  }
+
+  p + ul {
+    margin-top: 1em;
+  }
+}
+
 ::selection {
   background: rgba(97, 160, 234, 0.25);
   color: #62a1ea;
