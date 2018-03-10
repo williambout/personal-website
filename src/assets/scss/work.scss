@@ -48,7 +48,8 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      top: 4px;
+      top: 50%;
+      transform: translateY(-50%);
       left: 0;
     }
   }

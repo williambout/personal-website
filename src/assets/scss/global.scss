@@ -59,7 +59,6 @@ h1 {
   @include font-gtamerica-medium;
 
   font-size: 55px;
-  font-size: calc(2.5em + 0.8vw);
   line-height: 1.4;
   color: #262729;
   margin-bottom: 16px;
@@ -69,10 +68,9 @@ h2 {
   @include font-gtamerica-regular;
 
   font-size: 30px;
-  font-size: calc(1.2em + 0.8vw);
   color: #262729;
   margin-bottom: 16px;
-  line-height: 1.4;
+  line-height: 1.5;
 
   &.light {
     color: white;
