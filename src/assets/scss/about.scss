@@ -1,9 +1,44 @@
 .avatar {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  min-height: 600px;
+
+  @include bp(tablet) {
+    min-height: 35vh;
+  }
 }
 
 .avatar-container {
   min-width: 100%;
   height: auto;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content;
+  grid-column-gap: 80px;
+
+  @include bp(tablet) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+  }
+
+  h2 {
+    @include bp(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  .avatar-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    @include bp(tablet) {
+      max-width: 80%;
+    }
+  }
 }

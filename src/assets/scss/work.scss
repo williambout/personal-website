@@ -9,29 +9,20 @@
 
   .wrapper {
     display: flex;
+    padding-top: 70px;
     margin: auto;
   }
 
-  h1 {
-    margin-top: -10px;
-  }
-
   h2 {
-    color: #838a96;
-    margin-bottom: 40px;
+    color: #b0b5bd;
   }
 
-  aside {
-    height: 100%;
-    position: absolute;
-    right: 10%;
-    margin-top: -70px;
-  }
+  article {
+    max-width: 50%;
 
-  article,
-  aside {
-    display: inline-flex;
-    flex-direction: column;
+    @include bp(phone) {
+      max-width: 100%;
+    }
   }
 }
 
