@@ -9,8 +9,7 @@
       top: 50%;
       left: 50%;
       display: block;
-      animation: spin 0.8s linear infinite;
-      transform: translate(-50%, -50%) rotate(0) scale(0.95);
+      transform: translate(-50%, -50%) rotate(0);
       transition: all 0.2s ease;
       opacity: 0;
       transform-origin: center center;
@@ -27,11 +26,12 @@
 
     &.-loading:after {
       opacity: 1;
+      animation: spin 0.8s linear infinite;
     }
 
     @keyframes spin {
       100% {
-        transform: translate(-50%, -50%) rotate(360deg) scale(1);
+        transform: translate(-50%, -50%) rotate(360deg);
       }
     }
 
