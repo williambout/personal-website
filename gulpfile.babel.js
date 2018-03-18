@@ -261,11 +261,8 @@ gulp.task("build", callback => {
 // ---------------
 
 gulp.task("deploy", () => {
-	pump([
-		gulp.src("./build/**/*"),
-		file("CNAME", "williambout.me"),
-		ghPages({
-			remoteUrl: "git@github.com:williambout/personal-website.git"
-		})
-	]);
+	return gulp
+		.src("./build/**/*")
+		.pipe(file("CNAME", "williambout.me"))
+		.pipe(ghPages());
 });
