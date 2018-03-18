@@ -1,5 +1,4 @@
-body,
-html {
+body {
   color: #767676;
   background: white;
 
@@ -8,6 +7,16 @@ html {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
+}
+
+html {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.5, #f5f7f8),
+    color-stop(0.5, #eef3f9)
+  );
 }
 
 section {

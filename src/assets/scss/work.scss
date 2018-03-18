@@ -48,15 +48,16 @@
   .button {
     @include font-gtamerica-medium;
 
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    color: #1f2235;
     letter-spacing: 1.08px;
-    padding: 5px 9px;
-    background: rgba(255, 255, 255, 0.15);
+    padding: 0 9px;
+    background: rgba(255, 255, 255, 0.97);
     border-radius: 6px;
     text-transform: uppercase;
     align-self: flex-end;
     text-decoration: none;
+    line-height: 27px;
   }
 
   .platform {
@@ -230,7 +231,9 @@
     }
 
     & + h4 {
-      margin-top: 80px;
+      @include bp(phone) {
+        margin-top: 80px;
+      }
     }
 
     .link {
