@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('inc/head.html')
+  <body>
+    @@include('inc/navigation.html')
+    <section id="photos" class="first">
+      <div class="wrapper -phone-column">
+        <div class="column">
+          <h2>Photography</h2>
+          <h3>Last posts on Instagram</h3>
+        </div>
+      </div>
+      <div class="instagram-feed-container"></div>
+    </section>
+    <section id="unsplash">
+      <div class="wrapper -phone-column">
+        <a class="more-button" href="http://unsplash.com/@williambout" target="_blank">
+          <div>
+            <h3>More on Unsplash</h3>
+            <p class="description">Some of my photos are available for free in high resolution</p>
+          </div>
+          <div class="right">
+            <ul class="stats">
+              <li>
+                <span id="photos-counter" class="number">-</span>
+                <span class="label">Photos</span>
+              </li>
+              <li>
+                <span id="collections-counter" class="number">-</span>
+                <span class="label">Collections</span>
+              </li>
+            </ul>
+            <svg class="chevron" width=13 height=24>
+              <use xlink:href="#link-arrow"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section id="photofeed">
+      <div class="wrapper">
+      <ul>
+        <li>
+          <figure>
+            <picture class="avatar-container">
+              <!-- webp images -->
+              <source type="image/webp" srcset="../assets/images/DSC07306-small.webp 250w, ../assets/images/DSC07306-medium.webp 500w, ../assets/images/DSC07306-large.webp 1000w, ../assets/images/DSC07306-extralarge.webp 2000w">
+              <!-- jpeg images -->
+              <source srcset="../assets/images/DSC07306-small.jpg 250w, ../assets/images/DSC07306-medium.jpg 500w, ../assets/images/DSC07306-large.jpg 1000w, ../assets/images/DSC07306-extralarge.jpg 2000w">
+              <img class="avatar" srcset="../assets/images/DSC07306-small.jpg 250w, ../assets/images/DSC07306-medium.jpg 500w, ../assets/images/DSC07306-large.jpg 1000w, ../assets/images/DSC07306-extralarge.jpg 2000w" alt="">
+            </picture>
+             <figcaption>Nantes, France</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <picture class="avatar-container">
+              <!-- webp images -->
+              <source type="image/webp" srcset="../assets/images/DSC08158-small.webp 250w, ../assets/images/DSC08158-medium.webp 500w, ../assets/images/DSC08158-large.webp 1000w, ../assets/images/DSC08158-extralarge.webp 2000w">
+              <!-- jpeg images -->
+              <source srcset="../assets/images/DSC08158-small.jpg 250w, ../assets/images/DSC08158-medium.jpg 500w, ../assets/images/DSC08158-large.jpg 1000w, ../assets/images/DSC08158-extralarge.jpg 2000w">
+              <img class="avatar" srcset="../assets/images/DSC08158-small.jpg 250w, ../assets/images/DSC08158-medium.jpg 500w, ../assets/images/DSC08158-large.jpg 1000w, ../assets/images/DSC08158-extralarge.jpg 2000w" alt="Photo of William Bout">
+            </picture>
+            <figcaption>Brest, France</figcaption>
+         </figure>
+        </li>
+        <li>
+          <figure>
+            <picture class="avatar-container">
+              <!-- webp images -->
+              <source type="image/webp" srcset="../assets/images/DSC06378-small.webp 250w, ../assets/images/DSC06378-medium.webp 500w, ../assets/images/DSC06378-large.webp 1000w, ../assets/images/DSC06378-extralarge.webp 2000w">
+              <!-- jpeg images -->
+              <source srcset="../assets/images/DSC06378-small.jpg 250w, ../assets/images/DSC06378-medium.jpg 500w, ../assets/images/DSC06378-large.jpg 1000w, ../assets/images/DSC06378-extralarge.jpg 2000w">
+              <img class="avatar" srcset="../assets/images/DSC06378-small.jpg 250w, ../assets/images/DSC06378-medium.jpg 500w, ../assets/images/DSC06378-large.jpg 1000w, ../assets/images/DSC06378-extralarge.jpg 2000w" alt="Photo of William Bout">
+            </picture>
+            <figcaption>South Lake Tahoe, CA, USA</figcaption>
+         </figure>
+        </li>
+        <li>
+          <figure>
+            <picture class="avatar-container">
+              <!-- webp images -->
+              <source type="image/webp" srcset="../assets/images/DSC04245-small.webp 250w, ../assets/images/DSC04245-medium.webp 500w, ../assets/images/DSC04245-large.webp 1000w, ../assets/images/DSC04245-extralarge.webp 2000w">
+              <!-- jpeg images -->
+              <source srcset="../assets/images/DSC04245-small.jpg 250w, ../assets/images/DSC04245-medium.jpg 500w, ../assets/images/DSC04245-large.jpg 1000w, ../assets/images/DSC04245-extralarge.jpg 2000w">
+              <img class="avatar" srcset="../assets/images/DSC04245-small.jpg 250w, ../assets/images/DSC04245-medium.jpg 500w, ../assets/images/DSC04245-large.jpg 1000w, ../assets/images/DSC04245-extralarge.jpg 2000w" alt="Photo of William Bout">
+            </picture>
+            <figcaption>San Francisco, CA, USA</figcaption>
+         </figure>
+        </li>
+        <li>
+          <figure>
+            <picture class="avatar-container">
+              <!-- webp images -->
+              <source type="image/webp" srcset="../assets/images/DJI_0072-small.webp 250w, ../assets/images/DJI_0072-medium.webp 500w, ../assets/images/DJI_0072-large.webp 1000w, ../assets/images/DJI_0072-extralarge.webp 2000w">
+              <!-- jpeg images -->
+              <source srcset="../assets/images/DJI_0072-small.jpg 250w, ../assets/images/DJI_0072-medium.jpg 500w, ../assets/images/DJI_0072-large.jpg 1000w, ../assets/images/DJI_0072-extralarge.jpg 2000w">
+              <img class="avatar" srcset="../assets/images/DJI_0072-small.jpg 250w, ../assets/images/DJI_0072-medium.jpg 500w, ../assets/images/DJI_0072-large.jpg 1000w, ../assets/images/DJI_0072-extralarge.jpg 2000w" alt="Photo of William Bout">
+            </picture>
+            <figcaption>Pacifica, CA, USA</figcaption>
+         </figure>
+        </li>
+        <li>
+          <figure>
+            <picture class="avatar-container">
+              <!-- webp images -->
+              <source type="image/webp" srcset="../assets/images/DSC07583-small.webp 250w, ../assets/images/DSC07583-medium.webp 500w, ../assets/images/DSC07583-large.webp 1000w, ../assets/images/DSC07583-extralarge.webp 2000w">
+              <!-- jpeg images -->
+              <source srcset="../assets/images/DSC07583-small.jpg 250w, ../assets/images/DSC07583-medium.jpg 500w, ../assets/images/DSC07583-large.jpg 1000w, ../assets/images/DSC07583-extralarge.jpg 2000w">
+              <img class="avatar" srcset="../assets/images/DSC07583-small.jpg 250w, ../assets/images/DSC07583-medium.jpg 500w, ../assets/images/DSC07583-large.jpg 1000w, ../assets/images/DSC07583-extralarge.jpg 2000w" alt="Photo of William Bout">
+            </picture>
+            <figcaption>Clisson, France</figcaption>
+         </figure>
+        </li>
+      </ul>
+      </div>
+    </section>
+    <div class="separator-container">
+      <svg class="separator" width=30 height=14>
+        <use xlink:href="#separator"/>
+      </svg>
+    </div>
+    <section id="posts">
+      <div class="wrapper">
+        <div class="posts-container">
+          <article>
+            <h4>Gear I use</h4>
+            <p>I rely on 3 cameras in order to take most of my photos. Each camera has it's pros and cons but they allow me to capture moments in different conditions.</p>
+            <ul>
+              <li>
+                <p><b>iPhone X</b></p>
+                <p>The iPhone X is by far my most used camera. Image quality is remarkable and the innovative Depth API allows a lot of creativity.</p>
+                <p>I use a couple of apps in order to extend it's capabilities: for shooting, I use <a href="https://halide.cam">Halide</a>. For editing, I use <a href="https://itunes.apple.com/us/app/focos/id1274938524?mt=8">Focos</a> and <a href="http://darkroom.co">Darkroom</a>.</p>
+              </li>
+              <li>
+                <p><b>Sony a6000<b></p>
+                <p>Having a large sensor can be really usefull in low light conditions. It also helps during editing, thanks to a better dynamic range.</p>
+                <p>My most used lenses are the <b>Sigma 30mm F/1.4 DC DN</b> and the <b>Sigma 16mm F/1.4 DC DN</b>.</p>
+              </li>
+              <li>
+                <p><b>DJI Mavic Air<b></p>
+                <p>The latest addition to my kit; this drone is a lot of fun to use. Capturing pictures from the sky feels incredible and the software made by DJI makes it a great experience.</p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    @@include('inc/footer.html')
+  </body>
+
+</html>

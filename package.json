@@ -1,47 +1,61 @@
 {
-  "name": "personal-website",
-  "version": "1.0.0",
-  "description": "My personal webiste",
-  "dependencies": {
-    "reset-css": "^2.2.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-preset-es2015": "^6.22.0",
-    "browser-sync": "^2.18.8",
-    "del": "^2.2.1",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cache": "^0.4.6",
-    "gulp-file": "^0.3.0",
-    "gulp-file-include": "^1.0.0",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "^3.0.1",
-    "gulp-inject": "^4.2.0",
-    "gulp-pxtorem": "^2.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-svgmin": "^1.2.3",
-    "gulp-svgstore": "^6.1.0",
-    "gulp-uglify": "^2.1.0",
-    "gulp-useref": "^3.0.4",
-    "run-sequence": "^1.1.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp watch",
-    "deploy": "gulp build && gulp deploy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/williambout/personal-webite.git"
-  },
-  "author": "William Bout",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/williambout/personal-webite/issues"
-  },
-  "homepage": "https://github.com/williambout/personal-webite#readme"
+	"name": "personal-website",
+	"version": "1.0.0",
+	"description": "My personal webiste",
+	"dependencies": {
+		"animejs": "github:juliangarnier/anime#3.0.0",
+		"image-preloader": "^1.1.1",
+		"instafeed.js": "^1.4.1",
+		"pusher-feeds-client": "^0.10.0",
+		"reset-css": "^2.2.0",
+		"unsplash-js": "^4.8.0"
+	},
+	"devDependencies": {
+		"babel-core": "^6.23.1",
+		"babel-preset-es2015": "^6.22.0",
+		"browser-sync": "^2.23.6",
+		"del": "^2.2.1",
+		"eslint": "^4.18.2",
+		"eslint-config-airbnb-base": "^12.1.0",
+		"eslint-config-google": "^0.9.1",
+		"eslint-plugin-import": "^2.9.0",
+		"gulp": "^3.9.0",
+		"gulp-autoprefixer": "^3.1.0",
+		"gulp-cache": "^0.4.6",
+		"gulp-concat": "^2.6.1",
+		"gulp-file": "^0.3.0",
+		"gulp-file-include": "^1.0.0",
+		"gulp-gh-pages": "^0.5.4",
+		"gulp-htmlmin": "^3.0.0",
+		"gulp-imagemin": "^3.0.1",
+		"gulp-inject": "^4.3.1",
+		"gulp-pxtorem": "^2.0.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-responsive": "^2.9.0",
+		"gulp-sass": "^3.2.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-svgmin": "^1.2.3",
+		"gulp-svgstore": "^6.1.1",
+		"gulp-uglify": "^2.1.2",
+		"gulp-useref": "^3.1.5",
+		"pump": "^3.0.0",
+		"run-sequence": "^1.1.2",
+		"stylelint": "^9.1.3",
+		"stylelint-config-standard": "^18.2.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "gulp",
+		"deploy": "gulp build && gulp deploy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/williambout/personal-webite.git"
+	},
+	"author": "William Bout",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/williambout/personal-webite/issues"
+	},
+	"homepage": "https://github.com/williambout/personal-webite#readme"
 }
