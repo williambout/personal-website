@@ -77,6 +77,7 @@ gulp.task("vendors", () => {
 	pump([
 		gulp.src(paths.vendors),
 		concat("vendors.js"),
+		uglify(),
 		gulp.dest("./build/assets/js")
 	]);
 });

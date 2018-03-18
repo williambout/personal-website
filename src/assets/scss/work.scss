@@ -19,6 +19,7 @@
 
   article {
     max-width: 50%;
+    padding: 40px 0;
 
     @include bp(phone) {
       max-width: 100%;

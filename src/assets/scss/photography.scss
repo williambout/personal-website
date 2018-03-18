@@ -1,7 +1,9 @@
 #photos {
   .instagram-feed-container {
-    min-height: calc(300px + 24px);
+    min-height: calc(300px + 40px);
+    padding-top: 40px;
     position: relative;
+    overflow: hidden;
 
     &:after {
       content: "";
@@ -36,7 +38,6 @@
     }
 
     .instagram-feed {
-      margin-top: 40px;
       display: flex;
       height: calc(300px + 40px);
       scroll-snap-type: mandatory;
