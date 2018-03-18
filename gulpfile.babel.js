@@ -77,7 +77,6 @@ gulp.task("vendors", () => {
 	pump([
 		gulp.src(paths.vendors),
 		concat("vendors.js"),
-		uglify(),
 		gulp.dest("./build/assets/js")
 	]);
 });
@@ -264,5 +263,9 @@ gulp.task("deploy", () => {
 	return gulp
 		.src("./build/**/*")
 		.pipe(file("CNAME", "williambout.me"))
-		.pipe(ghPages());
+		.pipe(
+			ghPages({
+				remoteUrl: "git@github.com:williambout/personal-website.git"
+			})
+		);
 });
