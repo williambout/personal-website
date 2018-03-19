@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				circle.setAttributeNS(
 					null,
 					"style",
-					"fill: #FFFFFF; fill-opacity: 0.2; stroke=\"none\""
+					"will-change: opacity; fill: #FFFFFF; fill-opacity: 0.2; stroke=\"none\""
 				);
 				starsContainer.appendChild(circle);
 			}

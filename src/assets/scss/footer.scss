@@ -44,6 +44,7 @@ footer {
     grid-row: 1;
 
     #vinyl {
+      will-change: transform;
       animation: rotating 2s linear infinite;
     }
 
@@ -76,13 +77,14 @@ footer {
 
     .song {
       margin-top: -4px;
+      width: 100%;
     }
 
     .artist,
     .title {
       overflow: hidden;
       min-height: 25px;
-      min-width: 400px;
+      min-width: 100%;
 
       span {
         position: absolute;
