@@ -4,6 +4,7 @@
 	"description": "My personal webiste",
 	"dependencies": {
 		"animejs": "github:juliangarnier/anime#3.0.0",
+		"gulp-netlify": "^1.1.0",
 		"image-preloader": "^1.1.1",
 		"instafeed.js": "^1.4.1",
 		"pusher-feeds-client": "^0.10.0",
@@ -25,7 +26,6 @@
 		"gulp-concat": "^2.6.1",
 		"gulp-file": "^0.3.0",
 		"gulp-file-include": "^1.0.0",
-		"gulp-gh-pages": "^0.5.4",
 		"gulp-htmlmin": "^3.0.0",
 		"gulp-imagemin": "^3.0.1",
 		"gulp-inject": "^4.3.2",

@@ -7,7 +7,6 @@ import cache from "gulp-cache";
 import del from "del";
 import runSequence from "run-sequence";
 import pxtorem from "gulp-pxtorem";
-import ghPages from "gulp-gh-pages";
 import htmlmin from "gulp-htmlmin";
 import svgstore from "gulp-svgstore";
 import includes from "gulp-file-include";
@@ -16,6 +15,7 @@ import concat from "gulp-concat";
 import responsive from "gulp-responsive";
 import uglify from "gulp-uglify";
 import pump from "pump";
+import netlify from "gulp-netlify";
 
 const paths = {
 	sass: "./src/assets/scss/styles.scss",
@@ -250,7 +250,7 @@ gulp.task("build", callback => {
 			"js",
 			"responsive-images",
 			"images",
-			"icons"
+			"icons",
 		],
 		callback
 	);
@@ -262,8 +262,10 @@ gulp.task("build", callback => {
 gulp.task("deploy", () => {
 	return gulp
 		.src("./build/**/*")
-		.pipe(file("CNAME", "williambout.me"))
 		.pipe(
-			ghPages()
+			netlify({
+	      site_id: "bab716a5-dbcc-4c29-8631-f7b5f2c6871d",
+	      access_token: "9ea0f7c9b78cef00ef6ed252957f5cf5b60198726c3d90498988c9462686e0c7"
+	    })
 		);
 });
