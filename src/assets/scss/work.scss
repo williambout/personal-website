@@ -108,6 +108,8 @@
     }
 
     .screenshot {
+      display: inline-block;
+
       @include bp(phone) {
         max-height: 50vh;
         width: auto;
@@ -161,10 +163,10 @@
 
 #nucleon {
   background-image: linear-gradient(
-    -180deg,
-    rgba(16, 18, 37, 0.5) 0%,
-    rgba(123, 128, 160, 0.5) 100%
-  ),
+      -180deg,
+      rgba(16, 18, 37, 0.5) 0%,
+      rgba(123, 128, 160, 0.5) 100%
+    ),
     radial-gradient(circle at bottom center, #7b80a0 0%, #101225 100%);
   position: relative;
   background-size: cover;
@@ -216,7 +218,9 @@
       transition: opacity 0.3s ease;
       will-change: opacity;
 
-      @supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+      @supports (
+        (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
+      ) {
         background-color: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(2em) saturate(150%);
       }
