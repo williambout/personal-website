@@ -36,7 +36,7 @@ const paths = {
 gulp.task("browserSync", () => {
   browserSync({
     server: {
-      baseDir: "build"
+      baseDir: "./build/"
     }
   });
 });
