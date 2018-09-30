@@ -15,7 +15,6 @@ import concat from "gulp-concat";
 import responsive from "gulp-responsive";
 import uglify from "gulp-uglify";
 import pump from "pump";
-import netlify from "gulp-netlify";
 
 const paths = {
   sass: "./src/assets/scss/styles.scss",
@@ -34,13 +33,6 @@ const paths = {
   ]
 };
 
-const config = {
-  deploy: {
-    cname: "williambout.me"
-  }
-};
-
-// Start browserSync server
 gulp.task("browserSync", () => {
   browserSync({
     server: {
