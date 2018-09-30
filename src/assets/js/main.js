@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     generateStars();
   }
   // Photos
-  if (window.location.pathname === "/photography") {
+  if (window.location.pathname.includes("/photography")) {
     setActive("photography");
     const instagramPostHeight = 300;
     const instagramFeedEl = document.querySelector(".instagram-feed-container");
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
   // About
-  if (window.location.pathname === "/about") {
+  if (window.location.pathname.includes("/about")) {
     setActive("about");
   }
   // Footer
