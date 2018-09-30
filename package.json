@@ -7,6 +7,7 @@
 		"gulp-netlify": "^1.1.0",
 		"image-preloader": "^1.1.1",
 		"instafeed.js": "^1.4.1",
+		"livephotoskit": "^1.5.4",
 		"pusher-feeds-client": "^0.10.0",
 		"reset-css": "^2.2.0",
 		"unsplash-js": "^4.8.0"
