@@ -29,7 +29,8 @@ const paths = {
     "./node_modules/animejs/lib/anime.min.js",
     "./node_modules/unsplash-js/dist/unsplash.min.js",
     "./node_modules/instafeed.js/instafeed.js",
-    "./node_modules/pusher-feeds-client/target/pusher-feeds-client.js"
+    "./node_modules/pusher-feeds-client/target/pusher-feeds-client.js",
+    "./node_modules/livephotoskit/livephotoskit.js"
   ]
 };
 

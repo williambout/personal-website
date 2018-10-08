@@ -1,0 +1,40 @@
+.live-photo {
+  position: relative;
+
+  .live-photo-image {
+    position: relative;
+    z-index: 1;
+  }
+
+  .live-photo-overlay {
+    z-index: 10;
+    min-height: 165px;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+    background-image: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.009) 8.1%,
+      hsla(0, 0%, 0%, 0.034) 15.5%,
+      hsla(0, 0%, 0%, 0.073) 22.5%,
+      hsla(0, 0%, 0%, 0.123) 29%,
+      hsla(0, 0%, 0%, 0.181) 35.3%,
+      hsla(0, 0%, 0%, 0.246) 41.2%,
+      hsla(0, 0%, 0%, 0.315) 47.1%,
+      hsla(0, 0%, 0%, 0.385) 52.9%,
+      hsla(0, 0%, 0%, 0.454) 58.8%,
+      hsla(0, 0%, 0%, 0.519) 64.7%,
+      hsla(0, 0%, 0%, 0.577) 71%,
+      hsla(0, 0%, 0%, 0.627) 77.5%,
+      hsla(0, 0%, 0%, 0.666) 84.5%,
+      hsla(0, 0%, 0%, 0.691) 91.9%,
+      hsla(0, 0%, 0%, 0.7) 100%
+    );
+  }
+
+  .live-photo-download {
+    pointer-events: all;
+  }
+}

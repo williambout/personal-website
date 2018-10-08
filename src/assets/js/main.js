@@ -184,6 +184,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.location.pathname.includes("/about")) {
     setActive("about");
   }
+  // Atmos
+  if (window.location.pathname.includes("/atmos")) {
+    setActive("photography");
+  }
+
   // Footer
 
   const feeds = new Feeds({

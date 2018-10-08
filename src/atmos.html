@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('inc/head.html')
+  <body class="dark">
+    @@include('inc/navigation.html')
+    <section id="photos" class="first">
+      <div class="wrapper">
+        <div class="column">
+          <h2>Atmos</h2>
+          <h3>A collection of live wallpapers shot from above</h3>
+        </div>
+      </div>
+    </section>
+    <section id="photofeed">
+      <div class="wrapper">
+      <ul>
+        <li class="live-photo">
+          <div
+            class="live-photo-image"
+            data-live-photo
+            data-photo-src="../assets/images/atmos/kitesurf.jpg"
+            data-video-src="../assets/images/atmos/kitesurf.mov"
+            style="width: 335px; height: 594px">
+          </div>
+          <div class="live-photo-overlay">
+            <p>Kitesur</p>
+            <p>Landeda, France</p>
+            <a class="live-photo-download" href="../assets/images/atmos/kitesurf.pvt" download>Download</a>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </section>
+    @@include('inc/footer.html')
+  </body>
+
+</html>
