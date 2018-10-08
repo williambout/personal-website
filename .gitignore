@@ -2,3 +2,5 @@ node_modules
 build
 .publish
 *.DS_Store
+*.lock
+.DS_Store
