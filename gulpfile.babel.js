@@ -74,6 +74,13 @@ gulp.task("vendors", () => {
   ]);
 });
 
+gulp.task("headers", () => {
+  pump([
+    gulp.src("_headers"),
+    gulp.dest("./build/")
+  ]);
+});
+
 // Watchers
 gulp.task("watch", () => {
   gulp.watch("src/**/*.scss", ["sass"]);
@@ -243,7 +250,8 @@ gulp.task("build", callback => {
       "js",
       "responsive-images",
       "images",
-      "icons"
+      "icons",
+	  "headers"
     ],
     callback
   );
