@@ -1,0 +1,11 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/williambout/personal-website.git",
+  "author": "William Bout <hello@williambout.me>",
+  "license": "MIT",
+  "dependencies": {
+    "reset-css": "^4.0.1"
+  }
+}

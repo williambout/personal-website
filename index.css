@@ -1,0 +1,34 @@
+/* Import Reset file */
+@import "./node_modules/reset-css/reset.css";
+
+:root {
+  --body-bg: #f2f2f2;
+  --body-color: #454443;
+  --link-color: #222;
+  --link-color-hover: #000;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #272626;
+    --body-color: #e0e0e0;
+    --link-color: #dee2e6;
+    --link-color-hover: #fff;
+  }
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: GTAmerica-Medium;
+  font-size: 56px;
+}
