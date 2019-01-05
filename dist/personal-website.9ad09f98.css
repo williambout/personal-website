@@ -52,6 +52,36 @@ table {
 }
 /* Import Reset file */
 
+@font-face {
+  font-family: "GTAmerica-Regular";
+  src: url("GTAmerica-Regular.fe79eee1.eot");
+  src: url("GTAmerica-Regular.2491d5a1.woff2") format("woff2"),
+    url("GTAmerica-Regular.8374cdaa.woff") format("woff"),
+    url("GTAmerica-Regular.6e2558fc.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GTAmerica-Light";
+  src: url("GTAmerica-Light.e2ac10d0.eot");
+  src: url("GTAmerica-Light.2f771341.woff2") format("woff2"),
+    url("GTAmerica-Light.8a52b242.woff") format("woff"),
+    url("GTAmerica-Light.e6293150.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GTAmerica-Medium";
+  src: url("GTAmerica-Medium.0992421b.eot");
+  src: url("GTAmerica-Medium.228f8f09.woff2") format("woff2"),
+    url("GTAmerica-Medium.c1c38857.woff") format("woff"),
+    url("GTAmerica-Medium.3331930f.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --body-bg: #f2f2f2;
   --body-color: #454443;
@@ -82,4 +112,27 @@ header {
 h1 {
   font-family: GTAmerica-Medium;
   font-size: 56px;
+}
+
+h2 {
+  font-family: GTAmerica-Medium;
+  font-size: 56px;
+  opacity: 0.25;
+}
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+}
+
+#projects ul {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.project {
+  height: 200px;
+  background: linear-gradient(to bottom right, deeppink, orangered);
+  border-radius: 20px;
 }
