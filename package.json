@@ -6,6 +6,9 @@
   "author": "William Bout <hello@williambout.me>",
   "license": "MIT",
   "dependencies": {
-    "reset-css": "^4.0.1"
+    "postcss-modules": "^1.4.1",
+    "postcss-nesting": "^7.0.0",
+    "reset-css": "^4.0.1",
+    "scroll-parallax": "^2.1.0"
   }
 }
