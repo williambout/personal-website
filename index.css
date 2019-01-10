@@ -59,17 +59,27 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  & .mask {
+    display: block;
+    overflow: hidden;
+  }
+
+  & .heading {
+    display: block;
+    opacity: 0;
+    will-change: transform;
+  }
 }
 
 h1 {
   font-family: GTAmerica-Medium;
   font-size: 56px;
+  line-height: 1.2;
 }
 
-h2 {
-  font-family: GTAmerica-Medium;
-  font-size: 56px;
-  opacity: 0.25;
+.subtitle {
+  /* color: color(var(--body-color) a(25%)); */
 }
 
 a {
