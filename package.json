@@ -2,6 +2,10 @@
   "name": "personal-website",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
   "repository": "https://github.com/williambout/personal-website.git",
   "author": "William Bout <hello@williambout.me>",
   "license": "MIT",
