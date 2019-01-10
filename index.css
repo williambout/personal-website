@@ -43,6 +43,7 @@
     --body-bg: #272626;
     --footer-bg: #2d2c2c;
     --body-color: #e0e0e0;
+    --body-color-secondary: #5d5c5c;
     --link-color: rgba(255, 255, 255, 0.8);
     --link-color-hover: #fff;
   }
@@ -55,7 +56,7 @@ body {
 }
 
 header {
-  min-height: 100vh;
+  min-height: calc(100vh - 75px);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -78,8 +79,20 @@ h1 {
   line-height: 1.2;
 }
 
+h2 {
+  font-family: GTAmerica-Medium;
+  font-size: 56px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: GTAmerica-Medium;
+  font-size: 28px;
+  color: #ffffff;
+}
+
 .subtitle {
-  /* color: color(var(--body-color) a(25%)); */
+  color: var(--body-color-secondary);
 }
 
 a {
@@ -94,8 +107,35 @@ a {
   margin: auto;
 }
 
-#projects ul {
-  display: grid;
+#projects {
+  & h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 80px;
+
+    &:before {
+      content: "프로젝트 项目";
+      color: var(--body-color-secondary);
+      position: absolute;
+      left: 0;
+      text-align: right;
+      display: block;
+      transform: translateX(-100%);
+    }
+
+    &:after {
+      content: "Proyectos プロジェクト Projets פרוייקטים";
+      color: var(--body-color-secondary);
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      transform: translateX(100%);
+    }
+  }
+  & ul {
+    display: grid;
+  }
 }
 
 .project {
@@ -106,7 +146,13 @@ a {
 
   & .container {
     position: relative;
+    margin-top: 50px;
     z-index: 100;
+  }
+
+  & h3 {
+    text-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+    margin-bottom: 18px;
   }
 }
 
