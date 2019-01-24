@@ -182,7 +182,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./node_modules/reset-css/reset.css":"node_modules/reset-css/reset.css","./assets/fonts/GTAmerica-Regular.eot":[["GTAmerica-Regular.fe79eee1.eot","assets/fonts/GTAmerica-Regular.eot"],"assets/fonts/GTAmerica-Regular.eot"],"./assets/fonts/GTAmerica-Regular.woff2":[["GTAmerica-Regular.2491d5a1.woff2","assets/fonts/GTAmerica-Regular.woff2"],"assets/fonts/GTAmerica-Regular.woff2"],"./assets/fonts/GTAmerica-Regular.woff":[["GTAmerica-Regular.8374cdaa.woff","assets/fonts/GTAmerica-Regular.woff"],"assets/fonts/GTAmerica-Regular.woff"],"./assets/fonts/GTAmerica-Regular.ttf":[["GTAmerica-Regular.6e2558fc.ttf","assets/fonts/GTAmerica-Regular.ttf"],"assets/fonts/GTAmerica-Regular.ttf"],"./assets/fonts/GTAmerica-Light.eot":[["GTAmerica-Light.e2ac10d0.eot","assets/fonts/GTAmerica-Light.eot"],"assets/fonts/GTAmerica-Light.eot"],"./assets/fonts/GTAmerica-Light.woff2":[["GTAmerica-Light.2f771341.woff2","assets/fonts/GTAmerica-Light.woff2"],"assets/fonts/GTAmerica-Light.woff2"],"./assets/fonts/GTAmerica-Light.woff":[["GTAmerica-Light.8a52b242.woff","assets/fonts/GTAmerica-Light.woff"],"assets/fonts/GTAmerica-Light.woff"],"./assets/fonts/GTAmerica-Light.ttf":[["GTAmerica-Light.e6293150.ttf","assets/fonts/GTAmerica-Light.ttf"],"assets/fonts/GTAmerica-Light.ttf"],"./assets/fonts/GTAmerica-Medium.eot":[["GTAmerica-Medium.0992421b.eot","assets/fonts/GTAmerica-Medium.eot"],"assets/fonts/GTAmerica-Medium.eot"],"./assets/fonts/GTAmerica-Medium.woff2":[["GTAmerica-Medium.228f8f09.woff2","assets/fonts/GTAmerica-Medium.woff2"],"assets/fonts/GTAmerica-Medium.woff2"],"./assets/fonts/GTAmerica-Medium.woff":[["GTAmerica-Medium.c1c38857.woff","assets/fonts/GTAmerica-Medium.woff"],"assets/fonts/GTAmerica-Medium.woff"],"./assets/fonts/GTAmerica-Medium.ttf":[["GTAmerica-Medium.3331930f.ttf","assets/fonts/GTAmerica-Medium.ttf"],"assets/fonts/GTAmerica-Medium.ttf"],"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./node_modules/reset-css/reset.css":"node_modules/reset-css/reset.css","_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -209,7 +209,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57435" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52189" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

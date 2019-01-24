@@ -10,13 +10,13 @@
   "author": "William Bout <hello@williambout.me>",
   "license": "MIT",
   "dependencies": {
-    "animejs": "^3.0.0",
+    "animejs": "^3.0.1",
     "lib": "^3.0.2",
     "postcss-color-function": "^4.0.1",
     "postcss-custom-properties": "^8.0.9",
     "postcss-modules": "^1.4.1",
     "postcss-nesting": "^7.0.0",
     "reset-css": "^4.0.1",
-    "scroll-parallax": "^2.1.0"
+    "scroll-parallax": "^3.0.3"
   }
 }

@@ -52,46 +52,20 @@ table {
 }
 /* Import Reset file */
 
-@font-face {
-  font-family: "GTAmerica-Regular";
-  src: url("GTAmerica-Regular.fe79eee1.eot");
-  src: url("GTAmerica-Regular.2491d5a1.woff2") format("woff2"),
-    url("GTAmerica-Regular.8374cdaa.woff") format("woff"),
-    url("GTAmerica-Regular.6e2558fc.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GTAmerica-Light";
-  src: url("GTAmerica-Light.e2ac10d0.eot");
-  src: url("GTAmerica-Light.2f771341.woff2") format("woff2"),
-    url("GTAmerica-Light.8a52b242.woff") format("woff"),
-    url("GTAmerica-Light.e6293150.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GTAmerica-Medium";
-  src: url("GTAmerica-Medium.0992421b.eot");
-  src: url("GTAmerica-Medium.228f8f09.woff2") format("woff2"),
-    url("GTAmerica-Medium.c1c38857.woff") format("woff"),
-    url("GTAmerica-Medium.3331930f.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
-  --body-bg: #f2f2f2;
+  --body-bg: #ebebeb;
+  --header-bg: #f3f3f3;
   --footer-bg: #eaeaea;
-  --body-color: #454443;
+  --heading-color: #2B2A2A;
+  --body-color: #2B2A2A;
+  --body-color-secondary: #8F8E8E;
   --link-color: #222;
   --link-color-hover: #000;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --body-bg: #272626;
+    --header-bg: #2d2c2c;
     --footer-bg: #2d2c2c;
     --body-color: #e0e0e0;
     --body-color-secondary: #5d5c5c;
@@ -103,37 +77,68 @@ table {
 body {
   background-color: var(--body-bg);
   color: var(--body-color);
-  font-family: GTAmerica-Regular;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 header {
-  min-height: calc(100vh - 75px);
+  background-color: var(--header-bg);
+  height: 250px;
   display: flex;
   justify-content: center;
-  flex-direction: column
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 75px
 }
 
-header .mask {
-    display: block;
-    overflow: hidden;
+header:after {
+    content: "";
+    position: absolute;
+    background-color: var(--body-bg);
+    width: 150%;
+    height: 200px;
+    bottom: -200px;
+    left: 0;
+    transform: translateX(-25%) rotate(3deg);
+    transform-origin: bottom  right;
   }
 
-header .heading {
+header .container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+header .avatar {
     display: block;
-    opacity: 0;
-    will-change: transform;
+    position: absolute;
+    right: 0;
+    bottom: -140px;
+    z-index: 20;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: green;
+    box-shadow: 0 20px 70px 0 rgba(0,0,0,0.29);
   }
 
 h1 {
-  font-family: GTAmerica-Medium;
-  font-size: 56px;
-  line-height: 1.2;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--heading-color);
 }
 
 h2 {
-  font-family: GTAmerica-Medium;
-  font-size: 56px;
-  line-height: 1.2;
+  transform: translateX(calc(-100% + 48px)) rotate(-90deg);
+  font-weight: 900;
+  font-size: 120px;
+  transform-origin: bottom right;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+  color: var(--heading-color);
 }
 
 h3 {
@@ -142,12 +147,16 @@ h3 {
   color: #ffffff;
 }
 
+.heading {
+  display: block;
+}
+
 .subtitle {
   color: var(--body-color-secondary);
+  font-weight: 300;
 }
 
 a {
-  font-family: GTAmerica-Regular;
   color: var(--link-color);
   text-decoration: none;
 }
@@ -158,53 +167,94 @@ a {
   margin: auto;
 }
 
-#projects h2 {
+#work ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
     position: relative;
+    z-index: 10;
+  }
+
+#work .project {
+    margin-bottom: 75px;
+    min-width: calc(50% - 75px / 2);
     display: inline-block;
-    margin-bottom: 80px
+    height: 600px;
+    background: red;
+    position: relative
   }
 
-#projects h2:before {
-      content: "프로젝트 项目";
-      color: var(--body-color-secondary);
-      position: absolute;
-      left: 0;
-      text-align: right;
-      display: block;
-      transform: translateX(-100%);
+#work .project:nth-child(odd):not(:first-child) {
+      margin-top: -170px;
     }
 
-#projects h2:after {
-      content: "Proyectos プロジェクト Projets פרוייקטים";
-      color: var(--body-color-secondary);
+#work .project:nth-child(2) {
+      margin-top: 170px;
+    }
+
+#work .project a {
+      display: block;
+      padding: 40px 50px;
+      width: 100%;
+      height: 100%;
+    }
+
+#work .project h3, #work .project h4 {
+      position: relative;
+      z-index: 10;
+    }
+
+#work .project .background {
       position: absolute;
-      right: 0;
       top: 0;
-      display: block;
-      transform: translateX(100%);
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
     }
 
-#projects ul {
-    display: grid;
-  }
-
-.project {
-  position: relative;
-  max-width: 100vw;
-  height: 550px;
-  overflow: hidden
+#photography {
+  overflow-x: hidden
 }
 
-.project .container {
-    position: relative;
-    margin-top: 50px;
-    z-index: 100;
+#photography ul {
+    margin-top: -50px;
+    display: flex;
+    scroll-snap-type: mandatory;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 50px 5% 75px;
+    padding: 50px calc(5% + env(safe-area-inset-right)) 75px
+    calc(5% + env(safe-area-inset-left));
+    scroll-padding: 5%;
+    scroll-padding: calc(5% + env(safe-area-inset-right))
   }
 
-.project h3 {
-    text-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
-    margin-bottom: 18px;
+@media (min-width: 1111px) {
+
+#photography ul {
+      padding: 0 calc((100% - 1000px) / 2);
+      scroll-padding: calc((100% - 1000px) / 2)
   }
+    }
+
+#photography .photo {
+    display: block;
+    position: relative;
+    z-index: 10;
+    min-height: 500px;
+    min-width: 387px;
+    background: red;
+    box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
+    scroll-snap-align: start
+  }
+
+#photography .photo + .photo {
+      margin-left: 40px;
+    }
 
 footer {
   overflow-x: hidden;
