@@ -187,20 +187,54 @@ a {
 
 #work .project {
     margin-bottom: 75px;
-    min-width: calc(50% - 75px / 2);
+    width: calc(50% - (75px / 2));
     display: inline-block;
-    height: 600px;
+    height: 45vw;
     background: red;
     position: relative;
-    box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25)
+    transition: transform .2s ease
   }
+
+#work .project:hover {
+      transform: scale(1.03)
+    }
+
+#work .project:hover .background {
+        transform: scale(1.03);
+      }
+
+#work .project:hover .shadow {
+        opacity: 1;
+      }
 
 #work .project:nth-child(odd):not(:first-child) {
       margin-top: -170px;
     }
 
 #work .project:nth-child(2) {
-      margin-top: 170px;
+      margin-top: 170px
+    }
+
+@media (max-width: 600px) {
+
+#work .project:nth-child(2) {
+        margin-top: 0
+    }
+      }
+
+@media (max-width: 1000px) {
+
+#work .project {
+      width: 47.5%;
+      margin-bottom: 5%
+  }
+    }
+
+@media (max-width: 500px) {
+
+#work .project {
+      width: 100%
+  }
     }
 
 #work .project:after {
@@ -218,11 +252,28 @@ a {
       );
     }
 
-#work .project a {
-      display: block;
-      padding: 40px 50px;
+#work .project .shadow {
+      opacity: 0.65;
+      transition: opacity .3s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
+
+#work .project a {
+      overflow: hidden;
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+#work .project .card-container {
+      padding: 40px 50px;
     }
 
 #work .project h3,
@@ -232,6 +283,7 @@ a {
     }
 
 #work .project .background {
+      transition: transform .5s ease;
       position: absolute;
       top: 0;
       left: 0;
