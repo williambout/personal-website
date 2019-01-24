@@ -56,9 +56,9 @@ table {
   --body-bg: #ebebeb;
   --header-bg: #f3f3f3;
   --footer-bg: #eaeaea;
-  --heading-color: #2B2A2A;
-  --body-color: #2B2A2A;
-  --body-color-secondary: #8F8E8E;
+  --heading-color: #2b2a2a;
+  --body-color: #2b2a2a;
+  --body-color-secondary: #8f8e8e;
   --link-color: #222;
   --link-color-hover: #000;
 }
@@ -100,7 +100,7 @@ header:after {
     bottom: -200px;
     left: 0;
     transform: translateX(-25%) rotate(3deg);
-    transform-origin: bottom  right;
+    transform-origin: bottom right;
   }
 
 header .container {
@@ -120,7 +120,7 @@ header .avatar {
     height: 300px;
     border-radius: 50%;
     background: green;
-    box-shadow: 0 20px 70px 0 rgba(0,0,0,0.29);
+    box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25);
   }
 
 h1 {
@@ -142,9 +142,17 @@ h2 {
 }
 
 h3 {
-  font-family: GTAmerica-Medium;
-  font-size: 28px;
-  color: #ffffff;
+  font-weight: 600;
+  font-size: 24px;
+  color: #272626;
+  line-height: 1.4;
+}
+
+h4 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .heading {
@@ -183,7 +191,8 @@ a {
     display: inline-block;
     height: 600px;
     background: red;
-    position: relative
+    position: relative;
+    box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25)
   }
 
 #work .project:nth-child(odd):not(:first-child) {
@@ -194,6 +203,21 @@ a {
       margin-top: 170px;
     }
 
+#work .project:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: linear-gradient(
+        -180deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 97%
+      );
+    }
+
 #work .project a {
       display: block;
       padding: 40px 50px;
@@ -201,7 +225,8 @@ a {
       height: 100%;
     }
 
-#work .project h3, #work .project h4 {
+#work .project h3,
+    #work .project h4 {
       position: relative;
       z-index: 10;
     }
@@ -214,6 +239,7 @@ a {
       height: 100%;
       object-fit: cover;
       z-index: 0;
+      pointer-events: none;
     }
 
 #photography {
@@ -228,7 +254,7 @@ a {
     -webkit-overflow-scrolling: touch;
     padding: 50px 5% 75px;
     padding: 50px calc(5% + env(safe-area-inset-right)) 75px
-    calc(5% + env(safe-area-inset-left));
+      calc(5% + env(safe-area-inset-left));
     scroll-padding: 5%;
     scroll-padding: calc(5% + env(safe-area-inset-right))
   }
@@ -248,7 +274,7 @@ a {
     min-height: 500px;
     min-width: 387px;
     background: red;
-    box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25);
     scroll-snap-align: start
   }
 
