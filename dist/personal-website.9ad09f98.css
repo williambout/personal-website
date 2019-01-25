@@ -55,7 +55,7 @@ table {
 :root {
   --body-bg: #ebebeb;
   --header-bg: #f3f3f3;
-  --footer-bg: #eaeaea;
+  --footer-bg: #f3f3f3;
   --heading-color: #2b2a2a;
   --body-color: #2b2a2a;
   --body-color-secondary: #8f8e8e;
@@ -96,7 +96,7 @@ header .tile {
     height: 100%;
     width: 100%;
     bottom: 0;
-    overflow-x: hidden
+    overflow: hidden
   }
 
 header .tile:after {
@@ -199,7 +199,6 @@ a {
     width: calc(50% - (75px / 2));
     display: inline-block;
     height: 45vw;
-    background: red;
     position: relative;
     transition: transform 0.2s ease
   }
@@ -305,6 +304,7 @@ a {
 
 #photography .photo-container {
     overflow-x: hidden;
+    padding-bottom: 400px;
   }
 
 #photography ul {
@@ -332,15 +332,30 @@ a {
     display: block;
     position: relative;
     z-index: 10;
-    min-height: 500px;
+    height: 500px;
     min-width: 387px;
-    background: red;
     box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25);
     scroll-snap-align: start
   }
 
 #photography .photo + .photo {
       margin-left: 40px;
+    }
+
+#photography .photo img {
+      width: auto;
+      max-height: 100%;
+    }
+
+#photography .photo .title {
+      font-weight: 600;
+      font-size: 18px;
+      color: #FFFFFF;
+    }
+
+#photography .photo .location {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.5);
     }
 
 footer {
@@ -377,7 +392,7 @@ footer .container:before {
       bottom: 0;
       display: inline-block;
       width: 100vw;
-      font-family: GTAmerica-Medium;
+      font-weight: 500;
       content: "37°45'17.99\" N -122°25'23.39\" W";
       font-size: 80px;
       color: rgba(255, 255, 255, 0.08);
@@ -386,7 +401,9 @@ footer .container:before {
         -90deg,
         rgba(0, 0, 0, 0.05) 0%,
         rgba(0, 0, 0, 0.02) 100%
-      )
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
     }
 
 @media (prefers-color-scheme: dark) {
