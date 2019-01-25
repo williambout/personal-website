@@ -91,17 +91,25 @@ header {
   padding-bottom: 75px
 }
 
-header:after {
-    content: "";
+header .tile {
     position: absolute;
-    background-color: var(--body-bg);
-    width: 150%;
-    height: 200px;
-    bottom: -200px;
-    left: 0;
-    transform: translateX(-25%) rotate(3deg);
-    transform-origin: bottom right;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    overflow-x: hidden
   }
+
+header .tile:after {
+      content: "";
+      position: absolute;
+      background-color: var(--body-bg);
+      width: 150%;
+      height: 200px;
+      bottom: -200px;
+      left: 0;
+      transform: translateX(-25%) rotate(3deg);
+      transform-origin: bottom right;
+    }
 
 header .container {
     height: 100%;
@@ -121,7 +129,6 @@ header .avatar {
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
-    background: green;
     box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25);
   }
 
@@ -194,7 +201,7 @@ a {
     height: 45vw;
     background: red;
     position: relative;
-    transition: transform .2s ease
+    transition: transform 0.2s ease
   }
 
 #work .project:hover {
@@ -256,7 +263,7 @@ a {
 
 #work .project .shadow {
       opacity: 0.65;
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
       position: absolute;
       top: 0;
       left: 0;
@@ -285,7 +292,7 @@ a {
     }
 
 #work .project .background {
-      transition: transform .5s ease;
+      transition: transform 0.5s ease;
       position: absolute;
       top: 0;
       left: 0;
@@ -296,9 +303,9 @@ a {
       pointer-events: none;
     }
 
-#photography {
-  overflow-x: hidden
-}
+#photography .photo-container {
+    overflow-x: hidden;
+  }
 
 #photography ul {
     margin-top: -50px;
