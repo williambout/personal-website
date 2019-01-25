@@ -64,8 +64,10 @@ header {
     right: 0;
     bottom: -140px;
     z-index: 20;
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
     background: green;
     box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25);
