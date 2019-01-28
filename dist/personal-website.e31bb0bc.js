@@ -1866,16 +1866,16 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var photoList = document.querySelector('.photolist');
-  var photographyTitle = document.querySelector('#photography-title');
+  var photoList = document.querySelector(".photolist");
+  var photographyTitle = document.querySelector("#photography-title");
   photoList.addEventListener("scroll", function (event) {
     var scrollLeft = event.target.scrollLeft;
 
-    if (!isNaN(scrollLeft)) {
+    if (isNaN(scrollLeft)) {
       return;
     }
 
-    var newOpacity = modulate(scrollLeft[(0, 50)], [0, 1]);
+    var newOpacity = modulate(scrollLeft, [0, 75], [1, 0.35], true);
     console.log(newOpacity);
     photographyTitle.style.opacity = newOpacity;
   });
@@ -1894,7 +1894,7 @@ var modulate = function modulate(value, rangeA, rangeB, limit) {
 
   var result = toLow + (value - fromLow) / (fromHigh - fromLow) * (toHigh - toLow);
 
-  if (limit === true) {
+  if (limit) {
     if (toLow < toHigh) {
       if (result < toLow) {
         return toLow;
@@ -1916,7 +1916,7 @@ var modulate = function modulate(value, rangeA, rangeB, limit) {
 
   return result;
 };
-},{"animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1943,7 +1943,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61481" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50149" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -2085,5 +2085,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/personal-website.e31bb0bc.map

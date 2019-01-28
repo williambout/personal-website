@@ -57,8 +57,8 @@ table {
   --header-bg: #f3f3f3;
   --footer-bg: #f3f3f3;
   --heading-color: #2b2a2a;
-  --body-color: #2b2a2a;
-  --body-color-secondary: #8f8e8e;
+  --body-color: #2B2A2A;
+  --body-color-secondary: #A6A2A2;
   --link-color: #222;
   --link-color-hover: #000;
 }
@@ -241,7 +241,9 @@ a {
 @media (max-width: 500px) {
 
 #work .project {
-      width: 100%
+      width: 100%;
+      height: 70vh;
+      margin-top: 0!important
   }
     }
 
@@ -302,16 +304,32 @@ a {
       pointer-events: none;
     }
 
-#photography .photo-container {
-    overflow-x: hidden;
-    padding-bottom: 400px;
+#photography {
+  margin-top: -75px
+}
+
+#photography h2 {
+    transform: translateX(calc(-100% + 48px)) translateY(50px) rotate(-90deg);
+    background: url('gradient-sf.d25aa576.jpg');
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
+#photography .photo-container {
+    overflow-x: hidden;
+    padding-bottom: 250px;
+  }
+
+#photography ul::-webkit-scrollbar {
+      display: none;
+    }
+
 #photography ul {
-    margin-top: -50px;
     display: flex;
     scroll-snap-type: mandatory;
     overflow-x: scroll;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     padding: 50px 5% 75px;
     padding: 50px calc(5% + env(safe-area-inset-right)) 75px
@@ -323,7 +341,7 @@ a {
 @media (min-width: 1111px) {
 
 #photography ul {
-      padding: 0 calc((100% - 1000px) / 2);
+      padding: 50px calc((100% - 1000px) / 2) 75px;
       scroll-padding: calc((100% - 1000px) / 2)
   }
     }
@@ -332,9 +350,6 @@ a {
     display: block;
     position: relative;
     z-index: 10;
-    height: 500px;
-    min-width: 387px;
-    box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25);
     scroll-snap-align: start
   }
 
@@ -344,18 +359,23 @@ a {
 
 #photography .photo img {
       width: auto;
-      max-height: 100%;
+      max-height: 500px;
+      min-width: 387px;
+      box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
     }
 
 #photography .photo .title {
+      display: block;
+      margin-top: 20px;
       font-weight: 600;
       font-size: 18px;
-      color: #FFFFFF;
     }
 
 #photography .photo .location {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.5);
+      display: block;
+      margin-top: 8px;
+      font-size: 15px;
+      color: var(--body-color-secondary);
     }
 
 footer {
