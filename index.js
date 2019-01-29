@@ -9,9 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isNaN(scrollLeft)) {
       return;
     }
-    const newOpacity = modulate(scrollLeft, [0, 75], [1, 0.35], true);
-    console.log(newOpacity);
-    photographyTitle.style.opacity = newOpacity;
+		function updateOpacity() {
+			const newOpacity = modulate(scrollLeft, [0, 75], [1, 0.35], true);
+			photographyTitle.style.opacity = newOpacity;
+			requestAnimationFrame(updateOpacity);
+		}
+		requestAnimationFrame(updateOpacity);
   });
 });
 
