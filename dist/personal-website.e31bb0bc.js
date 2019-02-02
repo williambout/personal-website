@@ -1876,7 +1876,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateOpacity() {
-      var newOpacity = modulate(scrollLeft, [0, 75], [1, 0.35], true);
+      var newOpacity = modulate(scrollLeft, [0, 75], [1, 0.15], true);
       photographyTitle.style.opacity = newOpacity;
       requestAnimationFrame(updateOpacity);
     }
