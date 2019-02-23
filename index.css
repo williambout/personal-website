@@ -6,8 +6,8 @@
   --header-bg: #f3f3f3;
   --footer-bg: #f3f3f3;
   --heading-color: #2b2a2a;
-  --body-color: #2B2A2A;
-  --body-color-secondary: #A6A2A2;
+  --body-color: #2b2a2a;
+  --body-color-secondary: #a6a2a2;
   --link-color: #222;
   --link-color-hover: #000;
 }
@@ -151,8 +151,10 @@ a {
     width: calc(50% - (75px / 2));
     display: inline-block;
     height: 45vw;
+    max-height: 600px;
     position: relative;
     transition: transform 0.2s ease;
+    will-change: transform;
 
     &:hover {
       transform: scale(1.03);
@@ -186,7 +188,7 @@ a {
     @media (max-width: 500px) {
       width: 100%;
       height: 70vh;
-      margin-top: 0!important;
+      margin-top: 0 !important;
     }
 
     &:after {
@@ -199,8 +201,8 @@ a {
       pointer-events: none;
       background-image: linear-gradient(
         -180deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(255, 255, 255, 0) 97%
+        rgba(255, 255, 255, 0.35) 0%,
+        rgba(255, 255, 255, 0) 100%
       );
     }
 
@@ -234,6 +236,10 @@ a {
       z-index: 10;
     }
 
+    & h4 {
+      margin-top: 5px;
+    }
+
     & .background {
       transition: transform 0.5s ease;
       position: absolute;
@@ -249,8 +255,6 @@ a {
 }
 
 #photography {
-  margin-top: -75px;
-
   & h2 {
     transform: translateX(calc(-100% + 28px)) translateY(15px) rotate(-90deg);
     will-change: opacity;
@@ -258,7 +262,7 @@ a {
 
   & .photo-container {
     overflow-x: hidden;
-    padding-bottom: 250px;
+    padding-bottom: 75px;
     position: relative;
     z-index: 20;
   }
