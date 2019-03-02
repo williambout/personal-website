@@ -1,0 +1,4 @@
+@import "../../node_modules/reset-css/reset.css";
+@import "./global.css";
+@import "./home.css";
+@import "./project.css";
