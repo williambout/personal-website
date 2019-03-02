@@ -192,7 +192,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/main.css":[function(require,module,exports) {
+},{"./../images/projects/instagram.jpg":[["instagram.6090531e.jpg","assets/images/projects/instagram.jpg"],"assets/images/projects/instagram.jpg"],"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/main.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -224,7 +224,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53900" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60066" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

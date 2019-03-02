@@ -430,6 +430,31 @@ a {
       }
         }
 
-  .project header {
+  .project .parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+  }
+.project header {
+    position: relative;
+    height: 100vh
+  }
+.project header:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateZ(-1px) scale(1.5);
+      background-image: url("instagram.6090531e.jpg");
+      background-size: cover;
+      z-index: -1;
+    }
+.project article {
+    position: relative;
+    height: 100vh;
+    background-color: white;
   }
 
