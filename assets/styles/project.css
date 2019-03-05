@@ -1,4 +1,45 @@
 .project {
+  background-color: var(--project-bg);
+
+  & h1 {
+    font-weight: 900;
+    margin-bottom: 60px;
+    font-size: 60px;
+    color: var(--heading-color);
+  }
+
+  & h2 {
+    font-weight: 700;
+    margin-bottom: 24px;
+    font-size: 36px;
+    color: var(--heading-color);
+  }
+
+  & p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--large-body-color);
+  }
+
+  & img {
+    max-width: 100%;
+
+    &.full-width {
+      object-fit: cover;
+      width: 100%;
+      min-height: 650px;
+      margin: 60px auto;
+    }
+  }
+
+  & .block {
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   & .parallax {
     height: 100vh;
     overflow-x: hidden;
@@ -26,6 +67,24 @@
   & article {
     position: relative;
     height: 100vh;
-    background-color: white;
+    background-color: var(--project-bg);
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: var(--project-bg);
+      width: 150%;
+      height: 200px;
+      top: 0;
+      left: 0;
+      transform: translateX(-25%) rotate(3deg);
+      transform-origin: bottom right;
+      z-index: 1;
+    }
+
+    & .container {
+      z-index: 10;
+      position: relative;
+    }
   }
 }

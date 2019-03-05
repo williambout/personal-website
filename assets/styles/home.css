@@ -1,4 +1,36 @@
 .home {
+  & h1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--heading-color);
+  }
+
+  & h2 {
+    transform: translateX(calc(-100% + 28px)) translateY(-35px) rotate(-90deg);
+    font-weight: 900;
+    font-size: 80px;
+    transform-origin: bottom right;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+    color: var(--heading-color);
+  }
+
+  & h3 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #272626;
+    line-height: 1.4;
+  }
+
+  & h4 {
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
   & header {
     background-color: var(--header-bg);
     height: 250px;
