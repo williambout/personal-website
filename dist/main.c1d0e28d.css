@@ -117,10 +117,12 @@ a {
     color: var(--heading-color);
   }
 .home h2 {
-    transform: translateX(calc(-100% + 28px)) translateY(-35px) rotate(-90deg);
+    -webkit-transform: translateX(calc(-100% + 28px)) translateY(-35px) rotate(-90deg);
+            transform: translateX(calc(-100% + 28px)) translateY(-35px) rotate(-90deg);
     font-weight: 900;
     font-size: 80px;
-    transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
     text-align: right;
     position: relative;
     z-index: 1;
@@ -141,9 +143,16 @@ a {
 .home header {
     background-color: var(--header-bg);
     height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     padding-bottom: 75px
   }
@@ -172,14 +181,20 @@ a {
         height: 200px;
         bottom: -200px;
         left: 0;
-        transform: translateX(-25%) rotate(3deg);
-        transform-origin: bottom right;
+        -webkit-transform: translateX(-25%) rotate(3deg);
+                transform: translateX(-25%) rotate(3deg);
+        -webkit-transform-origin: bottom right;
+                transform-origin: bottom right;
       }
 .home header .container {
       height: 100%;
       position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
 .home header .avatar {
       display: block;
@@ -192,7 +207,8 @@ a {
       width: 30vw;
       height: 30vw;
       border-radius: 50%;
-      box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25)
+      -webkit-box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25);
+              box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25)
     }
 @media (max-width: 500px) {
     .home header .avatar {
@@ -200,11 +216,21 @@ a {
     }
       }
 .home #work ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: stretch;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
       position: relative;
       z-index: 10;
     }
@@ -215,14 +241,19 @@ a {
       height: 45vw;
       max-height: 600px;
       position: relative;
+      -webkit-transition: -webkit-transform 0.2s ease;
+      transition: -webkit-transform 0.2s ease;
       transition: transform 0.2s ease;
+      transition: transform 0.2s ease, -webkit-transform 0.2s ease;
       will-change: transform
     }
 .home #work .project:hover {
-        transform: scale(1.03)
+        -webkit-transform: scale(1.03);
+                transform: scale(1.03)
       }
 .home #work .project:hover .background {
-          transform: scale(1.03);
+          -webkit-transform: scale(1.03);
+                  transform: scale(1.03);
         }
 .home #work .project:hover .shadow {
           opacity: 1;
@@ -261,6 +292,12 @@ a {
         width: 100%;
         height: 100%;
         pointer-events: none;
+        background-image: -webkit-gradient(
+          linear,
+          left top, left bottom,
+          from(rgba(255, 255, 255, 0.35)),
+          to(rgba(255, 255, 255, 0))
+        );
         background-image: linear-gradient(
           -180deg,
           rgba(255, 255, 255, 0.35) 0%,
@@ -269,13 +306,15 @@ a {
       }
 .home #work .project .shadow {
         opacity: 0.65;
+        -webkit-transition: opacity 0.3s ease;
         transition: opacity 0.3s ease;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.4);
+                box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.4);
         pointer-events: none;
       }
 .home #work .project a {
@@ -302,18 +341,23 @@ a {
         margin-top: 5px;
       }
 .home #work .project .background {
+        -webkit-transition: -webkit-transform 0.5s ease;
+        transition: -webkit-transform 0.5s ease;
         transition: transform 0.5s ease;
+        transition: transform 0.5s ease, -webkit-transform 0.5s ease;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         z-index: 0;
         pointer-events: none;
       }
 .home #photography h2 {
-      transform: translateX(calc(-100% + 28px)) translateY(15px) rotate(-90deg);
+      -webkit-transform: translateX(calc(-100% + 28px)) translateY(15px) rotate(-90deg);
+              transform: translateX(calc(-100% + 28px)) translateY(15px) rotate(-90deg);
       min-width: 100vh;
       will-change: opacity;
     }
@@ -327,8 +371,11 @@ a {
         display: none;
       }
 .home #photography ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
       overflow-x: scroll;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
@@ -357,8 +404,10 @@ a {
         width: auto;
         max-height: 500px;
         min-width: 387px;
-        object-fit: cover;
-        box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5)
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
+                box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5)
       }
 @media (max-width: 500px) {
     .home #photography .photo img {
@@ -387,11 +436,17 @@ a {
     }
 .home footer .edition {
       border-radius: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       width: 64px;
       height: 64px;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       background-color: var(--link-color);
       color: var(--footer-bg);
     }
@@ -458,26 +513,35 @@ a {
     max-width: 100%
   }
 .project img.full-width {
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
       width: 100%;
       min-height: 650px;
       margin: 60px auto;
     }
 .project .block {
     margin: 60px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 .project .parallax {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    perspective: 2px;
+    -webkit-perspective: 2px;
+            perspective: 2px;
   }
 .project header {
     position: relative;
-    height: 100vh
+    height: 50vh
   }
 .project header:after {
       content: "";
@@ -486,8 +550,19 @@ a {
       right: 0;
       bottom: 0;
       left: 0;
-      transform: translateZ(-1px) scale(1.5);
-      background-image: url("instagram.6090531e.jpg");
+      -webkit-transform: translateZ(-1px) scale(1.75) translateY(-7%);
+              transform: translateZ(-1px) scale(1.75) translateY(-7%);
+      background-position: 75% 50%;
+      background-image: -webkit-image-set(
+        url("instagram_header.a98b15b3.jpg") 1x,
+        url("instagram_header@2x.1c573c4d.jpg") 2x,
+        url("instagram_header@3x.6558788b.jpg") 3x
+      );
+      background-image: image-set(
+        url("instagram_header.a98b15b3.jpg") 1x,
+        url("instagram_header@2x.1c573c4d.jpg") 2x,
+        url("instagram_header@3x.6558788b.jpg") 3x
+      );
       background-size: cover;
       z-index: -1;
     }
@@ -504,8 +579,10 @@ a {
       height: 200px;
       top: 0;
       left: 0;
-      transform: translateX(-25%) rotate(3deg);
-      transform-origin: bottom right;
+      -webkit-transform: translateX(-25%) rotate(3deg);
+              transform: translateX(-25%) rotate(3deg);
+      -webkit-transform-origin: bottom right;
+              transform-origin: bottom right;
       z-index: 1;
     }
 .project article .container {
