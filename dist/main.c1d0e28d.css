@@ -492,7 +492,8 @@ a {
   background-color: var(--project-bg)
 }
 .project h1 {
-    font-weight: 900;
+    font-weight: 800;
+    margin-top: 40px;
     margin-bottom: 60px;
     font-size: 60px;
     color: var(--heading-color);
@@ -539,7 +540,7 @@ a {
   }
 .project header .overlay {
       opacity: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.75);
       position: absolute;
       width: 100%;
       height: calc(100% + 140px);
@@ -550,8 +551,8 @@ a {
 .project header img {
       -o-object-fit: cover;
          object-fit: cover;
-      -o-object-position: 75% 50%;
-         object-position: 75% 50%;
+      -o-object-position: 50% 75%;
+         object-position: 50% 75%;
       position: absolute;
       width: 100%;
       height: calc(100% + 140px);
@@ -561,10 +562,21 @@ a {
     }
 .project article {
     position: relative;
-    height: 100vh;
     background-color: var(--project-bg);
     z-index: 20
   }
+.project article:before {
+      content: "";
+      position: absolute;
+      background-color: var(--project-bg);
+      width: 150%;
+      height: 200px;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      -webkit-transform: translateX(-25%) rotate(3deg);
+              transform: translateX(-25%) rotate(3deg);
+    }
 .project article:after {
       content: "";
       position: absolute;
@@ -578,6 +590,8 @@ a {
       -webkit-transform-origin: bottom right;
               transform-origin: bottom right;
       z-index: 1;
+      -webkit-box-shadow: 0 -16px 75px 0 rgba(0, 0, 0, 0.35);
+              box-shadow: 0 -16px 75px 0 rgba(0, 0, 0, 0.35);
     }
 .project article .container {
       z-index: 10;

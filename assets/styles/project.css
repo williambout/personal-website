@@ -2,7 +2,8 @@
   background-color: var(--project-bg);
 
   & h1 {
-    font-weight: 900;
+    font-weight: 800;
+    margin-top: 40px;
     margin-bottom: 60px;
     font-size: 60px;
     color: var(--heading-color);
@@ -47,7 +48,7 @@
 
     & .overlay {
       opacity: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.75);
       position: absolute;
       width: 100%;
       height: calc(100% + 140px);
@@ -58,7 +59,7 @@
 
     & img {
       object-fit: cover;
-      object-position: 75% 50%;
+      object-position: 50% 75%;
       position: absolute;
       width: 100%;
       height: calc(100% + 140px);
@@ -70,9 +71,20 @@
 
   & article {
     position: relative;
-    height: 100vh;
     background-color: var(--project-bg);
     z-index: 20;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: var(--project-bg);
+      width: 150%;
+      height: 200px;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      transform: translateX(-25%) rotate(3deg);
+    }
 
     &:after {
       content: "";
@@ -85,6 +97,7 @@
       transform: translateX(-25%) rotate(3deg);
       transform-origin: bottom right;
       z-index: 1;
+      box-shadow: 0 -16px 75px 0 rgba(0, 0, 0, 0.35);
     }
 
     & .container {
