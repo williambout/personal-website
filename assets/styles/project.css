@@ -40,32 +40,31 @@
     justify-content: center;
   }
 
-  & .parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 2px;
-  }
-
   & header {
     position: relative;
-    height: 50vh;
-    &:after {
-      content: "";
+    max-height: 60vw;
+    min-height: 60vh;
+
+    & .overlay {
+      opacity: 0;
+      background: rgba(0, 0, 0, 0.5);
       position: absolute;
+      width: 100%;
+      height: calc(100% + 140px);
       top: 0;
-      right: 0;
-      bottom: 0;
       left: 0;
-      transform: translateZ(-1px) scale(1.75) translateY(-7%);
-      background-position: 75% 50%;
-      background-image: image-set(
-        url("../images/projects/instagram/instagram_header.jpg") 1x,
-        url("../images/projects/instagram/instagram_header@2x.jpg") 2x,
-        url("../images/projects/instagram/instagram_header@3x.jpg") 3x
-      );
-      background-size: cover;
-      z-index: -1;
+      z-index: 2;
+    }
+
+    & img {
+      object-fit: cover;
+      object-position: 75% 50%;
+      position: absolute;
+      width: 100%;
+      height: calc(100% + 140px);
+      top: 0;
+      left: 0;
+      z-index: 1;
     }
   }
 
@@ -73,6 +72,7 @@
     position: relative;
     height: 100vh;
     background-color: var(--project-bg);
+    z-index: 20;
 
     &:after {
       content: "";

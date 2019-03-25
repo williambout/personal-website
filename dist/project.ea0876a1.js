@@ -1850,7 +1850,7 @@ anime.random = function (min, max) {
 
 var _default = anime;
 exports.default = _default;
-},{}],"index.js":[function(require,module,exports) {
+},{}],"assets/scripts/project.js":[function(require,module,exports) {
 "use strict";
 
 var _animeEs = _interopRequireDefault(require("animejs/lib/anime.es.js"));
@@ -1858,16 +1858,21 @@ var _animeEs = _interopRequireDefault(require("animejs/lib/anime.es.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var photoList = document.querySelector(".photolist");
-  var photographyFade = (0, _animeEs.default)({
-    targets: "#photography-title",
-    opacity: 0.15,
+  var timeline = _animeEs.default.timeline({
     easing: "linear",
     autoplay: false
   });
-  photoList.addEventListener("scroll", function (event) {
-    var scrollLeft = event.target.scrollLeft;
-    photographyFade.seek(photographyFade.duration * (scrollLeft / 75));
+
+  timeline.add({
+    targets: "#project-cover",
+    translateY: 150
+  }, 0).add({
+    targets: ".overlay",
+    opacity: 1
+  }, 0);
+  window.addEventListener("scroll", function (event) {
+    var scrollTop = window.scrollY;
+    timeline.seek(timeline.duration * (scrollTop / 400));
   });
 });
 },{"animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -1897,7 +1902,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49525" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50732" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -2039,5 +2044,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/personal-website.e31bb0bc.map
+},{}]},{},["../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","assets/scripts/project.js"], null)
+//# sourceMappingURL=/project.ea0876a1.map

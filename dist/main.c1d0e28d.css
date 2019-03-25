@@ -532,44 +532,38 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-.project .parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 2px;
-            perspective: 2px;
-  }
 .project header {
     position: relative;
-    height: 50vh
+    max-height: 60vw;
+    min-height: 60vh
   }
-.project header:after {
-      content: "";
+.project header .overlay {
+      opacity: 0;
+      background: rgba(0, 0, 0, 0.5);
       position: absolute;
+      width: 100%;
+      height: calc(100% + 140px);
       top: 0;
-      right: 0;
-      bottom: 0;
       left: 0;
-      -webkit-transform: translateZ(-1px) scale(1.75) translateY(-7%);
-              transform: translateZ(-1px) scale(1.75) translateY(-7%);
-      background-position: 75% 50%;
-      background-image: -webkit-image-set(
-        url("instagram_header.a98b15b3.jpg") 1x,
-        url("instagram_header@2x.1c573c4d.jpg") 2x,
-        url("instagram_header@3x.6558788b.jpg") 3x
-      );
-      background-image: image-set(
-        url("instagram_header.a98b15b3.jpg") 1x,
-        url("instagram_header@2x.1c573c4d.jpg") 2x,
-        url("instagram_header@3x.6558788b.jpg") 3x
-      );
-      background-size: cover;
-      z-index: -1;
+      z-index: 2;
+    }
+.project header img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: 75% 50%;
+         object-position: 75% 50%;
+      position: absolute;
+      width: 100%;
+      height: calc(100% + 140px);
+      top: 0;
+      left: 0;
+      z-index: 1;
     }
 .project article {
     position: relative;
     height: 100vh;
-    background-color: var(--project-bg)
+    background-color: var(--project-bg);
+    z-index: 20
   }
 .project article:after {
       content: "";
