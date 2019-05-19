@@ -3,7 +3,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 1.4;
-    color: var(--heading-color);
+    color: var(--title-color);
   }
 
   & h2 {
@@ -20,7 +20,7 @@
   & h3 {
     font-weight: 600;
     font-size: 24px;
-    color: #272626;
+    color: var(--body-bg);
     line-height: 1.4;
   }
 
@@ -32,7 +32,7 @@
   }
 
   & header {
-    background-color: var(--header-bg);
+    background-color: var(--secondary-bg);
     height: 250px;
     display: flex;
     justify-content: center;
@@ -106,6 +106,8 @@
 
     & .project {
       margin-bottom: 75px;
+      border-radius: 6px;
+      overflow: hidden;
       width: calc(50% - (75px / 2));
       display: inline-block;
       height: 45vw;
@@ -257,7 +259,6 @@
       position: relative;
       z-index: 20;
       scroll-snap-align: start;
-
       & + .photo {
         margin-left: 40px;
       }
@@ -268,6 +269,7 @@
         min-width: 387px;
         object-fit: cover;
         box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 2.5px;
 
         @media (max-width: 500px) {
           min-width: 60vw;
@@ -292,7 +294,7 @@
 
   & footer {
     overflow-x: hidden;
-    background-color: var(--footer-bg);
+    background-color: var(--secondary-bg);
     padding: 50px 0;
 
     & li {
@@ -307,7 +309,7 @@
       justify-content: center;
       align-items: center;
       background-color: var(--link-color);
-      color: var(--footer-bg);
+      color: var(--secondary-bg);
     }
 
     & .container {

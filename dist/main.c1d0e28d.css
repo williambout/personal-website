@@ -50,11 +50,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 :root {
   --body-bg: #ebebeb;
-  --header-bg: #f3f3f3;
-  --project-bg: #f3f3f3;
-  --footer-bg: #f3f3f3;
+  --secondary-bg: #f3f3f3;
   --heading-color: #2b2a2a;
   --body-color: #2b2a2a;
   --large-body-color: #5e5b5b;
@@ -65,11 +64,11 @@ table {
 @media (prefers-color-scheme: dark) {
   :root {
     --body-bg: #272626;
-    --header-bg: #2d2c2c;
-    --footer-bg: #2d2c2c;
-    --heading-color: #fff;
+    --secondary-bg: #2d2c2c;
+    --title-color: white;
+    --heading-color: #949393;
     --body-color: #e0e0e0;
-    --large-body-color: #5e5b5b;
+    --large-body-color: #6e6d6d;
     --body-color-secondary: #5d5c5c;
     --link-color: rgba(255, 255, 255, 0.8);
     --link-color-hover: #fff;
@@ -110,11 +109,12 @@ a {
     width: 100%;
   }
 
+
   .home h1 {
     font-weight: 600;
     font-size: 20px;
     line-height: 1.4;
-    color: var(--heading-color);
+    color: var(--title-color);
   }
 .home h2 {
     -webkit-transform: translateX(calc(-100% + 28px)) translateY(-35px) rotate(-90deg);
@@ -131,7 +131,7 @@ a {
 .home h3 {
     font-weight: 600;
     font-size: 24px;
-    color: #272626;
+    color: var(--body-bg);
     line-height: 1.4;
   }
 .home h4 {
@@ -141,7 +141,7 @@ a {
     color: rgba(0, 0, 0, 0.5);
   }
 .home header {
-    background-color: var(--header-bg);
+    background-color: var(--secondary-bg);
     height: 250px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -236,6 +236,8 @@ a {
     }
 .home #work .project {
       margin-bottom: 75px;
+      border-radius: 6px;
+      overflow: hidden;
       width: calc(50% - (75px / 2));
       display: inline-block;
       height: 45vw;
@@ -407,7 +409,8 @@ a {
         -o-object-fit: cover;
            object-fit: cover;
         -webkit-box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
-                box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5)
+                box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 2.5px
       }
 @media (max-width: 500px) {
     .home #photography .photo img {
@@ -428,7 +431,7 @@ a {
       }
 .home footer {
     overflow-x: hidden;
-    background-color: var(--footer-bg);
+    background-color: var(--secondary-bg);
     padding: 50px 0
   }
 .home footer li {
@@ -448,7 +451,7 @@ a {
           -ms-flex-align: center;
               align-items: center;
       background-color: var(--link-color);
-      color: var(--footer-bg);
+      color: var(--secondary-bg);
     }
 .home footer .container {
       position: relative;
@@ -488,21 +491,23 @@ a {
           -webkit-text-fill-color: transparent
       }
         }
+
 .project {
-  background-color: var(--project-bg)
+  background-color: var(--secondary-bg)
 }
 .project h1 {
     font-weight: 800;
     margin-top: 40px;
     margin-bottom: 60px;
     font-size: 60px;
-    color: var(--heading-color);
+    color: var(--title-color);
   }
 .project h2 {
     font-weight: 700;
     margin-bottom: 24px;
     font-size: 36px;
     color: var(--heading-color);
+    line-height: 1.3;
   }
 .project p {
     font-weight: 500;
@@ -562,13 +567,13 @@ a {
     }
 .project article {
     position: relative;
-    background-color: var(--project-bg);
+    background-color: var(--secondary-bg);
     z-index: 20
   }
 .project article:before {
       content: "";
       position: absolute;
-      background-color: var(--project-bg);
+      background-color: var(--secondary-bg);
       width: 150%;
       height: 200px;
       top: 0;
@@ -580,7 +585,7 @@ a {
 .project article:after {
       content: "";
       position: absolute;
-      background-color: var(--project-bg);
+      background-color: var(--secondary-bg);
       width: 150%;
       height: 200px;
       top: 0;
@@ -598,3 +603,7 @@ a {
       position: relative;
     }
 
+
+
+
+/*# sourceMappingURL=/main.c1d0e28d.css.map */
