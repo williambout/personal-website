@@ -287,6 +287,7 @@
         display: block;
         margin-top: 8px;
         font-size: 15px;
+        font-weight: 500;
         color: var(--body-color-secondary);
       }
     }
@@ -299,6 +300,7 @@
 
     & li {
       line-height: 2.5em;
+      font-weight: 500;
     }
 
     & .edition {

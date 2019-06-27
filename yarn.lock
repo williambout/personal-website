@@ -282,7 +282,7 @@ object-assign@^4.0.1:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
-postcss-color-function@^4.0.1:
+postcss-color-function@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/postcss-color-function/-/postcss-color-function-4.1.0.tgz#b6f9355e07b12fcc5c34dab957834769b03d8f57"
   integrity sha512-2/fuv6mP5Lt03XbRpVfMdGC8lRP1sykme+H1bR4ARyOmSMB8LPSjcL6EAI1iX6dqUF+jNEvKIVVXhan1w/oFDQ==
@@ -292,12 +292,12 @@ postcss-color-function@^4.0.1:
     postcss-message-helpers "^2.0.0"
     postcss-value-parser "^3.3.1"
 
-postcss-custom-properties@^8.0.9:
-  version "8.0.10"
-  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-8.0.10.tgz#e8dc969e1e15c555f0b836b7f278ef47e3cdeaff"
-  integrity sha512-GDL0dyd7++goDR4SSasYdRNNvp4Gqy1XMzcCnTijiph7VB27XXpJ8bW/AI0i2VSBZ55TpdGhMr37kMSpRfYD0Q==
+postcss-custom-properties@^8.0.10:
+  version "8.0.11"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-8.0.11.tgz#2d61772d6e92f22f5e0d52602df8fae46fa30d97"
+  integrity sha512-nm+o0eLdYqdnJ5abAJeXp4CEU1c1k+eB2yMCvhgzsds/e0umabFrN6HoTy/8Q4K5ilxERdl/JD1LO5ANoYBeMA==
   dependencies:
-    postcss "^7.0.14"
+    postcss "^7.0.17"
     postcss-values-parser "^2.0.1"
 
 postcss-message-helpers@^2.0.0:
@@ -390,6 +390,15 @@ postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.2:
   version "7.0.16"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.16.tgz#48f64f1b4b558cb8b52c88987724359acb010da2"
   integrity sha512-MOo8zNSlIqh22Uaa3drkdIAgUGEL+AD1ESiSdmElLUmE2uVDo1QloiT/IfW9qRw8Gw+Y/w69UVMGwbufMSftxA==
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
+
+postcss@^7.0.17:
+  version "7.0.17"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.17.tgz#4da1bdff5322d4a0acaab4d87f3e782436bad31f"
+  integrity sha512-546ZowA+KZ3OasvQZHsbuEpysvwTZNGJv9EfyCQdsIDltPSWHAeTQ5fQy/Npi2ZDtLI3zs7Ps/p6wThErhm9fQ==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"

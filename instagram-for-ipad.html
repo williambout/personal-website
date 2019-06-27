@@ -13,9 +13,11 @@
         id="project-cover"
         src="./assets/images/projects/instagram/instagram_header.jpg"
         srcset="
-          ./assets/images/projects/instagram/instagram_header.jpg    1440w,
-          ./assets/images/projects/instagram/instagram_header@2x.jpg 2880w,
-          ./assets/images/projects/instagram/instagram_header@3x.jpg 4320w
+          ./assets/images/projects/instagram/instagram_header.jpg     720w,
+          ./assets/images/projects/instagram/instagram_header@2x.jpg 1440w,
+          ./assets/images/projects/instagram/instagram_header@3x.jpg 2160w,
+          ./assets/images/projects/instagram/instagram_header@4x.jpg 2880w,
+          ./assets/images/projects/instagram/instagram_header@5x.jpg 4320w
         "
         alt=""
       />
@@ -25,9 +27,9 @@
         <h1>Instagram for iPad</h1>
         <p>
           As a regular user of Instagram, I decided to work on an unsolicited
-          redesign of their iOS app to support the iPad. The exercice here was
-          to refine the experience and allow the app to take full advantage of
-          the larger display of the device.
+          redesign of their iOS app that focuses on the support the iPad. The
+          exercice here was to refine the experience and allow the app to take
+          full advantage of the larger display of the device.
         </p>
       </div>
       <div class="container full-width">
@@ -45,15 +47,16 @@
       <div class="container block">
         <h2>Stories</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          pretium odio eget velit tincidunt dapibus sed consequat dolor. Integer
-          rutrum viverra arcu, vel ullamcorper mauris mollis eu. Aliquam erat
-          volutpat. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Phasellus tellus sem, lacinia semper
-          sodales id, elementum non nisl. Nullam quis lacus mollis, pulvinar est
-          quis, aliquam dui. Proin vel egestas libero, quis gravida tellus.
-          Aliquam nec turpis purus. Mauris eu tellus tempus, mattis erat id,
-          bibendum libero.
+          For this part of the app, I thought it would be interesting to explore
+          with story previews. Displaying a grid of stories will allow the user
+          to get a sneak peak of all the stories available. This is especially
+          useful when you follow a large amount of accounts and want to have a
+          better overview of the all content available.
+        </p>
+        <p>
+          Each story is displayed in fullscreen in order to keep a good
+          immersion. Because of technical constraints (photo size, video
+          compression), stories are limited to a fixed container container.
         </p>
         <img
           src="./assets/images/projects/instagram/posts.png"
@@ -63,17 +66,24 @@
           "
           alt=""
         />
-        <h2>Instagram for iPad</h2>
+        <h2>Feed & Notifications</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          pretium odio eget velit tincidunt dapibus sed consequat dolor. Integer
-          rutrum viverra arcu, vel ullamcorper mauris mollis eu. Aliquam erat
-          volutpat. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Phasellus tellus sem, lacinia semper
-          sodales id, elementum non nisl. Nullam quis lacus mollis, pulvinar est
-          quis, aliquam dui. Proin vel egestas libero, quis gravida tellus.
-          Aliquam nec turpis purus. Mauris eu tellus tempus, mattis erat id,
-          bibendum libero.
+          The notifications list has been moved to a dropdown menu on the right
+          of the navigation bar. This allows the menu to be accessible in most
+          screens of the app. The icon has been updated with a more generic icon
+          that works for a variety of notification types.
+        </p>
+        <p>
+          Unlike stories, the feed is using a 1 column layout, like on a phone.
+          I experimented with a multi-columns layout but it seemed better suited
+          for browsing/discovering new content. Having 1 column reduces the
+          number of posts displayed in the viewport. It results in a better
+          focus on the posts, as the goal here is not to “consume content” but
+          rather to offer an experience that allows the content to stand out.
+        </p>
+        <p>
+          Posts have the possibility to have a caption, displayed right under
+          the image and above the post’s actions and comments.
         </p>
         <img
           src="./assets/images/projects/instagram/posts.png"
@@ -83,16 +93,14 @@
           "
           alt=""
         />
+        <h2>Navigation</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          pretium odio eget velit tincidunt dapibus sed consequat dolor. Integer
-          rutrum viverra arcu, vel ullamcorper mauris mollis eu. Aliquam erat
-          volutpat. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Phasellus tellus sem, lacinia semper
-          sodales id, elementum non nisl. Nullam quis lacus mollis, pulvinar est
-          quis, aliquam dui. Proin vel egestas libero, quis gravida tellus.
-          Aliquam nec turpis purus. Mauris eu tellus tempus, mattis erat id,
-          bibendum libero.
+          Instagram’s current navigation system isn’t perfectly suited for the
+          iPad. It relies a lot on swipe action which are less user friendly on
+          such a large display. While I understand the decision to integrate the
+          stories in the main “Home” view (discoverability, engagement...), I
+          still think it makes a lot of sens to separate them from the
+          traditional feed.
         </p>
         <img
           src="./assets/images/projects/instagram/posts.png"

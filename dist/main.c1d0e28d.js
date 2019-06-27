@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,33 +184,38 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/reset-css/reset.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/reset-css/reset.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/global.css":[function(require,module,exports) {
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/fonts.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/home.css":[function(require,module,exports) {
+},{"./../fonts/manrope-extrabold.woff2":[["manrope-extrabold.f2421770.woff2","assets/fonts/manrope-extrabold.woff2"],"assets/fonts/manrope-extrabold.woff2"],"./../fonts/manrope-extrabold.woff":[["manrope-extrabold.a01f3804.woff","assets/fonts/manrope-extrabold.woff"],"assets/fonts/manrope-extrabold.woff"],"./../fonts/manrope-extrabold.otf":[["manrope-extrabold.932e1f5a.otf","assets/fonts/manrope-extrabold.otf"],"assets/fonts/manrope-extrabold.otf"],"./../fonts/manrope-bold.woff2":[["manrope-bold.db0db77d.woff2","assets/fonts/manrope-bold.woff2"],"assets/fonts/manrope-bold.woff2"],"./../fonts/manrope-bold.woff":[["manrope-bold.8d4dbc76.woff","assets/fonts/manrope-bold.woff"],"assets/fonts/manrope-bold.woff"],"./../fonts/manrope-bold.otf":[["manrope-bold.dc629231.otf","assets/fonts/manrope-bold.otf"],"assets/fonts/manrope-bold.otf"],"./../fonts/manrope-semibold.woff2":[["manrope-semibold.af25cf23.woff2","assets/fonts/manrope-semibold.woff2"],"assets/fonts/manrope-semibold.woff2"],"./../fonts/manrope-semibold.woff":[["manrope-semibold.3777c368.woff","assets/fonts/manrope-semibold.woff"],"assets/fonts/manrope-semibold.woff"],"./../fonts/manrope-semibold.otf":[["manrope-semibold.25bb62ce.otf","assets/fonts/manrope-semibold.otf"],"assets/fonts/manrope-semibold.otf"],"./../fonts/manrope-medium.woff2":[["manrope-medium.24c461e8.woff2","assets/fonts/manrope-medium.woff2"],"assets/fonts/manrope-medium.woff2"],"./../fonts/manrope-medium.woff":[["manrope-medium.44e0d20f.woff","assets/fonts/manrope-medium.woff"],"assets/fonts/manrope-medium.woff"],"./../fonts/manrope-medium.otf":[["manrope-medium.a1ba38b0.otf","assets/fonts/manrope-medium.otf"],"assets/fonts/manrope-medium.otf"],"./../fonts/manrope-regular.woff2":[["manrope-regular.c475542c.woff2","assets/fonts/manrope-regular.woff2"],"assets/fonts/manrope-regular.woff2"],"./../fonts/manrope-regular.woff":[["manrope-regular.215f1244.woff","assets/fonts/manrope-regular.woff"],"assets/fonts/manrope-regular.woff"],"./../fonts/manrope-regular.otf":[["manrope-regular.b86f0a5a.otf","assets/fonts/manrope-regular.otf"],"assets/fonts/manrope-regular.otf"],"./../fonts/manrope-light.woff2":[["manrope-light.9d88889c.woff2","assets/fonts/manrope-light.woff2"],"assets/fonts/manrope-light.woff2"],"./../fonts/manrope-light.woff":[["manrope-light.a2bc1786.woff","assets/fonts/manrope-light.woff"],"assets/fonts/manrope-light.woff"],"./../fonts/manrope-light.otf":[["manrope-light.a6a1681d.otf","assets/fonts/manrope-light.otf"],"assets/fonts/manrope-light.otf"],"./../fonts/manrope-thin.woff2":[["manrope-thin.1df6d12d.woff2","assets/fonts/manrope-thin.woff2"],"assets/fonts/manrope-thin.woff2"],"./../fonts/manrope-thin.woff":[["manrope-thin.0f7c305f.woff","assets/fonts/manrope-thin.woff"],"assets/fonts/manrope-thin.woff"],"./../fonts/manrope-thin.otf":[["manrope-thin.c928bcc2.otf","assets/fonts/manrope-thin.otf"],"assets/fonts/manrope-thin.otf"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/global.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/project.css":[function(require,module,exports) {
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/home.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/main.css":[function(require,module,exports) {
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/project.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"../../node_modules/reset-css/reset.css":"node_modules/reset-css/reset.css","./global.css":"assets/styles/global.css","./home.css":"assets/styles/home.css","./project.css":"assets/styles/project.css","_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/main.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"../../node_modules/reset-css/reset.css":"node_modules/reset-css/reset.css","./fonts.css":"assets/styles/fonts.css","./global.css":"assets/styles/global.css","./home.css":"assets/styles/home.css","./project.css":"assets/styles/project.css","_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -238,7 +243,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49473" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65124" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -413,5 +418,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/main.c1d0e28d.js.map

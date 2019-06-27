@@ -51,6 +51,75 @@ table {
 	border-spacing: 0;
 }
 
+@charset "UTF-8";
+@font-face {
+  font-family: "Manrope";
+  src: url("/manrope-extrabold.f2421770.woff2") format("woff2"),
+    url("/manrope-extrabold.a01f3804.woff") format("woff"),
+    url("/manrope-extrabold.932e1f5a.otf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/manrope-bold.db0db77d.woff2") format("woff2"),
+    url("/manrope-bold.8d4dbc76.woff") format("woff"),
+    url("/manrope-bold.dc629231.otf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/manrope-semibold.af25cf23.woff2") format("woff2"),
+    url("/manrope-semibold.3777c368.woff") format("woff"),
+    url("/manrope-semibold.25bb62ce.otf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/manrope-medium.24c461e8.woff2") format("woff2"),
+    url("/manrope-medium.44e0d20f.woff") format("woff"),
+    url("/manrope-medium.a1ba38b0.otf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/manrope-regular.c475542c.woff2") format("woff2"),
+    url("/manrope-regular.215f1244.woff") format("woff"),
+    url("/manrope-regular.b86f0a5a.otf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/manrope-light.9d88889c.woff2") format("woff2"),
+    url("/manrope-light.a2bc1786.woff") format("woff"),
+    url("/manrope-light.a6a1681d.otf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/manrope-thin.1df6d12d.woff2") format("woff2"),
+    url("/manrope-thin.0f7c305f.woff") format("woff"),
+    url("/manrope-thin.c928bcc2.otf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
+}
+body,
+html {
+  font-family: "Manrope", sans-serif;
+}
+*,
+*:before,
+*:after {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
 :root {
   --body-bg: #ebebeb;
   --secondary-bg: #f3f3f3;
@@ -78,19 +147,18 @@ table {
 body {
   background-color: var(--body-bg);
   color: var(--body-color);
-  -webkit-font-smoothing: antialiased;
 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .heading {
   display: block;
+  line-height: 1.5;
 }
 
 .subtitle {
   color: var(--body-color-secondary);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 a {
@@ -427,6 +495,7 @@ a {
         display: block;
         margin-top: 8px;
         font-size: 15px;
+        font-weight: 500;
         color: var(--body-color-secondary);
       }
 .home footer {
@@ -436,6 +505,7 @@ a {
   }
 .home footer li {
       line-height: 2.5em;
+      font-weight: 500;
     }
 .home footer .edition {
       border-radius: 50%;
@@ -512,9 +582,13 @@ a {
 .project p {
     font-weight: 500;
     font-size: 24px;
-    line-height: 1.4;
+    line-height: 1.5;
     color: var(--large-body-color);
+    display: block
   }
+.project p + p {
+      margin-top: 1em;
+    }
 .project img {
     max-width: 100%
   }
@@ -564,6 +638,7 @@ a {
       top: 0;
       left: 0;
       z-index: 1;
+      will-change: transform;
     }
 .project article {
     position: relative;
