@@ -1,6 +1,11 @@
 import anime from "animejs/lib/anime.es.js";
+import LazyLoad from "vanilla-lazyload";
 
 document.addEventListener("DOMContentLoaded", () => {
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+  });
+
   const timeline = anime.timeline({
     easing: "linear",
     autoplay: false
