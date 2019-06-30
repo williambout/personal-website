@@ -135,11 +135,11 @@ html {
     --body-bg: #272626;
     --secondary-bg: #2d2c2c;
     --title-color: white;
-    --heading-color: #949393;
+    --heading-color: #e0e0e0;
     --body-color: #e0e0e0;
-    --large-body-color: #6e6d6d;
+    --large-body-color: rgba(255, 255, 255, 0.5);
     --body-color-secondary: #5d5c5c;
-    --link-color: rgba(255, 255, 255, 0.8);
+    --link-color: rgba(255, 255, 255, 0.85);
     --link-color-hover: #fff;
   }
 }
@@ -582,7 +582,7 @@ a {
 .project p {
     font-weight: 500;
     font-size: 24px;
-    line-height: 1.5;
+    line-height: 1.75;
     color: var(--large-body-color);
     display: block
   }
