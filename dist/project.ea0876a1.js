@@ -1881,6 +1881,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var lazyLoadInstance = new _vanillaLazyload.default({
     elements_selector: ".lazy"
   });
+  var navbar = document.querySelector("nav");
+  var isNavbarVisible = false;
+  var header = document.querySelector("header");
+  var headerHeight = header.offsetHeight;
 
   var timeline = _animeEs.default.timeline({
     easing: "linear",
@@ -1894,9 +1898,22 @@ document.addEventListener("DOMContentLoaded", function () {
     targets: ".overlay",
     opacity: 1
   }, 0);
+
+  var toggleNavbar = function toggleNavbar() {
+    navbar.classList.toggle('visible');
+    isNavbarVisible = !isNavbarVisible;
+  };
+
   window.addEventListener("scroll", function (event) {
     var scrollTop = window.scrollY;
     timeline.seek(timeline.duration * (scrollTop / 400));
+    console.log('isNavbarVisible', isNavbarVisible);
+    console.log('scrollTop', scrollTop);
+    console.log('headerHeight', headerHeight);
+
+    if (isNavbarVisible && scrollTop < headerHeight || !isNavbarVisible && scrollTop > headerHeight) {
+      toggleNavbar();
+    }
   });
 });
 },{"animejs/lib/anime.es.js":"node_modules/animejs/lib/anime.es.js","vanilla-lazyload":"node_modules/vanilla-lazyload/dist/lazyload.min.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -1927,7 +1944,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61156" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65030" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

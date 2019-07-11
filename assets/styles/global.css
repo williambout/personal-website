@@ -44,6 +44,18 @@ a {
   text-decoration: none;
 }
 
+nav {
+  position: fixed;
+  min-height: 100px;
+  min-width: 100%;
+  background: var(--secondary-bg);
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.10);
+  will-change: opacity;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
 .container {
   max-width: 1000px;
   width: 90%;
