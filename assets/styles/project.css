@@ -37,6 +37,7 @@
       width: 100%;
       min-height: 650px;
       margin: 60px auto;
+      background-color: var(--full-width);
     }
   }
 
