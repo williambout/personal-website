@@ -123,6 +123,7 @@ html {
 :root {
   --body-bg: #ebebeb;
   --secondary-bg: #f3f3f3;
+  --transparent-bg: rgba(255, 255, 255, 0.8);
   --heading-color: #2b2a2a;
   --body-color: #2b2a2a;
   --large-body-color: #5e5b5b;
@@ -134,6 +135,7 @@ html {
   :root {
     --body-bg: #272626;
     --secondary-bg: #2d2c2c;
+    --transparent-bg: rgba(0, 0, 0, 0.8);
     --title-color: white;
     --heading-color: #e0e0e0;
     --body-color: #e0e0e0;
@@ -165,6 +167,40 @@ a {
   color: var(--link-color);
   text-decoration: none;
 }
+
+nav {
+  position: fixed;
+  min-height: 100px;
+  min-width: 100%;
+  background: var(--secondary-bg);
+  -webkit-box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.1);
+  will-change: opacity;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease
+}
+
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+
+nav {
+    background: var(--transparent-bg);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px)
+}
+  }
+
+nav.visible {
+    opacity: 1;
+  }
 
 .container {
   max-width: 1000px;

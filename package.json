@@ -19,6 +19,7 @@
     "postcss-modules": "^1.4.1",
     "postcss-nesting": "^7.0.0",
     "reset-css": "^4.0.1",
-    "scroll-parallax": "^3.0.3"
+    "scroll-parallax": "^3.0.3",
+    "vanilla-lazyload": "^12.0.0"
   }
 }
