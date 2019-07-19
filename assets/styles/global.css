@@ -3,6 +3,7 @@
   --secondary-bg: #f3f3f3;
   --transparent-bg: rgba(255, 255, 255, 0.8);
   --heading-color: #2b2a2a;
+  --card-title-color: var(--heading-color);
   --body-color: #2b2a2a;
   --large-body-color: #5e5b5b;
   --body-color-secondary: #a6a2a2;
@@ -15,6 +16,7 @@
     --secondary-bg: #2d2c2c;
     --transparent-bg: rgba(0, 0, 0, 0.8);
     --title-color: white;
+    --card-title-color: #2b2a2a;
     --heading-color: #e0e0e0;
     --body-color: #e0e0e0;
     --large-body-color: rgba(255, 255, 255, 0.5);
