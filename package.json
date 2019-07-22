@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-imagemin": "^3.0.0"
   }
 }
