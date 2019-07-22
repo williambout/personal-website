@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel *.html",
-    "build": "parcel build *.html"
+    "build": "parcel build *.html --detailed-report 10"
   },
   "repository": "https://github.com/williambout/personal-website.git",
   "author": "William Bout <hello@williambout.me>",
