@@ -32,6 +32,14 @@
   & img {
     max-width: 100%;
 
+    &.rounded {
+      border-radius: 20px;
+    }
+
+    &.with-margins {
+      margin: 75px auto;
+    }
+
     &.full-width {
       object-fit: cover;
       width: 100%;
@@ -82,18 +90,6 @@
     background-color: var(--secondary-bg);
     z-index: 20;
 
-    &:before {
-      content: "";
-      position: absolute;
-      background-color: var(--secondary-bg);
-      width: 150%;
-      height: 200px;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      transform: translateX(-25%) rotate(3deg);
-    }
-
     &:after {
       content: "";
       position: absolute;
@@ -105,7 +101,7 @@
       transform: translateX(-25%) rotate(3deg);
       transform-origin: bottom right;
       z-index: 1;
-      box-shadow: 0 -16px 75px 0 rgba(0, 0, 0, 0.35);
+      box-shadow: 0 -75px 75px 0 rgba(0, 0, 0, 0.2);
     }
 
     & .container {
