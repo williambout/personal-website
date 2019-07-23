@@ -49,6 +49,24 @@
     }
   }
 
+  & .link {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--body-color);
+    background: var(--body-bg);
+    border-radius: 10px;
+    display: inline-block;
+    padding: 8px 11px 9px;
+    margin-bottom: 60px;
+    margin-top: -50px;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background: var(--link-color);
+      color: var(--body-bg);
+    }
+  }
+
   & .block {
     margin: 60px auto;
     display: flex;
