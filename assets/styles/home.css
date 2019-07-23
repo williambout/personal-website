@@ -59,12 +59,12 @@
         content: "";
         position: absolute;
         background-color: var(--body-bg);
-        width: 150%;
+        right: 0;
         height: 200px;
-        bottom: -200px;
+        bottom: -190px;
         left: 0;
-        transform: translateX(-25%) rotate(3deg);
-        transform-origin: bottom right;
+        transform-origin: 100%;
+        transform: skewY(3deg);
       }
     }
 
