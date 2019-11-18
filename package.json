@@ -10,21 +10,21 @@
   "author": "William Bout <hello@williambout.me>",
   "license": "MIT",
   "dependencies": {
-    "animejs": "^3.0.1",
-    "autoprefixer": "^9.6.1",
-    "global.css": "^1.0.16",
+    "animejs": "^3.1.0",
+    "autoprefixer": "^9.7.1",
+    "global.css": "^1.1.0",
     "lib": "^3.0.2",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^8.0.11",
     "postcss-modules": "^1.4.1",
-    "postcss-nesting": "^7.0.0",
+    "postcss-nesting": "^7.0.1",
     "reset-css": "^4.0.1",
     "scroll-parallax": "^3.0.3",
-    "vanilla-lazyload": "^12.0.0"
+    "vanilla-lazyload": "^12.3.0"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "parcel-plugin-imagemin": "^3.0.0"
   }
 }
