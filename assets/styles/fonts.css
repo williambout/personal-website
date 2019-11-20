@@ -1,68 +1,57 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/manrope-extrabold.woff2") format("woff2"),
-    url("../fonts/manrope-extrabold.woff") format("woff"),
-    url("../fonts/manrope-extrabold.otf") format("truetype");
+  font-family: "Indivisible";
+  src: url("../fonts/Indivisible-Black.woff2") format("woff2"),
+    url("../fonts/Indivisible-Black.woff") format("woff"),
+    url("../fonts/Indivisible-Black.otf") format("opentype");
   font-style: normal;
   font-weight: 800;
 }
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/manrope-bold.woff2") format("woff2"),
-    url("../fonts/manrope-bold.woff") format("woff"),
-    url("../fonts/manrope-bold.otf") format("truetype");
+  font-family: "Indivisible";
+  src: url("../fonts/Indivisible-Bold.woff2") format("woff2"),
+    url("../fonts/Indivisible-Bold.woff") format("woff"),
+    url("../fonts/Indivisible-Bold.otf") format("opentype");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/manrope-semibold.woff2") format("woff2"),
-    url("../fonts/manrope-semibold.woff") format("woff"),
-    url("../fonts/manrope-semibold.otf") format("truetype");
+  font-family: "Indivisible";
+  src: url("../fonts/Indivisible-SemiBold.woff2") format("woff2"),
+    url("../fonts/Indivisible-SemiBold.woff") format("woff"),
+    url("../fonts/Indivisible-SemiBold.otf") format("opentype");
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/manrope-medium.woff2") format("woff2"),
-    url("../fonts/manrope-medium.woff") format("woff"),
-    url("../fonts/manrope-medium.otf") format("truetype");
+  font-family: "Indivisible";
+  src: url("../fonts/Indivisible-Medium.woff2") format("woff2"),
+    url("../fonts/Indivisible-Medium.woff") format("woff"),
+    url("../fonts/Indivisible-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/manrope-regular.woff2") format("woff2"),
-    url("../fonts/manrope-regular.woff") format("woff"),
-    url("../fonts/manrope-regular.otf") format("truetype");
+  font-family: "Indivisible";
+  src: url("../fonts/Indivisible-Regular.woff2") format("woff2"),
+    url("../fonts/Indivisible-Regular.woff") format("woff"),
+    url("../fonts/Indivisible-Regular.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/manrope-light.woff2") format("woff2"),
-    url("../fonts/manrope-light.woff") format("woff"),
-    url("../fonts/manrope-light.otf") format("truetype");
+  font-family: "Indivisible";
+  src: url("../fonts/Indivisible-Light.woff2") format("woff2"),
+    url("../fonts/Indivisible-Light.woff") format("woff"),
+    url("../fonts/Indivisible-Light.otf") format("opentype");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
-  font-family: "Manrope";
-  src: url("../fonts/manrope-thin.woff2") format("woff2"),
-    url("../fonts/manrope-thin.woff") format("woff"),
-    url("../fonts/manrope-thin.otf") format("truetype");
+  font-family: "Indivisible";
+  src: url("../fonts/Indivisible-Thin.woff2") format("woff2"),
+    url("../fonts/Indivisible-Thin.woff") format("woff"),
+    url("../fonts/Indivisible-Thin.otf") format("opentype");
   font-style: normal;
   font-weight: 200;
-}
-body,
-html {
-  font-family: "Manrope", sans-serif;
-}
-*,
-*:before,
-*:after {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
 }

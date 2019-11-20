@@ -1,50 +1,29 @@
 :root {
-  --body-bg: #ebebeb;
-  --secondary-bg: #f3f3f3;
-  --transparent-bg: rgba(255, 255, 255, 0.8);
-  --heading-color: #2b2a2a;
-  --card-title-color: var(--heading-color);
-  --body-color: #2b2a2a;
-  --large-body-color: #5e5b5b;
-  --body-color-secondary: #a6a2a2;
-  --link-color: #222;
-  --link-color-hover: #000;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-bg: #272626;
-    --secondary-bg: #2d2c2c;
-    --transparent-bg: rgba(0, 0, 0, 0.8);
-    --title-color: white;
-    --card-title-color: #2b2a2a;
-    --heading-color: #e0e0e0;
-    --body-color: #e0e0e0;
-    --large-body-color: rgba(255, 255, 255, 0.5);
-    --body-color-secondary: #5d5c5c;
-    --link-color: rgba(255, 255, 255, 0.85);
-    --link-color-hover: #fff;
-  }
+  --primary-background: #1d1d1d;
+  --secondary-background: #171717;
+  --primary-text: white;
+  --secondary-text: rgba(255, 255, 255, 0.5);
 }
 
-body {
-  background-color: var(--body-bg);
-  color: var(--body-color);
-
-  font-family: "Manrope", sans-serif;
+body,
+html {
+  color: var(--primary-text);
+  background-color: var(--primary-background);
+  font-size: 18px;
+  line-height: 29px;
+  font-family: "Indivisible", sans-serif;
+  font-weight: 400;
 }
-
-.heading {
-  display: block;
-  line-height: 1.5;
-}
-
-.subtitle {
-  color: var(--body-color-secondary);
-  font-weight: 500;
+*,
+*:before,
+*:after {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 a {
-  color: var(--link-color);
+  color: var(--primary-text);
   text-decoration: none;
 }
 
@@ -52,7 +31,7 @@ nav {
   position: fixed;
   min-height: 100px;
   min-width: 100%;
-  background: var(--secondary-bg);
+  background: var(--secondary-background);
   box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.1);
   will-change: opacity;
   font-weight: 600;
@@ -82,17 +61,4 @@ nav {
     max-width: 100%;
     width: 100%;
   }
-}
-
-.back-button {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  background: var(--secondary-bg);
-  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.06);
-  display: block;
-  z-index: 1000;
-  border-radius: 50%;
-  top: 50px;
-  left: 50px;
 }
