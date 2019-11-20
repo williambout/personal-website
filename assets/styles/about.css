@@ -1,0 +1,40 @@
+.about {
+  & section:first-of-type {
+    padding-top: 180px;
+  }
+
+  & .small {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+  }
+
+  & p {
+    color: var(--secondary-text);
+  }
+
+  & .card {
+    background: red;
+    display: block;
+
+    &.me {
+      position: relative;
+      z-index: 10;
+      align-self: flex-start;
+      width: 40%;
+      height: 315px;
+      box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.6);
+    }
+
+    &.dessert {
+      align-self: flex-end;
+      width: 75%;
+      height: 475px;
+      margin-left: -5%;
+      margin-right: -135px;
+      margin-top: 100px;
+      height: 475px;
+      box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.6);
+    }
+  }
+}

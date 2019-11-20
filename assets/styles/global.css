@@ -33,22 +33,16 @@ nav {
   min-width: 100%;
   background: var(--secondary-background);
   box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.1);
-  will-change: opacity;
   font-weight: 600;
   display: flex;
   align-items: center;
   z-index: 100;
-  opacity: 0;
   transition: opacity 0.2s ease;
 
   @supports (backdrop-filter: blur(20px)) {
     background: var(--transparent-bg);
     backdrop-filter: blur(20px);
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.3);
-  }
-
-  &.visible {
-    opacity: 1;
   }
 }
 
@@ -57,8 +51,37 @@ nav {
   width: 90%;
   margin: auto;
 
-  &.full-width {
-    max-width: 100%;
-    width: 100%;
+  &.small {
+    max-width: 730px;
+    width: 80%;
+  }
+
+  &.left-aligned {
+    padding-left: 150px;
+  }
+}
+
+.cta-button {
+  background: var(--primary-text);
+  color: var(--primary-background);
+  display: inline-flex;
+  padding: 0 15px;
+  min-height: 44px;
+  line-height: 44px;
+  border-radius: 22px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  position: relative;
+  padding-right: 37px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 11px;
+    transform: translateY(50%);
+    background: url("../images/icons/arrow.svg");
+    width: 22px;
+    height: 22px;
   }
 }
