@@ -85,3 +85,32 @@ nav {
     height: 22px;
   }
 }
+
+footer {
+  margin-top: 60px;
+  overflow-x: hidden;
+  background-color: var(--secondary-background);
+  padding: 50px 0;
+
+  & li {
+    line-height: 2.5em;
+    font-weight: 500;
+  }
+
+  & .edition {
+    border-radius: 50%;
+    display: flex;
+    width: 64px;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--link-color);
+    color: var(--secondary-bg);
+  }
+
+  & .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 64px;
+  }
+}
