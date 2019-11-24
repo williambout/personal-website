@@ -8,154 +8,232 @@
   </head>
   <body class="project">
     <nav>
-      <div class="container"><a href="./">William Bout</a></div>
+      <div class="container small"><a href="./">William Bout</a></div>
     </nav>
     <header>
+      <div class="container small">
+        <div class="heading">
+          <h1>Instagram for iPad</h1>
+          <h2>Personal project</h2>
+        </div>
+      </div>
+      <div class="container small">
+        <div class="info">
+          <hr />
+          <ul>
+            <li>Design</li>
+            <li>Prototyping</li>
+            <li>Research</li>
+            <li>2018</li>
+          </ul>
+        </div>
+      </div>
       <div class="overlay"></div>
       <img
-        id="project-cover"
-        srcset="
-          ./assets/images/projects/instagram/instagram_header.jpg     720w,
-          ./assets/images/projects/instagram/instagram_header@2x.jpg 1440w,
-          ./assets/images/projects/instagram/instagram_header@3x.jpg 2160w,
-          ./assets/images/projects/instagram/instagram_header@4x.jpg 2880w,
-          ./assets/images/projects/instagram/instagram_header@5x.jpg 4320w
-        "
+        class="background"
+        src="./assets/images/projects/instagram/ipad-desk.jpg"
         alt=""
       />
     </header>
-    <article>
-      <div class="container block">
-        <h1>Instagram for iPad</h1>
-        <div class="link-container">
-          <a
-            class="link"
-            href="https://github.com/williambout/clear-sky"
-            target="_blank"
-            >View on Dribbble</a
-          >
-        </div>
-        <p>
-          As a regular user of Instagram, I decided to work on an unsolicited
-          redesign of their iOS app that focuses on the support the iPad. The
-          exercice here was to refine the experience and allow the app to take
-          full advantage of the larger display of the device.
-        </p>
+    <section>
+      <div class="container small">
+        <article>
+          <h3>Introduction</h3>
+          <p>
+            As a regular user of Instagram, I decided to work on an unsolicited
+            redesign of their iOS app that focuses on the support the iPad. The
+            exercise here was to refine the experience and allow the app to take
+            full advantage of the larger display of the device.
+          </p>
+        </article>
+        <article>
+          <h3>Stories</h3>
+          <p>
+            For this part of the app, I thought it would be interesting to
+            explore with story previews. Displaying a grid of stories will allow
+            the user to get a sneak peak of all the stories available. This is
+            especially useful when you follow a large amount of accounts and
+            want to have a better overview of the all content available.
+          </p>
+          <p>
+            Each story is displayed in fullscreen in order to keep a good
+            immersion. Because of technical constraints (photo size, video
+            compression), stories are limited to a fixed container.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/instagram/Stories.png                     1460w
+            "
+            src="./assets/images/projects/instagram/Stories.png"
+          />
+          <figcaption>Stories tab</figcaption>
+        </figure>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/instagram/Story.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/instagram/Story.png                     1460w
+            "
+            src="./assets/images/projects/instagram/Story.png"
+          />
+          <figcaption>Story</figcaption>
+        </figure>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/instagram/Story-Music.png                     1460w
+            "
+            src="./assets/images/projects/instagram/Story-Music.png"
+          />
+          <figcaption>Story with audio</figcaption>
+        </figure>
+        <article>
+          <h3>Feed & Notifications</h3>
+          <p>
+            The notifications list has been moved to a dropdown menu on the
+            right of the navigation bar. This allows the menu to be accessible
+            in most screens of the app. The icon has been updated with a more
+            generic icon that works for a variety of notification types.
+          </p>
+          <p>
+            Unlike stories, the feed is using a 1 column layout, like on a
+            phone. I experimented with a multi-columns layout but it seemed
+            better suited for browsing/discovering new content. Having 1 column
+            reduces the number of posts displayed in the viewport. It results in
+            a better focus on the posts, as the goal here is not to “consume
+            content” but rather to offer an experience that allows the content
+            to stand out.
+          </p>
+          <p>
+            Posts have the possibility to have a caption, displayed right under
+            the image and above the post’s actions and comments.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/instagram/Posts.png                     1460w
+            "
+            src="./assets/images/projects/instagram/Posts.png"
+          />
+          <figcaption>Posts</figcaption>
+        </figure>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/instagram/Feed.png                     1460w
+            "
+            src="./assets/images/projects/instagram/Feed.png"
+          />
+          <figcaption>Feed tab with notification popover</figcaption>
+        </figure>
+        <article>
+          <h3>Navigation</h3>
+          <p>
+            Instagram’s current navigation system isn’t perfectly suited for the
+            iPad. It relies a lot on swipe action which are less user friendly
+            on such a large display. While I understand the decision to
+            integrate the stories in the main “Home” view (discoverability,
+            engagement...), I still think it makes a lot of sense to separate
+            them from the traditional feed.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/instagram/Navigation.png                     1460w
+            "
+            src="./assets/images/projects/instagram/Navigation.png"
+          />
+          <figcaption>Navigation icons</figcaption>
+        </figure>
+        <article>
+          <h3>Other explorations</h3>
+          <p>
+            Instagram introduced Collections a few years ago but they remained
+            not very accessible in the app. As a photographer, inspiration is a
+            very important way of collecting ideas, styles and compositions in
+            order to develop your own style and taste.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/instagram/Collections.png                     1460w
+            "
+            src="./assets/images/projects/instagram/Collections.png"
+          />
+          <figcaption>Collection tab</figcaption>
+        </figure>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/instagram/Collection.png                     1460w
+            "
+            src="./assets/images/projects/instagram/Collection.png"
+          />
+          <figcaption>Collection</figcaption>
+        </figure>
+        <article>
+          <h3>Outcome</h3>
+          <p>
+            This project allowed me to explore how an optimized experience could
+            improve Instagram on the iPad. By relying heavily on iOS’s core
+            components, the app could feel more structured and easier to use. It
+            could also allow Instagram to expand the functionalities of its app
+            by providing new features related to content exploration,
+            inspiration and building communities.
+          </p>
+        </article>
       </div>
-      <div class="container full-width">
-        <img
-          class="full-width"
-          src="./assets/images/projects/instagram/posts.jpg"
-          srcset="
-            ./assets/images/projects/instagram/posts.jpg    1440w,
-            ./assets/images/projects/instagram/posts@2x.jpg 2880w,
-            ./assets/images/projects/instagram/posts@3x.jpg 4320w
-          "
-          alt=""
-        />
+    </section>
+    <section>
+      <div class="container small">
+        <article class="project-preview-container">
+          <div class="project-preview previous">
+            <h4>Previous</h4>
+            <div class="image-container">
+              <p>Clear Sky</p>
+              <img
+                src="assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg"
+              />
+            </div>
+          </div>
+          <div class="project-preview next">
+            <h4>Next</h4>
+            <div class="image-container">
+              <p>Quick Replies</p>
+              <img
+                src="assets/images/projects/front/front-for-ios-sharpie.jpg"
+              />
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="container block">
-        <h2>Stories</h2>
-        <p>
-          For this part of the app, I thought it would be interesting to explore
-          with story previews. Displaying a grid of stories will allow the user
-          to get a sneak peak of all the stories available. This is especially
-          useful when you follow a large amount of accounts and want to have a
-          better overview of the all content available.
-        </p>
-        <p>
-          Each story is displayed in fullscreen in order to keep a good
-          immersion. Because of technical constraints (photo size, video
-          compression), stories are limited to a fixed container container.
-        </p>
-        <img
-          src="./assets/images/projects/instagram/stories.png"
-          srcset="
-            ./assets/images/projects/instagram/stories.png    1076w,
-            ./assets/images/projects/instagram/stories@2x.png 2152w
-          "
-          alt=""
-        />
-        <img
-          src="./assets/images/projects/instagram/story.png"
-          srcset="
-            ./assets/images/projects/instagram/story.png    1076w,
-            ./assets/images/projects/instagram/story@2x.png 2152w
-          "
-          alt=""
-        />
-        <img
-          src="./assets/images/projects/instagram/story_music.png"
-          srcset="
-            ./assets/images/projects/instagram/story_music.png    1076w,
-            ./assets/images/projects/instagram/story_music@2x.png 2152w
-          "
-          alt=""
-        />
-        <h2>Feed & Notifications</h2>
-        <p>
-          The notifications list has been moved to a dropdown menu on the right
-          of the navigation bar. This allows the menu to be accessible in most
-          screens of the app. The icon has been updated with a more generic icon
-          that works for a variety of notification types.
-        </p>
-        <p>
-          Unlike stories, the feed is using a 1 column layout, like on a phone.
-          I experimented with a multi-columns layout but it seemed better suited
-          for browsing/discovering new content. Having 1 column reduces the
-          number of posts displayed in the viewport. It results in a better
-          focus on the posts, as the goal here is not to “consume content” but
-          rather to offer an experience that allows the content to stand out.
-        </p>
-        <p>
-          Posts have the possibility to have a caption, displayed right under
-          the image and above the post’s actions and comments.
-        </p>
-        <img
-          src="./assets/images/projects/instagram/feed.png"
-          srcset="
-            ./assets/images/projects/instagram/feed.png    1076w,
-            ./assets/images/projects/instagram/feed@2x.png 2152w
-          "
-          alt=""
-        />
-        <h2>Navigation</h2>
-        <p>
-          Instagram’s current navigation system isn’t perfectly suited for the
-          iPad. It relies a lot on swipe action which are less user friendly on
-          such a large display. While I understand the decision to integrate the
-          stories in the main “Home” view (discoverability, engagement...), I
-          still think it makes a lot of sens to separate them from the
-          traditional feed.
-        </p>
-        <h2>Exploration: Collections</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <img
-          src="./assets/images/projects/instagram/collections.png"
-          srcset="
-            ./assets/images/projects/instagram/collections.png    1076w,
-            ./assets/images/projects/instagram/collections@2x.png 2152w
-          "
-          alt=""
-        />
-        <img
-          src="./assets/images/projects/instagram/collection.png"
-          srcset="
-            ./assets/images/projects/instagram/collection.png    1076w,
-            ./assets/images/projects/instagram/collection@2x.png 2152w
-          "
-          alt=""
-        />
+    </section>
+    <footer>
+      <div class="container">
+        <ul>
+          <li><a href="http://m.me/william.bout">Messenger</a></li>
+          <li><a href="mailto://hello@williambout.me">Email</a></li>
+          <li><a href="http://twitter.com/williambout">Twitter</a></li>
+          <li><a href="http://unsplash.com/williambout">Unsplash</a></li>
+          <li><a href="http://instagram.com/williambout">Instagram</a></li>
+          <li><a href="http://dribbble.com/williambout">Dribbble</a></li>
+          <li><a href="http://github.com/williambout">GitHub</a></li>
+        </ul>
+        <div class="edition"><span>19/01</span></div>
       </div>
-    </article>
+    </footer>
     <script src="./assets/scripts/project.js"></script>
   </body>
 </html>

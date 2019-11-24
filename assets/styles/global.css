@@ -40,16 +40,16 @@ nav {
   transition: opacity 0.2s ease;
 
   @supports (backdrop-filter: blur(20px)) {
-    background: var(--transparent-bg);
+    background: rgba(20, 20, 20, 0.9);
+    box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.3);
   }
 }
 
 .container {
   max-width: 1000px;
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
 
   &.small {
     max-width: 730px;
