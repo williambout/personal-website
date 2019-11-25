@@ -32,17 +32,53 @@ nav {
   min-height: 100px;
   min-width: 100%;
   background: var(--secondary-background);
-  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.2);
   font-weight: 600;
-  display: flex;
-  align-items: center;
   z-index: 100;
   transition: opacity 0.2s ease;
 
+  & .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    & ul {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      line-height: 100px;
+      font-weight: 500;
+
+      & li {
+        margin-left: 30px;
+
+        & a {
+          color: var(--secondary-text);
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: var(--primary-text);
+          }
+        }
+
+        &:first-child {
+          margin-left: 0;
+          margin-right: auto;
+
+          & a {
+            color: var(--primary-text);
+          }
+        }
+      }
+    }
+  }
+
   @supports (backdrop-filter: blur(20px)) {
-    background: rgba(20, 20, 20, 0.9);
+    background: rgba(20, 20, 20, 0.8);
     box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px) saturate(130%);
   }
 }
 
@@ -86,6 +122,13 @@ nav {
   }
 }
 
+hr {
+  border: 0;
+  height: 0;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 footer {
   margin-top: 60px;
   overflow-x: hidden;
@@ -95,17 +138,6 @@ footer {
   & li {
     line-height: 2.5em;
     font-weight: 500;
-  }
-
-  & .edition {
-    border-radius: 50%;
-    display: flex;
-    width: 64px;
-    height: 64px;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--link-color);
-    color: var(--secondary-bg);
   }
 
   & .container {

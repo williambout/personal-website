@@ -1,0 +1,200 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+  </head>
+  <body class="project">
+    <nav>
+      <div class="container small">
+        <ul>
+          <li><a href="./">William Bout</a></li>
+          <li><a href="./">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header>
+      <div class="container small">
+        <div class="heading">
+          <h1>Clear Sky</h1>
+          <h2>Personal project</h2>
+        </div>
+      </div>
+      <div class="container small">
+        <div class="info">
+          <hr />
+          <ul>
+            <li>Protyping</li>
+            <li>UI Design</li>
+            <li>2019</li>
+          </ul>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <img
+        class="background"
+        src="./assets/images/projects/clear-sky/amsterdam.jpg"
+        alt=""
+      />
+    </header>
+    <section>
+      <div class="container small">
+        <article>
+          <h3>Introduction</h3>
+          <p>
+            During the first edition of
+            <a href="https://www.framer.com/loupe/">Loupe</a>, I build my first
+            prototype with Framer X. This was for me the opportunity to dust off
+            my front-end skills, with the introduction of React in Framer.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/clear-sky/potrero.jpg?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/clear-sky/potrero.jpg                     1460w
+            "
+            src="./assets/images/projects/clear-sky/potrero.jpg"
+          />
+          <figcaption>Testing the prototype in real conditions</figcaption>
+        </figure>
+        <article>
+          <h3>Designing with data</h3>
+          <p>
+            The goal of this project was to design and prototype a simple app
+            that relies on real time data for it's core feature.<br />
+            For the past few years I only designed with regular UI design tools
+            (Sketch & Figma). They are great for building functional and
+            beautiful UIs but lack the ability to work with data end-users will
+            interact with when they use a product. It is possible to intregate
+            fake data based on research/intution but there might be a chance
+            your dataset doesn’t cover all use cases.<br />
+            For this project, accurate data is important but the real-time
+            aspect is what makes the prototype powerfull, because it provides an
+            always up-to-date information to the user.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/clear-sky/3-Screens.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/clear-sky/3-Screens.png                     1460w
+            "
+            src="./assets/images/projects/clear-sky/3-Screens.png"
+          />
+          <figcaption>Various weather conditions</figcaption>
+        </figure>
+        <article>
+          <p>
+            It doesn’t rain a lot in San Francisco but during my time in
+            Amsterdam the weather was cloudy and having a high precision
+            information about rain was useful.<br />
+            Data is provided by a geolocalisation service and Dark Sky, a
+            service that provides forecast data. Their API provides very
+            detailed predictions for precipitations. Being able to inject
+            accurate and precise data allowed me to itterate quickly and
+            experiment with different UI concepts.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/clear-sky/Framer.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/clear-sky/Framer.png                     1460w
+            "
+            src="./assets/images/projects/clear-sky/Framer.png"
+          />
+          <figcaption>
+            Realtime data is powering the prototype
+          </figcaption>
+        </figure>
+        <article>
+          <h3>Designing with code</h3>
+          <p>
+            The biggest challenge of this project was to transition from Framer
+            Classic to Framer X. Tools (from my experience in photography and
+            design) should constrain your but never get in the way of
+            creativity. <br />
+            Framer X still feels a bit restrictive as a UI Design tool but
+            trully shines when it comes to building high fidelity prototypes.
+            There wasn’t a lot of documentation available when I worked on this
+            but the Framer team has been really focused on providing ressources
+            that explain the core concepts of React and that allow designers to
+            get started quickly without feeling intimidated.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/clear-sky/Lines.png?nf_resize=fit&w=730  730w,
+              ./assets/images/projects/clear-sky/Lines.png                     1460w
+            "
+            src="./assets/images/projects/clear-sky/Lines.png"
+          />
+          <figcaption>
+            Predictions visualisation
+          </figcaption>
+        </figure>
+        <article>
+          <h3>Outcome</h3>
+          <p>
+            This project allowed me to design with a different approach. The
+            experience was refreshing because it forced me to revisit my
+            process.<br />
+            I released the project on GitHub to provide ressources for the
+            design community, to help other designers get started with Framer X.
+            Since then new best practises have appeared so it’s probably not the
+            cleanest code but the base logic can still be re-used and applied to
+            other use cases.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section>
+      <div class="container small">
+        <a class="cta-button" href="https://github.com/williambout/clear-sky"
+          >View on GitHub</a
+        >
+        <hr />
+      </div>
+    </section>
+    <section>
+      <div class="container small">
+        <article class="project-preview-container">
+          <a class="project-preview previous" href="/front.html">
+            <h4>Previous</h4>
+            <div class="image-container">
+              <p>FilmFeed</p>
+              <img src="assets/images/projects/filmfeed/film.jpg" />
+            </div>
+          </a>
+          <a class="project-preview next" href="/clear-sky.html">
+            <h4>Next</h4>
+            <div class="image-container">
+              <p>Instagram for iPad</p>
+              <img src="assets/images/projects/instagram/ipad-desk.jpg" />
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <ul>
+          <li><a href="http://m.me/william.bout">Messenger</a></li>
+          <li><a href="mailto://hello@williambout.me">Email</a></li>
+          <li><a href="http://twitter.com/williambout">Twitter</a></li>
+          <li><a href="http://unsplash.com/williambout">Unsplash</a></li>
+          <li><a href="http://instagram.com/williambout">Instagram</a></li>
+          <li><a href="http://dribbble.com/williambout">Dribbble</a></li>
+          <li><a href="http://github.com/williambout">GitHub</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./assets/scripts/project.js"></script>
+  </body>
+</html>
