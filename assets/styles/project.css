@@ -137,8 +137,8 @@
 
   & .project-preview-container {
     display: grid;
-    grid-template-columns: 1fr 60px 1fr;
-    grid-template-rows: 100px 300px;
+    grid-template-columns: 1fr 120px 1fr;
+    grid-template-rows: 100px 250px;
 
     & .project-preview {
       position: relative;
