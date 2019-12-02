@@ -9,6 +9,10 @@
     line-height: 1.4;
     color: var(--primary-text);
 
+    @media (max-width: 500px) {
+      font-size: 16px;
+    }
+
     & .subtitle {
       color: var(--secondary-text);
     }
@@ -23,6 +27,11 @@
     position: relative;
     z-index: 1;
     color: var(--secondary-text);
+
+    @media (max-width: 500px) {
+      transform: translateX(-85%) translateY(-35px) rotate(-90deg);
+      font-size: 50px;
+    }
   }
 
   & h3 {
@@ -46,14 +55,15 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    padding-bottom: 75px;
+    padding-bottom: 5%;
 
     @media (max-width: 1000px) {
       height: 200px;
+      padding-bottom: 6%;
     }
 
     @media (max-width: 500px) {
-      padding-bottom: 50px;
+      height: 150px;
     }
 
     & span {
@@ -100,10 +110,15 @@
       border-radius: 50%;
       box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.25);
 
-      @media (max-width: 480px) {
-        bottom: -80px;
-        max-width: 200px;
-        max-height: 200px;
+      @media (max-width: 1000px) {
+        max-width: 250px;
+        max-height: 250px;
+      }
+
+      @media (max-width: 500px) {
+        bottom: -30px;
+        max-width: 60px;
+        max-height: 60px;
       }
     }
   }
@@ -238,6 +253,7 @@
         object-fit: cover;
         z-index: 0;
         pointer-events: none;
+        will-change: transform;
       }
     }
   }
@@ -254,6 +270,10 @@
       transform: translateX(-100%) translateY(50px) rotate(-90deg);
       min-width: 100vh;
       will-change: opacity;
+
+      @media (max-width: 500px) {
+        transform: translateX(-90%) translateY(50px) rotate(-90deg);
+      }
     }
 
     & .photo-container {
@@ -274,9 +294,9 @@
       -webkit-overflow-scrolling: touch;
       padding: 50px 5% 75px;
       padding: 50px calc(5% + env(safe-area-inset-right)) 75px
-        calc(5% + env(safe-area-inset-left) + 150px);
+        calc(5% + env(safe-area-inset-left));
       scroll-padding: 5%;
-      scroll-padding: calc(5% + env(safe-area-inset-left) + 150px);
+      scroll-padding: calc(5% + env(safe-area-inset-left));
 
       @media (min-width: 1111px) {
         padding: 50px calc((100% - 1000px) / 2) 75px
@@ -307,7 +327,8 @@
         border-radius: 2.5px;
 
         @media (max-width: 500px) {
-          min-width: 60vw;
+          height: auto;
+          width: 80vw;
         }
       }
 
@@ -344,6 +365,10 @@
       display: block;
       max-width: 75%;
       color: var(--secondary-text);
+
+      @media (max-width: 500px) {
+        max-width: 100%;
+      }
     }
   }
 }

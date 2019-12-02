@@ -111,6 +111,13 @@ nav {
 
   &.left-aligned {
     padding-left: 150px;
+
+    @media (max-width: 500px) {
+      padding-left: 0;
+      margin-left: 20%;
+      margin-right: 5%;
+      width: auto;
+    }
   }
 }
 
