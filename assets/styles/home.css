@@ -108,6 +108,12 @@
     }
   }
 
+  & section {
+    & .title-container {
+      display: flex;
+    }
+  }
+
   & #work {
     & ul {
       display: flex;
@@ -245,7 +251,7 @@
       pointer-events: none;
     }
     & h2 {
-      transform: translateX(-100%) translateY(15px) rotate(-90deg);
+      transform: translateX(-100%) translateY(50px) rotate(-90deg);
       min-width: 100vh;
       will-change: opacity;
     }
