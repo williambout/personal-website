@@ -13,6 +13,7 @@ html {
   line-height: 29px;
   font-family: "Indivisible", sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -75,7 +76,7 @@ nav {
 
           &.active,
           &:hover {
-            color: var(--secondary-text);
+            color: var(--primary-text);
           }
         }
 

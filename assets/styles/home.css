@@ -107,6 +107,7 @@
       }
     }
   }
+
   & #work {
     & ul {
       display: flex;
@@ -235,6 +236,14 @@
     }
   }
   & #photography {
+    &:before {
+      display: block;
+      content: " ";
+      margin-top: -100px;
+      height: 100px;
+      visibility: hidden;
+      pointer-events: none;
+    }
     & h2 {
       transform: translateX(-100%) translateY(15px) rotate(-90deg);
       min-width: 100vh;
@@ -261,12 +270,12 @@
       padding: 50px calc(5% + env(safe-area-inset-right)) 75px
         calc(5% + env(safe-area-inset-left) + 150px);
       scroll-padding: 5%;
-      scroll-padding: calc(5% + env(safe-area-inset-right));
+      scroll-padding: calc(5% + env(safe-area-inset-left) + 150px);
 
       @media (min-width: 1111px) {
         padding: 50px calc((100% - 1000px) / 2) 75px
           calc(((100% - 1000px) / 2) + calc(150px / 2));
-        scroll-padding: calc((100% - 1000px) / 2);
+        scroll-padding: calc(((100% - 1000px) / 2) + calc(150px / 2));
       }
     }
 
@@ -277,6 +286,10 @@
       scroll-snap-align: start;
       & + .photo {
         margin-left: 40px;
+      }
+
+      &:last-child {
+        padding-right: 40px;
       }
 
       & img {
@@ -310,7 +323,15 @@
   }
 
   & #about {
-    min-height: 400px;
+    &:before {
+      display: block;
+      content: " ";
+      margin-top: -150px;
+      height: 150px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    min-height: 550px;
 
     & .me {
       margin: -40px 0 30px;

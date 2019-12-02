@@ -1,4 +1,5 @@
 import anime from "animejs/lib/anime.es.js";
+import zenscroll from "zenscroll/zenscroll-min.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const photoList = document.querySelector(".photolist");
@@ -32,22 +33,26 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  const scrollElement =
-    window.document.scrollingElement ||
-    window.document.body ||
-    window.document.documentElement;
-  const workLink = document.querySelector(".button-work");
-  const workTop = document.querySelector("#work").getBoundingClientRect().top;
-
-  workLink.addEventListener("click", () => {
-    anime({
-      targets: scrollElement,
-      scrollTop: workTop,
-      duration: 500,
-      easing: "spring(1, 100, 10, 0)",
-      complete: function(anim) {
-        workLink.classlist.add("active");
+  const changeNav = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
+        document.querySelector(".active").classList.remove("active");
+        var id = entry.target.getAttribute("id");
+        var newLink = document
+          .querySelector(`[href="#${id}"]`)
+          .classList.add("active");
       }
     });
+  };
+
+  const options = {
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver(changeNav, options);
+
+  const sections = document.querySelectorAll("section");
+  sections.forEach(section => {
+    observer.observe(section);
   });
 });
