@@ -292,14 +292,14 @@
       overflow-x: scroll;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
-      padding: 50px 5% 75px;
-      padding: 50px calc(5% + env(safe-area-inset-right)) 75px
-        calc(5% + env(safe-area-inset-left));
-      scroll-padding: 5%;
-      scroll-padding: calc(5% + env(safe-area-inset-left));
+      padding: 50px 10%;
+      padding: 100px calc(10% + env(safe-area-inset-right)) 70px
+        calc(10% + env(safe-area-inset-left));
+      scroll-padding: 10%;
+      scroll-padding: calc(10% + env(safe-area-inset-left));
 
       @media (min-width: 1111px) {
-        padding: 50px calc((100% - 1000px) / 2) 75px
+        padding: 50px calc((100% - 1000px) / 2) 0px
           calc(((100% - 1000px) / 2) + calc(150px / 2));
         scroll-padding: calc(((100% - 1000px) / 2) + calc(150px / 2));
       }
@@ -312,10 +312,16 @@
       scroll-snap-align: start;
       & + .photo {
         margin-left: 40px;
+
+        @media (max-width: 500px) {
+          margin-left: 20px;
+        }
       }
 
       &:last-child {
-        padding-right: 40px;
+        @media (max-width: 500px) {
+          padding-right: 20px;
+        }
       }
 
       & img {

@@ -109,6 +109,14 @@ nav {
     width: 80%;
   }
 
+  &.small-mobile {
+    @media (max-width: 500px) {
+      padding-left: 0;
+      max-width: 730px;
+      width: 80%;
+    }
+  }
+
   &.left-aligned {
     padding-left: 150px;
 
