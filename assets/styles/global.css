@@ -33,7 +33,7 @@ nav {
   min-height: 100px;
   min-width: 100%;
   background: var(--secondary-background);
-  box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.5);
   font-weight: 600;
   z-index: 100;
 
