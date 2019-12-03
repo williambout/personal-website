@@ -19,17 +19,17 @@
   }
 
   & h2 {
-    transform: translateX(-100%) translateY(-35px) rotate(-90deg);
+    transform: rotate(-90deg) translateX(-100%) translateY(-20px);
     font-weight: 700;
     font-size: 110px;
-    transform-origin: bottom right;
+    transform-origin: top left;
     text-align: right;
     position: relative;
     z-index: 1;
     color: var(--secondary-text);
 
     @media (max-width: 500px) {
-      transform: translateX(-85%) translateY(-35px) rotate(-90deg);
+      transform: rotate(-90deg) translateX(-100%);
       font-size: 50px;
     }
   }
@@ -267,12 +267,12 @@
       pointer-events: none;
     }
     & h2 {
-      transform: translateX(-100%) translateY(50px) rotate(-90deg);
-      min-width: 100vh;
+      transform: rotate(-90deg) translateX(-100%) translateY(-20px);
+      padding-right: 100px;
       will-change: opacity;
 
       @media (max-width: 500px) {
-        transform: translateX(-90%) translateY(50px) rotate(-90deg);
+        transform: rotate(-90deg) translateX(-100%) translateY(0px);
       }
     }
 
