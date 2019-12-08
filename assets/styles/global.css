@@ -36,9 +36,11 @@ nav {
   box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.5);
   font-weight: 600;
   z-index: 100;
+  will-change: opacity;
 
   & .container {
     display: flex;
+    min-height: 100px;
     align-items: center;
     flex-direction: row;
 
@@ -53,24 +55,18 @@ nav {
 
       @media (max-width: 500px) {
         line-height: 1.2em;
-        display: grid;
-        grid-template-areas:
-          "title title title"
-          "link1  link2 link3";
-        flex: none;
-
-        & li {
-          margin: 0 !important;
-          &:first-child {
-            grid-area: title;
-          }
-        }
+        font-size: 16px;
       }
 
       & li {
         margin-left: 30px;
 
+        @media (max-width: 500px) {
+          margin-left: 14px;
+        }
+
         & a {
+          touch-action: manipulation;
           color: var(--secondary-text);
           transition: color 0.2s ease;
 
