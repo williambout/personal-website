@@ -130,8 +130,7 @@ nav {
   color: var(--primary-background);
   display: inline-flex;
   padding: 0 15px;
-  min-height: 44px;
-  line-height: 44px;
+  padding: 12px 15px 11px;
   border-radius: 22px;
   margin-bottom: 40px;
   font-weight: 500;

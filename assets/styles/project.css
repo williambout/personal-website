@@ -177,6 +177,12 @@
       display: flex;
       flex-direction: column;
 
+      &:hover {
+        & .image-container {
+          transform: scale(1.03);
+        }
+      }
+
       &.previous {
         grid-column: 1 / 3;
         grid-row: 2 / 3;
@@ -206,6 +212,8 @@
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 2px 64px 0 rgba(0, 0, 0, 0.8);
+        will-change: transform;
+        transition: transform 0.2s ease;
 
         &:after {
           content: "";
