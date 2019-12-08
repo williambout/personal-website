@@ -292,8 +292,8 @@
       overflow-x: scroll;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
-      padding: 50px 10%;
-      padding: 100px calc(10% + env(safe-area-inset-right)) 70px
+      padding: 60px 10%;
+      padding: 60px calc(10% + env(safe-area-inset-right)) 70px
         calc(10% + env(safe-area-inset-left));
       scroll-padding: 10%;
       scroll-padding: calc(10% + env(safe-area-inset-left));
