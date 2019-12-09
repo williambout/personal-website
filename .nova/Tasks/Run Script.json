@@ -1,0 +1,8 @@
+{
+  "script" : "npm run dev",
+  "persistent" : true,
+  "actions" : [
+    "run"
+  ],
+  "identifier" : "4B87157F-7113-409A-ACA1-EFCB980E8338"
+}
