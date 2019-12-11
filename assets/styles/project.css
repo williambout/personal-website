@@ -140,7 +140,7 @@
       font-weight: 600;
       font-size: 30px;
       color: var(--primary-text);
-      line-height: 28px;
+      line-height: 1.3em;
       margin-bottom: 30px;
     }
 
@@ -155,6 +155,7 @@
     & img,
     & video {
       max-width: 100%;
+      height: auto;
       border-radius: 6px;
     }
 
