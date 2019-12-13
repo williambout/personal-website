@@ -136,6 +136,7 @@ nav {
   font-weight: 500;
   position: relative;
   padding-right: 37px;
+  line-height: normal;
 
   &:after {
     content: "";
