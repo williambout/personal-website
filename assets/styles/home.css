@@ -326,8 +326,8 @@
 
       & img {
         width: auto;
-        height: 650px;
-        width: 450px;
+        max-height: 650px;
+        max-width: 450px;
         object-fit: cover;
         box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
         border-radius: 2.5px;
