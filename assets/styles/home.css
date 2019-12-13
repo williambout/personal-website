@@ -147,7 +147,7 @@
       width: calc(50% - (75px / 2));
       display: inline-block;
       height: 45vw;
-      max-height: 600px;
+      max-height: 550px;
       position: relative;
       transition: transform 0.2s ease;
       will-change: transform;
@@ -258,6 +258,12 @@
     }
   }
   & #photography {
+    min-height: 990px;
+
+    @media (max-width: 500px) {
+      min-height: auto;
+    }
+
     &:before {
       display: block;
       content: " ";
@@ -328,6 +334,8 @@
         width: auto;
         max-height: 650px;
         max-width: 450px;
+        height: 75vh;
+        width: auto;
         object-fit: cover;
         box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.5);
         border-radius: 2.5px;
