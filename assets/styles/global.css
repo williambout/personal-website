@@ -166,6 +166,11 @@ footer {
   & li {
     line-height: 2.5em;
     font-weight: 500;
+
+    & a {
+      font-weight: 400;
+      color: var(--secondary-text);
+    }
   }
 
   & .container {
