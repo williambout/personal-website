@@ -6,6 +6,10 @@
 
   & p {
     color: var(--secondary-text);
+
+    & + p {
+      margin-top: 1em;
+    }
   }
 
   & .caption-container {
