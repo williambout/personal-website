@@ -1,0 +1,243 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+  </head>
+  <body class="project">
+    <nav>
+      <div class="container">
+        <ul>
+          <li><a href="./">William Bout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header>
+      <div class="container small">
+        <div class="heading">
+          <h1>Quick Replies</h1>
+          <h2>Front</h2>
+        </div>
+      </div>
+      <div class="container small">
+        <div class="info">
+          <hr />
+          <ul>
+            <li>UI Design</li>
+            <li>Prototyping</li>
+            <li>User Testing</li>
+            <li>2018</li>
+          </ul>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <img
+        class="background"
+        srcset="
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=500   500w,
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=1000 1000w,
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=1500 1500w,
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=2000 2000w,
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=2500 2500w
+        "
+        src="./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=1000"
+        alt=""
+      />
+    </header>
+    <section>
+      <div class="container small">
+        <article>
+          <h3>Introduction</h3>
+          <p>
+            Front for iOS is the ideal companion to triage and reply to emails
+            when you are on the go. With more and more Front users relying on
+            it, we decided to revisit the composing experience. For this
+            project, we focused on context and speed when replying to
+            conversations.<br />
+            Users were not able to get the full context of a conversation while
+            replying to a message, increasing the reply time and lowering the
+            quality of the replies.
+          </p>
+        </article>
+        <article>
+          <h3>Replying with context</h3>
+          <p>
+            Replying to a message can be straightforward, but sometimes it
+            requires more effort.<br />
+            That’s why having access to the full history of a conversation can
+            be helpful in a lot of situations. In Front, not only can you be
+            looking for information in past messages, but also from activities
+            and comments added by your teammates. That’s why it became clear to
+            us that the user should be able to compose and browse a conversation
+            at the same time.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/front/Default.png?nf_resize=fit&w=730   730w,
+              ./assets/images/projects/front/Default.png?nf_resize=fit&w=1460 1460w
+            "
+            src="./assets/images/projects/front/Default.png?nf_resize=fit&w=730"
+          />
+          <figcaption>Quick reply composer</figcaption>
+        </figure>
+        <article>
+          <h3>A flexible experience</h3>
+          <p>
+            In addition to our main goal, we took this opportunity to also
+            simplify and enhance the composing experience. By removing advanced
+            features and focusing on the core experience, we were able to
+            provide the right amount of flexibility at the right time. In order
+            to build this new experience we focused on a multi states composer.
+            Instead of having a single fullscreen experience for the composer,
+            we decided to split it into 3 different states:<br />
+            • Collapsed: The content of the draft is not visible. This mode is
+            used when the composing experience is paused and the content of the
+            conversation is the main element of focus.<br />
+            • Adaptive: The composer will be responsive, based on the content of
+            the draft. This allows the user to focus both on the content of the
+            conversation and the composition of the reply.<br />
+            • Expanded: The composer is shown on top of the conversation. It can
+            be used for longer drafts.
+          </p>
+        </article>
+        <figure>
+          <video width="730" height="589" autoplay playsinline loop muted>
+            <source
+              src="./assets/images/projects/front/States.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <figcaption>Composer states concept</figcaption>
+        </figure>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/front/States.png?nf_resize=fit&w=730   730w,
+              ./assets/images/projects/front/States.png?nf_resize=fit&w=1460 1460w
+            "
+            src="./assets/images/projects/front/States.png?nf_resize=fit&w=730"
+          />
+          <figcaption>Different states of the composer</figcaption>
+        </figure>
+        <article>
+          <h3>Multi channels</h3>
+          <p>
+            While a lot of conversations in the app are emails, Front supports a
+            variety of different channel types. Facebook Messenger, Twitter,
+            SMS, and others are available. This requires the composer to support
+            additinal features; providing an optimized experience for each
+            channel. The Twitter composer provides a username autocomplete as
+            well as a character count. The SMS composes displays a character
+            counter. The SMS composer is displaying a SMS counter.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/front/Twitter.png?nf_resize=fit&w=730   730w,
+              ./assets/images/projects/front/Twitter.png?nf_resize=fit&w=1460 1460w
+            "
+            src="./assets/images/projects/front/Twitter.png?nf_resize=fit&w=730"
+          />
+          <figcaption>Twitter composer</figcaption>
+        </figure>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/front/SMS.png?nf_resize=fit&w=730   730w,
+              ./assets/images/projects/front/SMS.png?nf_resize=fit&w=1460 1460w
+            "
+            src="./assets/images/projects/front/SMS.png?nf_resize=fit&w=730"
+          />
+          <figcaption>SMS composer</figcaption>
+        </figure>
+        <article>
+          <h3>Other explorations</h3>
+          <p>
+            Some early explorations focused on a mini toolbar that could be used
+            to provide more options to the composer. The initial mockups focused
+            only on replying with text, and we also explored a small system with
+            attachment management.<br />
+            We ended up revisiting the signature UI and switched from a floating
+            pill to a new action available in the mini toolbar.<br />
+            We also designed an attachment viewer with the ability to see file
+            name, file sizes and image previews.
+          </p>
+        </article>
+        <figure>
+          <img
+            srcset="
+              ./assets/images/projects/front/Images.png?nf_resize=fit&w=730   730w,
+              ./assets/images/projects/front/Images.png?nf_resize=fit&w=1460 1460w
+            "
+            src="./assets/images/projects/front/Images.png?nf_resize=fit&w=730"
+          />
+          <figcaption>Image attachments</figcaption>
+        </figure>
+        <article>
+          <h3>Outcome</h3>
+          <p>
+            After the release of this new composer, we measured the adoption of
+            the new composer. 75% of our users rely on the new quick reply mode
+            while 25% prefer to use the fullscreen mode.<br />
+            This project was an opportunity for the design team to focus on
+            providing a more adaptive experience in the app; allowing the user
+            to choose the UI that matches their need, while offering more
+            context enabling efficiency.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section>
+      <div class="container small">
+        <a
+          class="cta-button"
+          href="https://dribbble.com/shots/5835409-Concept-Instagram-for-iPad"
+          >Download on the App Store</a
+        >
+        <hr />
+      </div>
+    </section>
+    <section>
+      <div class="container small">
+        <article class="project-preview-container">
+          <a class="project-preview previous" href="/clear-sky.html">
+            <h4>Previous</h4>
+            <div class="image-container">
+              <p>Instagram for iPad</p>
+              <img
+                src="assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=730"
+              />
+            </div>
+          </a>
+          <a class="project-preview next" href="/filmfeed.html">
+            <h4>Next</h4>
+            <div class="image-container">
+              <p>FilmFeed</p>
+              <img
+                src="assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=730"
+              />
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <ul>
+          <li><a href="mailto://hello@williambout.me">Email</a></li>
+          <li><a href="http://twitter.com/williambout">Twitter</a></li>
+          <li><a href="http://unsplash.com/williambout">Unsplash</a></li>
+          <li><a href="http://instagram.com/williambout">Instagram</a></li>
+          <li><a href="http://dribbble.com/williambout">Dribbble</a></li>
+          <li><a href="http://github.com/williambout">GitHub</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./assets/scripts/project.js"></script>
+  </body>
+</html>
