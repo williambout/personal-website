@@ -13,12 +13,12 @@
     "animejs": "^3.1.0",
     "autoprefixer": "^9.7.1",
     "global.css": "^1.1.0",
-    "lib": "^3.0.2",
+    "lib": "^4.0.5",
     "postcss-color-function": "^4.1.0",
-    "postcss-custom-properties": "^8.0.11",
+    "postcss-custom-properties": "^9.0.2",
     "postcss-modules": "^1.4.1",
     "postcss-nesting": "^7.0.1",
-    "reset-css": "^4.0.1",
+    "reset-css": "^5.0.1",
     "scroll-parallax": "^3.0.3",
     "vanilla-lazyload": "^12.3.0",
     "zenscroll": "^4.0.2"
@@ -26,6 +26,7 @@
   "devDependencies": {
     "cssnano": "^4.1.10",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-imagemin": "^3.0.0"
+    "parcel-plugin-imagemin": "^3.0.0",
+    "posthtml-modules": "^0.4.2"
   }
 }
