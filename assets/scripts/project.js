@@ -1,5 +1,7 @@
 import LazyLoad from "vanilla-lazyload";
 
-const lazyLoadInstance = new LazyLoad({
-  elements_selector: ".lazy"
+document.addEventListener("DOMContentLoaded", () => {
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+  });
 });
