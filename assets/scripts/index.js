@@ -56,3 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
+
+window.addEventListener("load", () => {
+  const avatar = document.querySelector(".avatar");
+  console.log("loaded");
+});

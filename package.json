@@ -20,7 +20,7 @@
     "postcss-nesting": "^7.0.1",
     "reset-css": "^5.0.1",
     "scroll-parallax": "^3.0.3",
-    "vanilla-lazyload": "^12.3.0",
+    "vanilla-lazyload": "^12.4.0",
     "zenscroll": "^4.0.2"
   },
   "devDependencies": {
