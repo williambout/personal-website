@@ -3,6 +3,10 @@ import LazyLoad from "vanilla-lazyload";
 import zenscroll from "zenscroll/zenscroll-min.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+  });
+
   const photoList = document.querySelector(".photolist");
 
   const photographyFade = anime({
