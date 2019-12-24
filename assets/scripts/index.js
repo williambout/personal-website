@@ -1,4 +1,5 @@
 import anime from "animejs/lib/anime.es.js";
+import LazyLoad from "vanilla-lazyload";
 import zenscroll from "zenscroll/zenscroll-min.js";
 
 document.addEventListener("DOMContentLoaded", () => {
