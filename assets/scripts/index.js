@@ -1,7 +1,12 @@
 import anime from "animejs/lib/anime.es.js";
+import LazyLoad from "vanilla-lazyload";
 import zenscroll from "zenscroll/zenscroll-min.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+  });
+
   const photoList = document.querySelector(".photolist");
 
   const photographyFade = anime({
@@ -55,4 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach(section => {
     observer.observe(section);
   });
+});
+
+window.addEventListener("load", () => {
+  const avatar = document.querySelector(".avatar");
+  console.log("loaded");
 });
