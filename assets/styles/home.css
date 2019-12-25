@@ -289,7 +289,7 @@
   & #photography {
     min-height: 990px;
 
-    @media (max-width: 500px) {
+    @dia (max-width: 500px) {
       min-height: auto;
     }
 
@@ -399,10 +399,10 @@
     min-height: 550px;
 
     & .container-me {
-      padding-left: 20%;
+      padding-left: 140px;
 
-      @media (min-width: 1200px) {
-        padding-left: 0;
+      @media (max-width: 500px) {
+        padding-left: 60px;
       }
     }
 
