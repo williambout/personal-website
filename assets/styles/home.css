@@ -268,7 +268,6 @@
       }
 
       & .background {
-        transition: transform 0.5s ease;
         position: absolute;
         top: 0;
         left: 0;
@@ -278,7 +277,7 @@
         z-index: 0;
         pointer-events: none;
         will-change: transform;
-        transition: filter 0.5s ease;
+        transition: all 0.5s ease;
         filter: blur(50px);
 
         &.loaded {
