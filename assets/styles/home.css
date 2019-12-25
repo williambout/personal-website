@@ -20,16 +20,17 @@
 
   & h2 {
     transform: rotate(-90deg) translateX(-100%) translateY(-20px);
+    will-change: opacity;
     font-weight: 700;
     font-size: 110px;
     transform-origin: top left;
     text-align: right;
     position: relative;
     z-index: 1;
-    color: var(--secondary-text);
+    color: var(--tertiary-text);
 
     @media (max-width: 500px) {
-      transform: rotate(-90deg) translateX(-100%);
+      transform: rotate(-90deg) translateX(-100%) translateY(-26px);
       font-size: 50px;
     }
   }
@@ -147,6 +148,10 @@
   }
 
   & #work {
+    & h2 {
+      padding-right: 30px;
+    }
+
     & ul {
       display: flex;
       flex-wrap: wrap;
@@ -288,6 +293,10 @@
       min-height: auto;
     }
 
+    & h2 {
+      padding-right: 100px;
+    }
+
     &:before {
       display: block;
       content: " ";
@@ -295,15 +304,6 @@
       height: 100px;
       visibility: hidden;
       pointer-events: none;
-    }
-    & h2 {
-      transform: rotate(-90deg) translateX(-100%) translateY(-20px);
-      padding-right: 100px;
-      will-change: opacity;
-
-      @media (max-width: 500px) {
-        transform: rotate(-90deg) translateX(-100%) translateY(0px);
-      }
     }
 
     & .photo-container {
@@ -398,6 +398,14 @@
     }
     min-height: 550px;
 
+    & .container-me {
+      padding-left: 20%;
+
+      @media (min-width: 1200px) {
+        padding-left: 0;
+      }
+    }
+
     & .me {
       margin: -40px 0 30px;
       display: block;
@@ -405,7 +413,7 @@
       color: var(--secondary-text);
 
       @media (max-width: 500px) {
-        max-width: 100%;
+        max-width: 90%;
       }
     }
   }

@@ -3,6 +3,7 @@
   --secondary-background: #171717;
   --primary-text: white;
   --secondary-text: rgba(255, 255, 255, 0.5);
+  --tertiary-text: rgba(255, 255, 255, 0.25);
 }
 
 body,
@@ -97,31 +98,15 @@ nav {
 
 .container {
   max-width: 1000px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 
   &.small {
     max-width: 730px;
-    width: 80%;
   }
 
-  &.small-mobile {
-    @media (max-width: 500px) {
-      padding-left: 0;
-      max-width: 730px;
-      width: 80%;
-    }
-  }
-
-  &.left-aligned {
-    padding-left: 150px;
-
-    @media (max-width: 500px) {
-      padding-left: 0;
-      margin-left: 20%;
-      margin-right: 5%;
-      width: auto;
-    }
+  &.medium {
+    max-width: 850px;
   }
 }
 
