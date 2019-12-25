@@ -132,7 +132,10 @@
       object-fit: cover;
       object-position: 50% 50%;
       transition: filter 0.5s ease;
-      filter: blur(50px);
+
+      &.loading {
+        filter: blur(50px);
+      }
 
       &.loaded {
         filter: blur(0);
