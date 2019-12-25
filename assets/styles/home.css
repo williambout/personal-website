@@ -26,6 +26,7 @@
     transform-origin: top left;
     text-align: right;
     position: relative;
+    letter-spacing: -1.5px;
     z-index: 1;
     color: var(--tertiary-text);
 
