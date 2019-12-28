@@ -122,7 +122,10 @@
         height: 100%;
         object-fit: cover;
         transition: filter 0.5s ease;
-        filter: blur(50px);
+
+        &.loading {
+          filter: blur(50px);
+        }
 
         &.loaded {
           filter: blur(0);
