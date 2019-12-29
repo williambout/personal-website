@@ -320,10 +320,18 @@
       position: relative;
       z-index: 20;
       padding-bottom: 30px;
+
+      @media (max-width: 500px) {
+        padding-bottom: 20px;
+      }
     }
 
     & .container-scroll {
       padding-bottom: 45px;
+
+      @media (max-width: 500px) {
+        padding-bottom: 80px;
+      }
 
       & .scroll-button {
         height: 44px;
@@ -340,6 +348,7 @@
           cursor: pointer;
           display: flex;
           padding: 0 10px;
+          touch-action: manipulation;
 
           &.scroll-right {
             padding-left: 6px;
@@ -375,8 +384,8 @@
       overflow-x: scroll;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
-      padding: 60px 10%;
-      padding: 60px calc(10% + env(safe-area-inset-right)) 70px
+      padding: 60px 10% 0;
+      padding: 60px calc(10% + env(safe-area-inset-right)) 0
         calc(10% + env(safe-area-inset-left));
       scroll-padding: 10%;
       scroll-padding: calc(10% + env(safe-area-inset-left));
