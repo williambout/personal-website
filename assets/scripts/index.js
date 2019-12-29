@@ -1,10 +1,21 @@
 import anime from "animejs/lib/anime.es.js";
 import LazyLoad from "vanilla-lazyload";
-import zenscroll from "zenscroll/zenscroll-min.js";
+import smoothscroll from "smoothscroll-polyfill";
+
+smoothscroll.polyfill();
 
 document.addEventListener("DOMContentLoaded", () => {
   const lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
+  });
+
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(link => {
+    const id = link.attributes["href"].value.slice(1);
+    const target = document.getElementById(id);
+    link.addEventListener("click", () => {
+      target.scrollIntoView({ behavior: "smooth" });
+    });
   });
 
   const photoList = document.querySelector(".photolist");
@@ -16,9 +27,58 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplay: false
   });
 
+  let canScrollLeft = false;
+  let canScrollRight = true;
+
   photoList.addEventListener("scroll", event => {
     const scrollLeft = event.target.scrollLeft;
+
     photographyFade.seek(photographyFade.duration * (scrollLeft / 75));
+
+    if (
+      photoList.scrollWidth ===
+      photoList.clientWidth + photoList.scrollLeft
+    ) {
+      photoScrollRight.classList.remove("active");
+      canScrollRight = false;
+    }
+
+    if (
+      !canScrollRight &&
+      photoList.scrollWidth > photoList.clientWidth + photoList.scrollLeft
+    ) {
+      photoScrollRight.classList.add("active");
+      canScrollRight = true;
+    }
+
+    if (scrollLeft > 0 && !canScrollLeft) {
+      photoScrollLeft.classList.add("active");
+      canScrollLeft = true;
+    }
+
+    if (scrollLeft === 0 && canScrollLeft) {
+      photoScrollLeft.classList.remove("active");
+      canScrollLeft = false;
+    }
+  });
+
+  const photoScrollRight = document.querySelector(".scroll-right");
+  const photoScrollLeft = document.querySelector(".scroll-left");
+
+  photoScrollRight.addEventListener("click", event => {
+    photoList.scrollTo({
+      top: 0,
+      left: photoList.scrollLeft + 400,
+      behavior: "smooth"
+    });
+  });
+
+  photoScrollLeft.addEventListener("click", event => {
+    photoList.scrollTo({
+      top: 0,
+      left: photoList.scrollLeft - 400,
+      behavior: "smooth"
+    });
   });
 
   const navFade = anime({

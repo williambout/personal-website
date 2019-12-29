@@ -112,6 +112,10 @@ nav {
   &.small {
     max-width: 730px;
   }
+
+  &.right-aligned {
+    text-align: right;
+  }
 }
 
 .cta-button {

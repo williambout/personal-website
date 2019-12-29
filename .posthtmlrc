@@ -2,6 +2,7 @@
   "plugins": {
     "posthtml-modules": {
       "root": "./modules"
-    }
+    },
+    "posthtml-include": {}
   }
 }
