@@ -18,6 +18,7 @@
     "autoprefixer": "^9.8.4",
     "global.css": "^1.1.0",
     "lib": "^4.2.0",
+    "medium-zoom": "^1.0.5",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^9.1.1",
     "postcss-modules": "^3.1.0",
