@@ -157,6 +157,30 @@
     & p {
       color: var(--secondary-text);
     }
+    
+    & li {
+      margin-left: 1em;
+      color: var(--secondary-text);
+      
+      &:before {
+        content: "•\00a0\00a0";
+      }
+    }
+  }
+  
+  & .context {
+    margin-top: 10px;
+    background-color: var(--tertiary-background);
+    padding: 17px 20px;
+    border-radius: 6px;
+    
+    & h4 {
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--primary-text);
+      line-height: 1.6;
+      padding-bottom: 4px;
+    }
   }
 
   & figure {
@@ -175,6 +199,10 @@
       text-align: center;
       line-height: 30px;
       margin-top: 4px;
+    }
+    
+    & + article {
+      padding: 25px 0 30px;
     }
   }
 
