@@ -153,6 +153,14 @@
       line-height: 1.3em;
       margin-bottom: 30px;
     }
+    
+    & h4 {
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--primary-text);
+      line-height: 1.3em;
+      margin-bottom: 20px;
+    }
 
     & p {
       color: var(--secondary-text);
