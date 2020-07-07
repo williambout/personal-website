@@ -350,9 +350,14 @@
           outline: none;
           background: none;
           cursor: pointer;
-          display: flex;
           padding: 0 10px;
           touch-action: manipulation;
+          
+          & .icon-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+          }
 
           &.scroll-right {
             padding-left: 6px;
