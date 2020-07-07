@@ -14,18 +14,19 @@
   "author": "William Bout <hello@williambout.me>",
   "license": "MIT",
   "dependencies": {
-    "animejs": "^3.1.0",
-    "autoprefixer": "^9.7.5",
+    "animejs": "^3.2.0",
+    "autoprefixer": "^9.8.4",
     "global.css": "^1.1.0",
-    "lib": "^4.1.2",
+    "lib": "^4.2.0",
+    "medium-zoom": "^1.0.5",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^9.1.1",
-    "postcss-modules": "^1.5.0",
+    "postcss-modules": "^3.1.0",
     "postcss-nesting": "^7.0.1",
     "reset-css": "^5.0.1",
     "scroll-parallax": "^3.0.3",
     "smoothscroll-polyfill": "^0.4.4",
-    "vanilla-lazyload": "^14.0.1"
+    "vanilla-lazyload": "^17.0.1"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
@@ -33,7 +34,7 @@
     "parcel-plugin-copy": "^1.0.2",
     "parcel-plugin-imagemin": "^4.0.1",
     "parcel-plugin-lazy": "0.0.4",
-    "posthtml-include": "^1.4.0",
-    "posthtml-modules": "^0.5.0"
+    "posthtml-include": "^1.4.3",
+    "posthtml-modules": "^0.6.1"
   }
 }

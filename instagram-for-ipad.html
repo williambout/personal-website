@@ -1,247 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <module href="./modules/head.html"> | Instagram for iPad</module>
-  <body class="project">
-    <nav>
-      <div class="container large">
-        <ul>
-          <li><a href="./">William Bout</a></li>
-        </ul>
-      </div>
-    </nav>
-    <header>
-      <div class="container small">
-        <div class="heading">
-          <h1>Instagram for iPad</h1>
-          <h2>Personal project</h2>
-        </div>
-      </div>
-      <div class="container small">
-        <div class="info">
-          <hr />
-          <ul>
-            <li>UI Design</li>
-            <li>Prototyping</li>
-            <li>Research</li>
-            <li>2018</li>
-          </ul>
-        </div>
-      </div>
-      <div class="overlay"></div>
-      <img
-        class="background lazy"
-        srcset="
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=500   500w,
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=1000 1000w,
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=1500 1500w,
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=2000 2000w,
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=2500 2500w
-        "
-        src="./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=200"
-        alt=""
-      />
-    </header>
-    <main>
-      <section>
-        <div class="container small">
-          <article>
-            <h3>Introduction</h3>
-            <p>
-              As a regular user of Instagram, I decided to work on an
-              unsolicited redesign of their iOS app and focus on the support of
-              the iPad. The exercise here was to refine the experience and allow
-              the app to take full advantage of the larger display of the
-              device.
-            </p>
-          </article>
-          <article>
-            <h3>Stories</h3>
-            <p>
-              For this part of the app, I thought it would be interesting to
-              explore story previews. Displaying a grid of stories allows the
-              user to get a quick overview of all the stories available which is
-              especially useful when one follows a large number of accounts and
-              want to have a better overview of the all content available.
-            </p>
-            <p>
-              Each story is displayed in fullscreen in order to allow for a
-              fully immersive experience. To factor in technical constraints
-              such as photo size and video compression, these would be limited
-              to a fixed container size.
-            </p>
-          </article>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Stories tab</figcaption>
-          </figure>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/instagram/Story.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Story.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Story.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Story</figcaption>
-          </figure>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Story with audio</figcaption>
-          </figure>
-          <article>
-            <h3>Feed & Notifications</h3>
-            <p>
-              The notifications list has been moved to a dropdown menu on the
-              right hand side of the navigation bar allowing it to be accessible
-              across various screens in the app. I updated the icon to a more
-              generic version to cater to a variety of notification types.
-            </p>
-            <p>
-              Unlike stories, the feed is using a 1 column layout, like on a
-              phone. I experimented with a multi-columns layout but it seemed
-              better suited for browsing/discovering new content. The goal for
-              the feed is to focus on the quality of the content as opposed to
-              the quantity. A single column layout offers a better chance to
-              grab the users attention.
-            </p>
-            <p>
-              Posts are followed by captions and then by actions and comments.
-            </p>
-          </article>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Posts</figcaption>
-          </figure>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Feed tab with notification popover</figcaption>
-          </figure>
-          <article>
-            <h3>Navigation</h3>
-            <p>
-              Instagram's current navigation system isn't optimized for an
-              iPad's form factor. Swipe actions don't translate well on a big
-              screen such as the iPad's. Discoverability and engagement can also
-              improve with highly visible actions. For Stories, I decided to
-              separate them from the main homescreen in order to provide two
-              dedicated experiences.
-            </p>
-          </article>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Navigation icons</figcaption>
-          </figure>
-          <article>
-            <h3>Other explorations</h3>
-            <p>
-              Instagram introduced Collections a few years ago but they weren't
-              very accessible in the app. As a photographer, I realize how
-              important inspiration is to form your own sense of ideas, styles,
-              and compositions.<br />
-              In this exploration, I included Collections as a dedicated tab in
-              the navigation of the app in order to facilitate its
-              discoverability. I used this opportunity to revisit their design.
-            </p>
-          </article>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Collection tab</figcaption>
-          </figure>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Collection</figcaption>
-          </figure>
-          <article>
-            <h3>Outcome</h3>
-            <p>
-              This project allowed me to explore how an optimized experience
-              could improve Instagram on an iPad. Reliance on iOS's core
-              components could lend a structured, slicker interface. It could
-              also allow Instagram to expand the functionalities of its app by
-              providing new features related to content exploration, inspiration
-              and building communities.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section>
-        <div class="container small">
-          <a
-            class="cta-button"
-            href="https://dribbble.com/shots/5835409-Concept-Instagram-for-iPad"
-            >View on Dribbble</a
-          >
-          <hr />
-        </div>
-      </section>
-      <section>
-        <div class="container small">
-          <article class="project-preview-container">
-            <a class="project-preview previous" href="/clear-sky.html">
-              <h4>Previous</h4>
-              <div class="image-container">
-                <p>Clear Sky</p>
-                <img
-                  src="assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?nf_resize=fit&w=730"
-                />
-              </div>
-            </a>
-            <a class="project-preview next" href="/front.html">
-              <h4>Next</h4>
-              <div class="image-container">
-                <p>Quick Reply</p>
-                <img
-                  src="assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=730"
-                />
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-    </main>
-    <module href="./modules/footer.html"></module>
-    <script src="./assets/scripts/project.js"></script>
-  </body>
+	<module href="./modules/head.html"> | Instagram for iPad</module>
+	<body class="project">
+		<nav>
+			<div class="container large">
+				<ul>
+					<li><a href="./">William Bout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<header>
+			<div class="container small">
+				<div class="heading">
+					<h1>Instagram for iPad</h1>
+					<h2>Personal project</h2>
+				</div>
+			</div>
+			<div class="container small">
+				<div class="info">
+					<hr />
+					<ul>
+						<li>UI Design</li>
+						<li>Prototyping</li>
+						<li>Research</li>
+						<li>2018</li>
+					</ul>
+				</div>
+			</div>
+			<div class="overlay"></div>
+			<img class="background lazy" srcset="./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=500 500w, ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=1000 1000w, ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=1500 1500w, ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=2000 2000w, ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=2500 2500w" src="./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=200" alt="" />
+		</header>
+		<main>
+			<section>
+				<div class="container small">
+					<article>
+						<h3>Overview</h3>
+						<p>
+							As a regular user of Instagram, I decided to work on an unsolicited redesign of their iOS app and focus on the support of the iPad. The exercise here was to refine the experience and allow the app to take full advantage of the larger display of the device.
+						</p>
+					</article>
+					<article>
+						<h3>Stories</h3>
+						<p>
+							For this part of the app, I thought it would be interesting to explore story previews. Displaying a grid of stories allows the user to get a quick overview of all the stories available which is especially useful when one follows a large number of accounts and want to have a better overview of the all content available.
+						</p>
+						<p>
+							Each story is displayed in fullscreen in order to allow for a fully immersive experience. To factor in technical constraints such as photo size and video compression, these would be limited to a fixed container size.
+						</p>
+					</article>
+					<figure>
+						<img data-zoomable data-zoomable srcset="./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=730 730w, ./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=730" />
+						<figcaption>Stories tab</figcaption>
+					</figure>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/instagram/Story.png?nf_resize=fit&w=730 730w, ./assets/images/projects/instagram/Story.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/instagram/Story.png?nf_resize=fit&w=730" />
+						<figcaption>Story</figcaption>
+					</figure>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=730 730w, ./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=730" />
+						<figcaption>Story with audio</figcaption>
+					</figure>
+					<article>
+						<h3>Feed & Notifications</h3>
+						<p>
+							The notifications list has been moved to a dropdown menu on the right hand side of the navigation bar allowing it to be accessible across various screens in the app. I updated the icon to a more generic version to cater to a variety of notification types.
+						</p>
+						<p>
+							Unlike stories, the feed is using a 1 column layout, like on a phone. I experimented with a multi-columns layout but it seemed better suited for browsing/discovering new content. The goal for the feed is to focus on the quality of the content as opposed to the quantity. A single column layout offers a better chance to grab the users attention.
+						</p>
+						<p>
+							Posts are followed by captions and then by actions and comments.
+						</p>
+					</article>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=730 730w, ./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=730" />
+						<figcaption>Posts</figcaption>
+					</figure>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=730 730w, ./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=730" />
+						<figcaption>Feed tab with notification popover</figcaption>
+					</figure>
+					<article>
+						<h3>Navigation</h3>
+						<p>
+							Instagram's current navigation system isn't optimized for an iPad's form factor. Swipe actions don't translate well on a big screen such as the iPad's. Discoverability and engagement can also improve with highly visible actions. For Stories, I decided to separate them from the main homescreen in order to provide two dedicated experiences.
+						</p>
+					</article>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=730 730w, ./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=730" />
+						<figcaption>Navigation icons</figcaption>
+					</figure>
+					<article>
+						<h3>Other explorations</h3>
+						<p>
+							Instagram introduced Collections a few years ago but they weren't very accessible in the app. As a photographer, I realize how important inspiration is to form your own sense of ideas, styles, and compositions.<br />
+							In this exploration, I included Collections as a dedicated tab in the navigation of the app in order to facilitate its discoverability. I used this opportunity to revisit their design.
+						</p>
+					</article>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=730 730w, ./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=730" />
+						<figcaption>Collection tab</figcaption>
+					</figure>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=730 730w, ./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=730" />
+						<figcaption>Collection</figcaption>
+					</figure>
+					<article>
+						<h3>Outcome</h3>
+						<p>
+							This project allowed me to explore how an optimized experience could improve Instagram on an iPad. Reliance on iOS's core components could lend a structured, slicker interface. It could also allow Instagram to expand the functionalities of its app by providing new features related to content exploration, inspiration and building communities.
+						</p>
+					</article>
+				</div>
+			</section>
+			<section>
+				<div class="container small">
+					<a class="cta-button" href="https://dribbble.com/shots/5835409-Concept-Instagram-for-iPad">View on Dribbble</a>
+					<hr />
+				</div>
+			</section>
+			<section>
+				<div class="container small">
+					<article class="project-preview-container">
+						<a class="project-preview previous" href="/front-design-system.html">
+							<h4>Previous</h4>
+							<div class="image-container">
+								<p>Design System</p>
+								<img src="assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=730" />
+							</div>
+						</a>
+						<a class="project-preview next" href="/filmfeed.html">
+							<h4>Next</h4>
+							<div class="image-container">
+								<p>FilmFeed</p>
+								<img src="assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=730" />
+							</div>
+						</a>
+					</article>
+				</div>
+			</section>
+		</main>
+		<module href="./modules/footer.html"></module>
+		<script src="./assets/scripts/project.js"></script>
+	</body>
 </html>

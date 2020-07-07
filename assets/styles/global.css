@@ -1,6 +1,7 @@
 :root {
   --primary-background: #1d1d1d;
   --secondary-background: #171717;
+  --tertiary-background: rgba(255, 255, 255, 0.05);
   --primary-text: white;
   --secondary-text: rgba(255, 255, 255, 0.5);
   --tertiary-text: rgba(255, 255, 255, 0.25);

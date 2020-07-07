@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+	<module href="./modules/head.html"> | Quick Reply</module>
+	<body class="project">
+		<nav>
+			<div class="container large">
+				<ul>
+					<li><a href="./">William Bout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<header>
+			<div class="container small">
+				<div class="heading">
+					<h1>Quick Reply</h1>
+					<h2>Front</h2>
+				</div>
+			</div>
+			<div class="container small">
+				<div class="info">
+					<hr />
+					<ul>
+						<li>UI Design</li>
+						<li>Interaction Design</li>
+            <li>Prototyping</li>
+						<li>2018</li>
+					</ul>
+				</div>
+			</div>
+			<div class="overlay"></div>
+			<img
+				class="background lazy"
+				src="./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=200"
+				data-srcset="
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=500   500w,
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=1000 1000w,
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=1500 1500w,
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=2000 2000w,
+          ./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=2500 2500w
+        "
+				alt=""
+			/>
+		</header>
+		<main>
+			<section>
+				<div class="container small">
+					<article class="context">
+						<h4>Context</h4>
+						<p>Front is a communication platform for teams helping customer-facing teams better interact with their customers across a variety of external communication tools</p>
+					</article>
+					<article>
+						<h3>Overview</h3>
+						<p>
+							Front for iOS is the ideal companion to triage and reply to emails when you are on the go. With more and more Front users relying on it, we decided to revisit the composing experience. For this project, we focused on context and speed when replying to conversations.<br />
+							Users were not able to get the full context of a conversation while replying to a message, increasing the time it took to reply and lowering the quality of the replies.
+						</p>
+					</article>
+          <figure>
+            <video width="730" height="589" autoplay playsinline loop muted>
+              <source src="./assets/images/projects/front/default.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Quick reply composer</figcaption>
+          </figure>
+					<article>
+						<h3>Replying with context</h3>
+						<p>
+							Replying to a message can be straightforward, but sometimes it requires more effort.<br />
+							That’s why having access to the full history of a conversation can be helpful in a lot of situations. In Front, earlier messages, comments, and activities may all contain pertinent context. It became apparent that a user would need to read the conversation while composing a reply.
+						</p>
+					</article>
+					<article>
+						<p>
+							In the previous iteration, users had to follow a linear flow in order to reply to a message. This created 2 very distinct phases during the replying process:
+              <ul>
+                <li>A "consuming" phase, that allowed the user to understand the full context of a conversation and its content.</li>
+                <li>A "replying" phase during which the user focuses on composing their message.</li>
+              </ul> 
+						</p>
+					</article>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/front/reply-drawing-1.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/reply-drawing-1.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/reply-drawing-1.png?nf_resize=fit&w=730" />
+					</figure>
+					<article>
+						<p>
+							During the research phase, we realized how a lot of users had to navigate between the two screens in order to compose their reply, especially when confronted with:
+              <ul>
+                <li>Long conversations containing information spread out across multiple messages.</li>
+                <li>Conversations with precise and detailed information needed by the user to compose a reply.</li>
+              </ul> 
+						</p>
+					</article>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/front/reply-drawing-2.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/reply-drawing-2.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/reply-drawing-2.png?nf_resize=fit&w=730" />
+					</figure>
+          <article>
+            <p>
+              Research also allowed us to highlight friction points users were facing during the reply experience.
+              <ul>
+                <li>The navigation between the different screens was increasing the cognitive load of the user.</li>
+                <li>Switching screens also required multiple user interactions in various UI components.</li>
+              </ul> 
+            </p>
+          </article>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/front/reply-drawing-3.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/reply-drawing-3.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/reply-drawing-3.png?nf_resize=fit&w=730" />
+					</figure>
+          <article>
+            <h3>Early explorations</h3>
+            <p>
+              Based on the learnings for the research phase, we decided to focus on a fluid experience. </br>The new experience would need to reduce navigation transitions between screens and limit the number of user interactions needed to switch between the conversation and the composer.
+            </p>
+          </article>
+          <figure>
+            <img data-zoomable srcset="./assets/images/projects/front/reply-drawing-4.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/reply-drawing-4.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/reply-drawing-4.png?nf_resize=fit&w=730" />
+            <figcaption>Side panel exploration</figcaption>
+          </figure>
+          <article>
+            <p>
+              Two main explorations were considered at this stage of the project: a side panel & a bottom panel.</br>
+              Both solutions allow the user to switch between the composer and the conversation from a single swipe, making the interaction seamless.</br>
+              <br  />
+              During the prototyping phase, we were able to identify key elements that allowed us to validate the exploration of the bottom bar:
+              <ul>
+                <li>The vertical motion created by the appearance and disappearance of the keyboard didn't feel natural with the left to right gesture applied by the user when interacting with the side panel.</li>
+                <li>The side panel wasn't able to provide a lot of flexibility in terms of size options. The panel had to have a fixed height, as opposed of the bottom panel which can offer various heights (as described in the following section).</li>
+              </ul>
+            </p>
+          </article>
+          <figure>
+            <img data-zoomable srcset="./assets/images/projects/front/reply-drawing-5.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/reply-drawing-5.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/reply-drawing-5.png?nf_resize=fit&w=730" />
+            <figcaption>Bottom panel exploration</figcaption>
+          </figure>
+					<article>
+						<h3>A flexible experience</h3>
+						<p>
+							In addition to our main goal, we took this opportunity to also simplify and enhance the composing experience. By removing advanced features and focusing on the core experience, we were able to provide the right amount of flexibility at the right time without overwhelming the user. In order to build this new experience we focused on a multi states composer. Instead of having a single fullscreen experience for the composer, we decided to split it into 3 different states:<br />
+              <ul>
+                <li>Collapsed: The content of the draft is not visible. This mode is used when the composing experience is paused and the content of the conversation is the main element of focus.</li>
+                <li>Adaptive: The composer will be responsive, based on the content of the draft. This allows the user to focus both on the content of the conversation and the composition of the reply.</li>
+                <li>
+                  Expanded: The composer is shown on top of the conversation. It can be used for longer drafts.
+                </li>
+							</ul>
+						</p>
+					</article>
+					<figure>
+						<video width="730" height="589" autoplay playsinline loop muted>
+							<source src="./assets/images/projects/front/States.mp4" type="video/mp4" />
+						</video>
+						<figcaption>Composer states concept</figcaption>
+					</figure>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/front/States.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/States.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/States.png?nf_resize=fit&w=730" />
+						<figcaption>Different states of the composer</figcaption>
+					</figure>
+					<article>
+						<h3>Multi channels</h3>
+						<p>
+							While a lot of conversations in the app are emails, Front supports a variety of different channel types. Facebook Messenger, Twitter, SMS, and others are available. This requires the composer to support additional features; providing an optimized experience for each channel. The Twitter composer provides a username autocomplete as well as a character count. The SMS composer displays a character counter. The SMS composer is displaying a SMS counter.
+						</p>
+					</article>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/front/Twitter.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/Twitter.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/Twitter.png?nf_resize=fit&w=730" />
+						<figcaption>Twitter composer</figcaption>
+					</figure>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/front/SMS.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/SMS.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/SMS.png?nf_resize=fit&w=730" />
+						<figcaption>SMS composer</figcaption>
+					</figure>
+					<article>
+						<h3>Other explorations</h3>
+						<p>
+							Some early explorations focused on a mini toolbar that could be used to provide more options to the composer. The initial mockups focused only on replying with text, and we also explored a small system with attachment management.<br />
+							We ended up revisiting the signature UI and switched from a floating pill to a new action available in the mini toolbar.<br />
+							We also designed an attachment viewer with the ability to see file name, file sizes and image previews.
+						</p>
+					</article>
+					<figure>
+						<img data-zoomable srcset="./assets/images/projects/front/Images.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front/Images.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front/Images.png?nf_resize=fit&w=730" />
+						<figcaption>Image attachments</figcaption>
+					</figure>
+					<article>
+						<h3>Outcome</h3>
+						<p>
+							After the release of this new composer, we measured the adoption of the new composer.</br>75% of our users rely on the new quick reply mode while 25% prefer to use the fullscreen mode.<br />
+							This project was an opportunity for the design team to focus on providing a more adaptive experience in the app; allowing the user to choose the UI that matches their need, while offering more context enabling efficiency.
+						</p>
+					</article>
+				</div>
+			</section>
+			<section>
+				<div class="container small">
+					<a class="cta-button" href="https://apps.apple.com/app/id983808769">Download on the App Store</a>
+					<hr />
+				</div>
+			</section>
+			<section>
+				<div class="container small">
+					<article class="project-preview-container">
+            <a class="project-preview next" href="/front-design-system.html">
+              <h4>Next</h4>
+              <div class="image-container">
+                <p>Design System</p>
+                <img src="assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=730" />
+              </div>
+            </a>
+						<a class="project-preview previous" href="/front-responses.html">
+							<h4>Previous</h4>
+							<div class="image-container">
+								<p>Responses</p>
+								<img src="assets/images/projects/front-responses/Illustration.png?nf_resize=fit&w=730" />
+							</div>
+						</a>
+					</article>
+				</div>
+			</section>
+		</main>
+		<module href="./modules/footer.html"></module>
+		<script src="./assets/scripts/project.js"></script>
+	</body>
+</html>
