@@ -131,6 +131,16 @@ nav {
   position: relative;
   padding-right: 37px;
   line-height: normal;
+  user-select: none;
+  cursor: pointer;
+
+  &.disabled {
+    background: var(--secondary-text);
+    padding: 12px 15px 11px;
+    &:after {
+      content: none;
+    }
+  }
 
   &:after {
     content: "";
