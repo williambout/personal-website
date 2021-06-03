@@ -3,7 +3,7 @@
     opacity: 0 !important;
     will-change: opacity;
   }
-  & h1 {
+  h1 {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.4;
@@ -13,12 +13,12 @@
       font-size: 16px;
     }
 
-    & .subtitle {
+    .subtitle {
       color: var(--secondary-text);
     }
   }
 
-  & h2 {
+  h2 {
     transform: rotate(-90deg) translateX(-100%) translateY(-20px);
     will-change: opacity;
     font-weight: 700;
@@ -36,21 +36,21 @@
     }
   }
 
-  & h3 {
+  h3 {
     font-weight: 600;
     font-size: 24px;
     color: var(--primary-text);
     line-height: 1.4;
   }
 
-  & h4 {
+  h4 {
     line-height: 1.4;
     font-weight: 400;
     font-size: 18px;
     color: var(--secondary-text);
   }
 
-  & header {
+  header {
     background-color: var(--secondary-background);
     height: 250px;
     display: flex;
@@ -68,11 +68,11 @@
       height: 175px;
     }
 
-    & span {
+    span {
       display: block;
     }
 
-    & .tile {
+    .tile {
       position: absolute;
       height: 100%;
       width: 100%;
@@ -92,14 +92,14 @@
       }
     }
 
-    & .container {
+    .container {
       height: 100%;
       position: relative;
       display: flex;
       align-items: center;
     }
 
-    & .avatar-container {
+    .avatar-container {
       display: block;
       position: absolute;
       right: 0;
@@ -114,7 +114,7 @@
       background-image: linear-gradient(180deg, #adadad 0%, #cacacf 100%);
       overflow: hidden;
 
-      & .avatar {
+      .avatar {
         position: absolute;
         top: 0;
         left: 0;
@@ -145,21 +145,21 @@
     }
   }
 
-  & section {
-    & .container-title {
+  section {
+    .container-title {
       display: flex;
     }
   }
 
-  & #work {
+  #work {
     @media (max-width: 640px) {
       padding-top: 40px;
     }
-    & h2 {
+    h2 {
       padding-right: 30px;
     }
 
-    & ul {
+    ul {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -169,7 +169,7 @@
       z-index: 10;
     }
 
-    & .project {
+    .project {
       margin-bottom: 75px;
       border-radius: 6px;
       overflow: hidden;
@@ -185,11 +185,11 @@
       &:hover {
         transform: scale(1.03);
 
-        & .background {
+        .background {
           transform: scale(1.03);
         }
 
-        & .shadow {
+        .shadow {
           opacity: 1;
         }
       }
@@ -234,7 +234,7 @@
         );
       }
 
-      & .shadow {
+      .shadow {
         opacity: 0.65;
         transition: opacity 0.3s ease;
         position: absolute;
@@ -246,7 +246,7 @@
         pointer-events: none;
       }
 
-      & a {
+      a {
         overflow: hidden;
         position: absolute;
         display: flex;
@@ -255,7 +255,7 @@
         height: 100%;
       }
 
-      & .card-container {
+      .card-container {
         padding: 35px 40px;
 
         @media (max-width: 500px) {
@@ -263,17 +263,17 @@
         }
       }
 
-      & h3,
-      & h4 {
+      h3,
+      h4 {
         position: relative;
         z-index: 10;
       }
 
-      & h4 {
+      h4 {
         margin-top: 5px;
       }
 
-      & .background {
+      .background {
         position: absolute;
         top: 0;
         left: 0;
@@ -284,7 +284,7 @@
         pointer-events: none;
         will-change: transform;
         transition: all 0.5s ease;
-        
+
         &.left {
           object-position: left bottom;
         }
@@ -299,14 +299,14 @@
       }
     }
   }
-  & #photography {
+  #photography {
     min-height: 990px;
 
     @media (max-width: 500px) {
       min-height: auto;
     }
 
-    & h2 {
+    h2 {
       padding-right: 100px;
     }
 
@@ -319,7 +319,7 @@
       pointer-events: none;
     }
 
-    & .photo-container {
+    .photo-container {
       overflow-x: hidden;
       position: relative;
       z-index: 20;
@@ -330,20 +330,20 @@
       }
     }
 
-    & .container-scroll {
+    .container-scroll {
       padding-bottom: 45px;
 
       @media (max-width: 500px) {
         padding-bottom: 80px;
       }
 
-      & .scroll-button {
+      .scroll-button {
         height: 44px;
         border-radius: 22px;
         background: var(--primary-text);
         display: inline-flex;
 
-        & button {
+        button {
           -webkit-appearance: none;
           -moz-appearance: none;
           border: none;
@@ -352,8 +352,8 @@
           cursor: pointer;
           padding: 0 10px;
           touch-action: manipulation;
-          
-          & .icon-container {
+
+          .icon-container {
             height: 100%;
             display: flex;
             align-items: center;
@@ -368,23 +368,23 @@
           }
 
           &.active {
-            & svg {
-              & path {
+            svg {
+              path {
                 stroke: var(--primary-background);
               }
             }
           }
         }
 
-        & .scroll-left {
-          & svg {
+        .scroll-left {
+          svg {
             transform: rotate(180deg);
           }
         }
       }
     }
 
-    & ul {
+    ul {
       &::-webkit-scrollbar {
         display: none;
       }
@@ -406,12 +406,12 @@
       }
     }
 
-    & .photo {
+    .photo {
       display: block;
       position: relative;
       z-index: 20;
       scroll-snap-align: start;
-      & + .photo {
+      + .photo {
         margin-left: 40px;
 
         @media (max-width: 500px) {
@@ -425,7 +425,7 @@
         }
       }
 
-      & img {
+      img {
         width: auto;
         max-height: 650px;
         max-width: 450px;
@@ -441,14 +441,14 @@
         }
       }
 
-      & .title {
+      .title {
         display: block;
         margin-top: 25px;
         font-weight: 600;
         font-size: 20px;
       }
 
-      & .location {
+      .location {
         display: block;
         margin-top: 0px;
         font-size: 16px;
@@ -458,7 +458,7 @@
     }
   }
 
-  & #about {
+  #about {
     &:before {
       display: block;
       content: " ";
@@ -469,7 +469,7 @@
     }
     min-height: 550px;
 
-    & .container-me {
+    .container-me {
       padding-left: 140px;
 
       @media (max-width: 500px) {
@@ -477,7 +477,7 @@
       }
     }
 
-    & .me {
+    .me {
       margin: -40px 0 30px;
       display: block;
       max-width: 75%;

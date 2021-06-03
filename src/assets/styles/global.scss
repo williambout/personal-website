@@ -40,13 +40,13 @@ nav {
   z-index: 100;
   will-change: opacity;
 
-  & .container {
+  .container {
     display: flex;
     min-height: 100px;
     align-items: center;
     flex-direction: row;
 
-    & ul {
+    ul {
       display: flex;
       flex: 1;
       flex-direction: row;
@@ -60,14 +60,14 @@ nav {
         font-size: 16px;
       }
 
-      & li {
+      li {
         margin-left: 30px;
 
         @media (max-width: 500px) {
           margin-left: 14px;
         }
 
-        & a {
+        a {
           touch-action: manipulation;
           color: var(--secondary-text);
           transition: color 0.2s ease;
@@ -82,7 +82,7 @@ nav {
           margin-left: 0;
           margin-right: auto;
 
-          & a {
+          a {
             color: var(--primary-text);
           }
         }
@@ -167,17 +167,17 @@ footer {
   background-color: var(--secondary-background);
   padding: 50px 0;
 
-  & li {
+  li {
     line-height: 2.5em;
     font-weight: 500;
 
-    & a {
+    a {
       font-weight: 400;
       color: var(--secondary-text);
     }
   }
 
-  & .container {
+  .container {
     position: relative;
     display: grid;
     grid-template-columns: auto 64px;

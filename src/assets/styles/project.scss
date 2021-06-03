@@ -1,5 +1,5 @@
 .project {
-  & header {
+  header {
     height: 80vh;
     min-height: 650px;
     position: relative;
@@ -8,7 +8,7 @@
     justify-content: flex-end;
     overflow: hidden;
 
-    & .heading {
+    .heading {
       margin: 0 0 80px;
       position: relative;
       z-index: 20;
@@ -17,7 +17,7 @@
         margin: 0 0 40px;
       }
 
-      & h1 {
+      h1 {
         font-weight: 600;
         font-size: 65px;
         color: var(--primary-text);
@@ -28,7 +28,7 @@
         }
       }
 
-      & h2 {
+      h2 {
         font-weight: 600;
         font-size: 45px;
         color: var(--secondary-text);
@@ -40,18 +40,18 @@
       }
     }
 
-    & .info {
+    .info {
       position: relative;
       z-index: 20;
 
-      & ul {
+      ul {
         display: flex;
         margin: 15px 0;
 
         @media (max-width: 500px) {
           display: grid;
           grid-auto-flow: row;
-          & li {
+          li {
             margin: 0 !important;
             grid-column: 1 / 3;
 
@@ -66,7 +66,7 @@
           }
         }
 
-        & li {
+        li {
           margin-left: 20px;
           text-transform: uppercase;
           font-weight: 500;
@@ -86,7 +86,7 @@
       }
     }
 
-    & .overlay {
+    .overlay {
       z-index: 10;
       position: absolute;
       top: 0;
@@ -123,7 +123,7 @@
       );
     }
 
-    & .background {
+    .background {
       position: absolute;
       top: 0;
       left: 0;
@@ -143,18 +143,18 @@
     }
   }
 
-  & article {
+  article {
     padding: 40px 0 30px;
 
-    & h3 {
+    h3 {
       font-weight: 600;
       font-size: 30px;
       color: var(--primary-text);
       line-height: 1.3em;
       margin-bottom: 30px;
     }
-    
-    & h4 {
+
+    h4 {
       font-weight: 600;
       font-size: 22px;
       color: var(--primary-text);
@@ -162,27 +162,27 @@
       margin-bottom: 20px;
     }
 
-    & p {
+    p {
       color: var(--secondary-text);
     }
-    
-    & li {
+
+    li {
       margin-left: 1em;
       color: var(--secondary-text);
-      
+
       &:before {
         content: "•\00a0\00a0";
       }
     }
   }
-  
-  & .context {
+
+  .context {
     margin-top: 10px;
     background-color: var(--tertiary-background);
     padding: 17px 20px;
     border-radius: 6px;
-    
-    & h4 {
+
+    h4 {
       font-weight: 600;
       font-size: 22px;
       color: var(--primary-text);
@@ -191,41 +191,41 @@
     }
   }
 
-  & figure {
+  figure {
     padding: 30px 0 30px;
 
-    & img,
-    & video {
+    img,
+    video {
       max-width: 100%;
       height: auto;
       border-radius: 6px;
     }
 
-    & figcaption {
+    figcaption {
       font-size: 15px;
       color: var(--secondary-text);
       text-align: center;
       line-height: 30px;
       margin-top: 4px;
     }
-    
-    & + article {
+
+    + article {
       padding: 25px 0 30px;
     }
   }
 
-  & .project-preview-container {
+  .project-preview-container {
     display: grid;
     grid-template-columns: 1fr 120px 1fr;
     grid-template-rows: 100px 250px;
 
-    & .project-preview {
+    .project-preview {
       position: relative;
       display: flex;
       flex-direction: column;
 
       &:hover {
-        & .image-container {
+        .image-container {
           transform: scale(1.03);
         }
       }
@@ -234,7 +234,7 @@
         grid-column: 1 / 3;
         grid-row: 2 / 3;
 
-        & h4 {
+        h4 {
           margin-bottom: 10px;
         }
       }
@@ -244,14 +244,14 @@
         grid-row: 1 / 3;
         z-index: 10;
 
-        & h4 {
+        h4 {
           font-weight: 600;
           font-size: 40px;
           color: var(--primary-text);
           margin-bottom: 20px;
         }
       }
-      & .image-container {
+      .image-container {
         flex: 1;
         display: flex;
         flex-direction: column-reverse;
@@ -287,14 +287,14 @@
         }
       }
 
-      & p {
+      p {
         position: relative;
         z-index: 20;
         padding: 30px;
         font-weight: 500;
         color: var(--primary-text);
       }
-      & img {
+      img {
         position: absolute;
         top: 0;
         left: 0;
