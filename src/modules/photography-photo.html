@@ -1,0 +1,23 @@
+<li class="photo">
+  <picture>
+    <source
+      srcset="
+        url:{{url}}?as=webp&width=500&quality=80   500w,
+        url:{{url}}?as=webp&width=1000&quality=80 1000w,
+        url:{{url}}?as=webp&width=1500&quality=80 1500w
+      "
+      type="image/webp"
+    />
+    <source
+      srcset="
+        url:{{url}}?width=500&quality=80   500w,
+        url:{{url}}?width=1000&quality=80 1000w,
+        url:{{url}}?width=1500&quality=80 1500w
+      "
+      type="image/jpeg"
+    />
+    <img loading="lazy" src="url:{{url}}?width=500&quality=100" />
+  </picture>
+  <span class="title">{{title}}</span>
+  <span class="location">{{location}}</span>
+</li>

@@ -19,13 +19,29 @@
           <span class="subtitle">Product designer based in San Francisco</span>
         </h1>
         <div class="avatar-container">
-          <img
-            class="avatar"
-            data-piio="src/assets/images/avatar.jpg"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            sizes="(max-width: 480px) 200px,
-               300px"
-          />
+          <picture>
+            <source
+              srcset="
+                url:./assets/images/avatar.jpg?as=webp&width=500&quality=100 500w,
+                url:./assets/images/avatar.jpg?as=webp&width=300&quality=100 300w,
+                url:./assets/images/avatar.jpg?as=webp&width=200&quality=100 200w
+              "
+              type="image/webp"
+            />
+            <source
+              srcset="
+                url:./assets/images/avatar.jpg?width=500&quality=100 500w,
+                url:./assets/images/avatar.jpg?width=300&quality=100 300w,
+                url:./assets/images/avatar.jpg?width=200&quality=100 200w
+              "
+              type="image/jpeg"
+            />
+            <img
+              loading="lazy"
+              class="avatar"
+              src="url:./assets/images/avatar.jpg?width=200&quality=100"
+            />
+          </picture>
         </div>
       </div>
       <div class="tile"></div>
@@ -43,14 +59,27 @@
                 <div class="card-container">
                   <h3>Responses</h3>
                   <h4>Front</h4>
-                  <img
-                    class="background lazy"
-                    src="assets/images/projects/front-responses/Illustration.png?nf_resize=fit&w=50"
-                    data-srcset="
-									assets/images/projects/front-responses/Illustration.png?nf_resize=fit&w=600 463w,
-									assets/images/projects/front-responses/Illustration.png?nf_resize=fit&w=1400 926w
-									"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        url:./assets/images/projects/front-responses/Illustration.png?as=webp&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/front-responses/Illustration.png?as=webp&height=550&width=550&quality=100    550w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        url:./assets/images/projects/front-responses/Illustration.png?as=jpg&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/front-responses/Illustration.png?as=jpg&height=550&width=550&quality=100    550w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      loading="lazy"
+                      class="background"
+                      src="url:./assets/images/projects/front-responses/Illustration.png?as=jpg&height=550&quality=100"
+                    />
+                  </picture>
                 </div>
               </a>
             </li>
@@ -60,14 +89,27 @@
                 <div class="card-container">
                   <h3>Quick Reply</h3>
                   <h4>Front</h4>
-                  <img
-                    class="background lazy"
-                    src="assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=50"
-                    data-srcset="
-									assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=463 463w,
-									assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=926 926w
-									"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        url:./assets/images/projects/front/front-for-ios-sharpie.jpg?as=webp&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/front/front-for-ios-sharpie.jpg?as=webp&height=550&width=550&quality=100    550w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        url:./assets/images/projects/front/front-for-ios-sharpie.jpg?as=jpg&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/front/front-for-ios-sharpie.jpg?as=jpg&height=550&width=550&quality=100    550w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      loading="lazy"
+                      class="background"
+                      src="url:./assets/images/projects/front/front-for-ios-sharpie.jpg?as=jpg&height=550&quality=100"
+                    />
+                  </picture>
                 </div>
               </a>
             </li>
@@ -77,14 +119,27 @@
                 <div class="card-container">
                   <h3>Design System</h3>
                   <h4>Front</h4>
-                  <img
-                    class="background lazy left"
-                    src="assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=50"
-                    data-srcset="
-									assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=600 463w,
-									assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=1400 926w
-									"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        url:./assets/images/projects/front-design-system/Illustration.png?as=webp&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/front-design-system/Illustration.png?as=webp&height=550&width=550&quality=100    550w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&height=550&width=550&quality=100    550w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      loading="lazy"
+                      class="background"
+                      src="url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&height=550&quality=100"
+                    />
+                  </picture>
                 </div>
               </a>
             </li>
@@ -94,14 +149,27 @@
                 <div class="card-container">
                   <h3>Instagram for iPad</h3>
                   <h4>Personal Project</h4>
-                  <img
-                    class="background lazy"
-                    src="assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=50"
-                    data-srcset="
-                      assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=463 463w,
-                      assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=926 926w
-                    "
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&height=550&width=550&quality=100    550w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&height=550&width=550&quality=100    550w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      loading="lazy"
+                      class="background"
+                      src="url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&height=550&quality=100"
+                    />
+                  </picture>
                 </div>
               </a>
             </li>
@@ -111,15 +179,27 @@
                 <div class="card-container">
                   <h3>FilmFeed</h3>
                   <h4>Personal Project</h4>
-                  <img
-                    class="background lazy"
-                    src="assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=50"
-                    data-srcset="
-                      assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=463 463w,
-                      assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=926 926w
-                    "
-                    alt="Film frames"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        url:./assets/images/projects/filmfeed/film.jpg?as=webp&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/filmfeed/film.jpg?as=webp&height=550&width=550&quality=100    550w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        url:./assets/images/projects/filmfeed/film.jpg?as=jpg&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/filmfeed/film.jpg?as=jpg&height=550&width=550&quality=100    550w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      loading="lazy"
+                      class="background"
+                      src="url:./assets/images/projects/filmfeed/film.jpg?as=jpg&height=550&quality=100"
+                    />
+                  </picture>
                 </div>
               </a>
             </li>
@@ -129,14 +209,27 @@
                 <div class="card-container">
                   <h3>Clear Sky</h3>
                   <h4>Personal Project</h4>
-                  <img
-                    class="background lazy"
-                    src="assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?nf_resize=fit&w=50"
-                    data-srcset="
-                      assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?nf_resize=fit&w=463 463w,
-                      assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?nf_resize=fit&w=926 926w
-                    "
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=webp&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=webp&height=550&width=550&quality=100    550w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&height=1100&width=1100&quality=100 1100w,
+                        url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&height=550&width=550&quality=100    550w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      loading="lazy"
+                      class="background"
+                      src="url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&height=550&quality=100"
+                    />
+                  </picture>
                 </div>
               </a>
             </li>
@@ -149,138 +242,56 @@
         </div>
         <div class="photo-container">
           <ul class="photolist">
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DJI_0050.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DJI_0050.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DJI_0050.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DJI_0050.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Golden Gate Bridge</span>
-              <span class="location">San Francisco, California</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DJI_0133-2.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DJI_0133-2.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DJI_0133-2.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DJI_0133-2.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">UT-12</span>
-              <span class="location">Panguitch, Utah</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DJI_0161.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DJI_0161.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DJI_0161.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DJI_0161.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Skunk Harbor</span>
-              <span class="location">Carson City, Nevada</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DSC02763-2.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DSC02763-2.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DSC02763-2.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DSC02763-2.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Furnace Creek</span>
-              <span class="location">Death Valley, California</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DSC08904.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DSC08904.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DSC08904.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DSC08904.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Mount Tamalpais</span>
-              <span class="location">Marin County, California</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DSC09680-3.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DSC09680-3.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DSC09680-3.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DSC09680-3.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Skunk Harbor</span>
-              <span class="location">Carson City, Nevada</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DSC02630-2.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DSC02630-2.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DSC02630-2.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DSC02630-2.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Furnace Creek</span>
-              <span class="location">Death Valley, California</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DSC08422.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DSC08422.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DSC08422.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DSC08422.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">UT-12</span>
-              <span class="location">Utah</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DSC04245.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DSC04245.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DSC04245.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DSC04245.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Battery Chamberlin</span>
-              <span class="location">San Francisco, California</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DSC09032.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DSC09032.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DSC09032.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DSC09032.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Antelope Canyon</span>
-              <span class="location">Page, Arizona</span>
-            </li>
-            <li class="photo">
-              <img
-                srcset="
-                  assets/images/photos/DSC05654-13.jpg?nf_resize=fit&w=500   500w,
-                  assets/images/photos/DSC05654-13.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/photos/DSC05654-13.jpg?nf_resize=fit&w=1500 1500w
-                "
-                src="assets/images/photos/DSC05654-13.jpg?nf_resize=fit&w=500"
-              />
-              <span class="title">Canals of Amsterdam</span>
-              <span class="location">Amsterdam, The Netherlands</span>
-            </li>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DJI_0050.jpg", "title":"Golden Gate Bridge","location":"San Francisco, California"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DJI_0133-2.jpg", "title":"UT-12","location":"Panguitch, Utah"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DJI_0161.jpg", "title":"Skunk Harbor","location":"Carson City, Nevada"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DSC02763-2.jpg", "title":"Furnace Creek","location":"Death Valley, California"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DSC08904.jpg", "title":"Mount Tamalpais","location":"Marin County, California"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DSC09680-3.jpg", "title":"Skunk Harbor","location":"Carson City, Nevada"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DSC02630-2.jpg", "title":"Skunk Harbor","location":"Death Valley, California"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DSC08422.jpg", "title":"UT-12","location":"Utah"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DSC04245.jpg", "title":"Battery Chamberlin","location":"San Francisco, California"}'
+            >
+            </module>
+            <module
+              href="src/modules/photography-photo.html"
+              locals='{"url":"./assets/images/photos/DSC09032.jpg", "title":"Antelope Canyon","location":"Page, Arizona"}'
+            >
+            </module>
           </ul>
         </div>
         <div class="container medium right-aligned container-scroll">
