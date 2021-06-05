@@ -22,13 +22,11 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.0.0-beta.3.1",
+    "@parcel/transformer-image": "2.0.0-beta.3.1",
     "parcel": "next",
     "parcel-plugin-copy": "^1.0.2",
     "posthtml-include": "^1.7.1",
     "posthtml-modules": "^0.7.4",
     "sass": "^1.34.1"
-  },
-  "parcelDependencies": {
-    "@parcel/transformer-image": "2.0.0-beta.3.1"
   }
 }
