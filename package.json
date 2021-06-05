@@ -21,7 +21,7 @@
     "vanilla-lazyload": "^17.3.2"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.0.0-nightly.706",
+    "@parcel/transformer-sass": "2.0.0-beta.3.1",
     "@parcel/transformer-image": "2.0.0-nightly.1981",
     "parcel": "next",
     "parcel-plugin-copy": "^1.0.2",
