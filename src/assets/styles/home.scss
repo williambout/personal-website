@@ -29,6 +29,7 @@
     letter-spacing: -1.5px;
     z-index: 1;
     color: var(--tertiary-text);
+    user-select: none;
 
     @media (max-width: 500px) {
       transform: rotate(-90deg) translateX(-100%) translateY(-26px);
