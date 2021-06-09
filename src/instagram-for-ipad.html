@@ -31,18 +31,33 @@
         </div>
       </div>
       <div class="overlay"></div>
-      <img
-        class="background lazy"
-        srcset="
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=500   500w,
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=1000 1000w,
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=1500 1500w,
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=2000 2000w,
-          ./assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=2500 2500w
-        "
-        src="./assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=200"
-        alt=""
-      />
+      <picture>
+        <source
+          srcset="
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=500&quality=100   500w,
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=1000&quality=100 1000w,
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=1500&quality=100 1500w,
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=2000&quality=100 2000w,
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=2500&quality=100 2500w
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=500&quality=100   500w,
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=1000&quality=100 1000w,
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=1500&quality=100 1500w,
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=2000&quality=100 2000w,
+            url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=2500&quality=100 2500w
+          "
+          type="image/jpeg"
+        />
+        <img
+          loading="lazy"
+          class="background"
+          src="url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=1000&quality=100"
+        />
+      </picture>
     </header>
     <main>
       <section>

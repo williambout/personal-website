@@ -15,5 +15,7 @@
   />
 
   <img data-zoomable src="{{url}}?as=jpg&width=730&quality=100" />
-  <figcaption>{{caption}}</figcaption>
+  <if condition="caption">
+    <figcaption>{{{ caption }}}</figcaption>
+  </if>
 </figure>

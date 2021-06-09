@@ -28,18 +28,33 @@
         </div>
       </div>
       <div class="overlay"></div>
-      <img
-        class="background lazy"
-        src="./assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=1000"
-        data-srcset="
-          ./assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=500   500w,
-          ./assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=1000 1000w,
-          ./assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=1500 1500w,
-          ./assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=2000 2000w,
-          ./assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=2500 2500w
-        "
-        alt=""
-      />
+      <picture>
+        <source
+          srcset="
+            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=500&quality=100   500w,
+            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=1000&quality=100 1000w,
+            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=1500&quality=100 1500w,
+            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=2000&quality=100 2000w,
+            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=2500&quality=100 2500w
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=500&quality=100   500w,
+            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1000&quality=100 1000w,
+            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1500&quality=100 1500w,
+            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=2000&quality=100 2000w,
+            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=2500&quality=100 2500w
+          "
+          type="image/jpeg"
+        />
+        <img
+          loading="lazy"
+          class="background"
+          src="url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1000&quality=100"
+        />
+      </picture>
     </header>
     <main>
       <section>

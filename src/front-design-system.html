@@ -27,18 +27,33 @@
 				</div>
 			</div>
 			<div class="overlay"></div>
-			<img
-				class="background lazy"
-				src="./assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=200"
-				data-srcset="
-          ./assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=500   500w,
-          ./assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=1000 1000w,
-          ./assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=1500 1500w,
-          ./assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=2000 2000w,
-          ./assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=2500 2500w
-        "
-				alt=""
-			/>
+			<picture>
+				<source
+				  srcset="
+					url:./assets/images/projects/front-design-system/Illustration.png?as=webp&width=500&quality=100   500w,
+					url:./assets/images/projects/front-design-system/Illustration.png?as=webp&width=1000&quality=100 1000w,
+					url:./assets/images/projects/front-design-system/Illustration.png?as=webp&width=1500&quality=100 1500w,
+					url:./assets/images/projects/front-design-system/Illustration.png?as=webp&width=2000&quality=100 2000w,
+					url:./assets/images/projects/front-design-system/Illustration.png?as=webp&width=2500&quality=100 2500w
+				  "
+				  type="image/webp"
+				/>
+				<source
+				  srcset="
+					url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=500&quality=100   500w,
+					url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=1000&quality=100 1000w,
+					url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=1500&quality=100 1500w,
+					url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=2000&quality=100 2000w,
+					url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=2500&quality=100 2500w
+				  "
+				  type="image/jpeg"
+				/>
+				<img
+				  loading="lazy"
+				  class="background"
+				  src="url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=1000&quality=100"
+				/>
+			  </picture>
 		</header>
 		<main>
 			<section>
@@ -50,13 +65,12 @@
 					<article>
 						<h3>Overview</h3>
 						<p>
-							As part of my work on the Core team, I lead the design system. </br>This project involved creating the foundations of the design system (available across multiple platforms), maintaining it over time, and making improvements based on the feedback from the design team.
+							As part of my work on the Core team, I lead the design system. <br/>This project involved creating the foundations of the design system (available across multiple platforms), maintaining it over time, and making improvements based on the feedback from the design team.
 						</p>
 					</article>
-					<figure>
-						<img data-zoomable srcset="./assets/images/projects/front-design-system/Colors.png?nf_resize=fit&w=730 730w, ./assets/images/projects/front-design-system/Colors.png?nf_resize=fit&w=1460 1460w" src="./assets/images/projects/front-design-system/Colors.png?nf_resize=fit&w=730" />
-						<figcaption>Front's color system</figcaption>
-					</figure>
+					<module
+					href="src/modules/project-image.html"
+					locals='{"url":"./assets/images/projects/front-design-system/Colors.png", "caption":"Front&rsquo;s color system"}'></module>
 					<article>
 						<p>
 							Before this project, the design team didn't have an easy way of sharing styles and components across projects. The team ended up duplicating a lot of design elements, which was causing some visual inconsistencies and increasing the complexity of codebases.

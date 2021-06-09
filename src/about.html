@@ -36,16 +36,31 @@
         <div class="container card-container" id="container-top">
           <div class="card me">
             <div class="image-container">
-              <img
-                srcset="
-                  assets/images/avatar.jpg?nf_resize=fit&w=200 200w,
-                  assets/images/avatar.jpg?nf_resize=fit&w=300 300w,
-                  assets/images/avatar.jpg?nf_resize=fit&w=400 400w,
-                  assets/images/avatar.jpg?nf_resize=fit&w=600 600w,
-                  assets/images/avatar.jpg?nf_resize=fit&w=700 700w
-                "
-                src="assets/images/avatar.jpg?nf_resize=fit&w=300"
-              />
+              <figure>
+                <source
+                  srcset="
+                    url:./assets/images/avatar.jpg?as=webp&width=200&quality=100 200w,
+                    url:./assets/images/avatar.jpg?as=webp&width=300&quality=100 300w,
+                    url:./assets/images/avatar.jpg?as=webp&width=400&quality=100 400w,
+                    url:./assets/images/avatar.jpg?as=webp&width=600&quality=100 600w,
+                    url:./assets/images/avatar.jpg?as=webp&width=700&quality=100 700w
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    url:./assets/images/avatar.jpg?as=jpg&width=200&quality=100 200w,
+                    url:./assets/images/avatar.jpg?as=jpg&width=300&quality=100 300w,
+                    url:./assets/images/avatar.jpg?as=jpg&width=400&quality=100 400w,
+                    url:./assets/images/avatar.jpg?as=jpg&width=600&quality=100 600w,
+                    url:./assets/images/avatar.jpg?as=jpg&width=700&quality=100 700w
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./assets/images/avatar.jpg?as=jpg&width=400&quality=100"
+                />
+              </figure>
             </div>
           </div>
           <div class="card dessert">
@@ -55,14 +70,27 @@
               </p>
             </div>
             <div class="image-container">
-              <img
-                srcset="
-                  assets/images/lemon-tart.jpg?nf_resize=fit&w=800   800w,
-                  assets/images/lemon-tart.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/lemon-tart.jpg?nf_resize=fit&w=1400 1400w
-                "
-                src="assets/images/lemon-tart.jpg?nf_resize=fit&w=800"
-              />
+              <figure>
+                <source
+                  srcset="
+                    url:./assets/images/lemon-tart.jpg?as=webp&width=800&quality=100   800w,
+                    url:./assets/images/lemon-tart.jpg?as=webp&width=1000&quality=100 1000w,
+                    url:./assets/images/lemon-tart.jpg?as=webp&width=1400&quality=100 1400w
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    url:./assets/images/lemon-tart.jpg?as=jpg&width=800&quality=100   800w,
+                    url:./assets/images/lemon-tart.jpg?as=jpg&width=1000&quality=100 1000w,
+                    url:./assets/images/lemon-tart.jpg?as=jpg&width=1400&quality=100 1400w
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./assets/images/lemon-tart.jpg?as=jpg&width=400&quality=100"
+                />
+              </figure>
             </div>
           </div>
         </div>
@@ -77,26 +105,52 @@
               </p>
             </div>
             <div class="image-container">
-              <img
-                srcset="
-                  assets/images/lassen-night.jpg?nf_resize=fit&w=600   600w,
-                  assets/images/lassen-night.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/lassen-night.jpg?nf_resize=fit&w=1400 1400w
-                "
-                src="assets/images/lassen-night.jpg?nf_resize=fit&w=600"
-              />
+              <figure>
+                <source
+                  srcset="
+                    url:./assets/images/lassen-night.jpg?as=webp&width=600&quality=100    600w,
+                    url:./assets/images/lassen-night.jpg?as=webp&width=1000w&quality=100 1000w,
+                    url:./assets/images/lassen-night.jpg?as=webp&width=1400w&quality=100 1400w
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    url:./assets/images/lassen-night.jpg?as=jpg&width=600&quality=100   600w,
+                    url:./assets/images/lassen-night.jpg?as=jpg&width=1000&quality=100 1000w,
+                    url:./assets/images/lassen-night.jpg?as=jpg&width=1400&quality=100 1400w
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./assets/images/lassen-night.jpg?as=jpg&width=400&quality=100"
+                />
+              </figure>
             </div>
           </div>
           <div class="card lassen-lake">
             <div class="image-container">
-              <img
-                srcset="
-                  assets/images/lassen-lake.jpg?nf_resize=fit&w=600   600w,
-                  assets/images/lassen-lake.jpg?nf_resize=fit&w=1000 1000w,
-                  assets/images/lassen-lake.jpg?nf_resize=fit&w=1200 1400w
-                "
-                src="assets/images/lassen-lake.jpg?nf_resize=fit&w=600"
-              />
+              <figure>
+                <source
+                  srcset="
+                    url:./assets/images/lassen-lake.jpg?as=webp&width=600&quality=100    600w,
+                    url:./assets/images/lassen-lake.jpg?as=webp&width=1000w&quality=100 1000w,
+                    url:./assets/images/lassen-lake.jpg?as=webp&width=1400w&quality=100 1400w
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    url:./assets/images/lassen-lake.jpg?as=jpg&width=600&quality=100   600w,
+                    url:./assets/images/lassen-lake.jpg?as=jpg&width=1000&quality=100 1000w,
+                    url:./assets/images/lassen-lake.jpg?as=jpg&width=1400&quality=100 1400w
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./assets/images/lassen-lake.jpg?as=jpg&width=400&quality=100"
+                />
+              </figure>
             </div>
           </div>
         </div>
