@@ -88,40 +88,19 @@
               to a fixed container size.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              data-zoomable
-              srcset="
-                ./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Stories.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Stories tab</figcaption>
-          </figure>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/instagram/Story.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Story.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Story.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Story</figcaption>
-          </figure>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Story-Music.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Story with audio</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/instagram/Stories.png", "caption":"Stories tab"}'
+          ></module>
+
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/instagram/Story.png", "caption":"Story"}'
+          ></module>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/instagram/Story-Music.png", "caption":"Story with audio"}'
+          ></module>
           <article>
             <h3>Feed & Notifications</h3>
             <p>
@@ -142,28 +121,14 @@
               Posts are followed by captions and then by actions and comments.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Posts.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Posts</figcaption>
-          </figure>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Feed.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Feed tab with notification popover</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/instagram/Posts.png", "caption":"Posts"}'
+          ></module>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/instagram/Feed.png", "caption":"Feed tab with notification popover"}'
+          ></module>
           <article>
             <h3>Navigation</h3>
             <p>
@@ -175,17 +140,10 @@
               dedicated experiences.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Navigation.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Navigation icons</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/instagram/Navigation.png", "caption":"Navigation icons"}'
+          ></module>
           <article>
             <h3>Other explorations</h3>
             <p>
@@ -198,28 +156,14 @@
               discoverability. I used this opportunity to revisit their design.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Collections.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Collection tab</figcaption>
-          </figure>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/instagram/Collection.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Collection</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/instagram/Collections.png", "caption":"Collection tab"}'
+          ></module>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/instagram/Collection.png", "caption":"Collection"}'
+          ></module>
           <article>
             <h3>Outcome</h3>
             <p>
@@ -253,18 +197,50 @@
               <h4>Previous</h4>
               <div class="image-container">
                 <p>Design System</p>
-                <img
-                  src="assets/images/projects/front-design-system/Illustration.png?nf_resize=fit&w=730"
-                />
+                <figure>
+                  <source
+                    srcset="
+                      url:./assets/images/projects/front-design-system/Illustration.png?as=webp&width=730&quality=100   730w,
+                      url:./assets/images/projects/front-design-system/Illustration.png?as=webp&width=1460&quality=100 1460w
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=730&quality=100   730w,
+                      url:./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=1460&quality=100 1460w
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/projects/front-design-system/Illustration.png?as=jpg&width=730&quality=100"
+                  />
+                </figure>
               </div>
             </a>
             <a class="project-preview next" href="./filmfeed.html">
               <h4>Next</h4>
               <div class="image-container">
                 <p>FilmFeed</p>
-                <img
-                  src="assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=730"
-                />
+                <figure>
+                  <source
+                    srcset="
+                      url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=730&quality=100   730w,
+                      url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=1460&quality=100 1460w
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=730&quality=100   730w,
+                      url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1460&quality=100 1460w
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/projects/filmfeed/film.jpg?as=jpg&width=730&quality=100"
+                  />
+                </figure>
               </div>
             </a>
           </article>

@@ -69,20 +69,14 @@
               & design.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/filmfeed/AE-1.jpg?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/filmfeed/AE-1.jpg?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/filmfeed/AE-1.jpg"
-            />
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/filmfeed/AE-1.jpg", "caption":false}'
+          ></module>
           <article>
             <h3>Logo and branding</h3>
             <p>
-              In order to add some personnality to the project, I explored a few
+              In order to add some personality to the project, I explored a few
               ideas for branding. The logo is composed of two “f”, the symbol
               used to indicate an aperture value in photography. The background
               showcases a color spectrum with vibrant tones. A subtle noise is
@@ -90,17 +84,10 @@
               film.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/filmfeed/logo.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/filmfeed/logo.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/filmfeed/logo.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Logo of FilmFeed</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/filmfeed/logo.png", "caption":"Logo of FilmFeed"}'
+          ></module>
           <article>
             <h3>An optimized experience</h3>
             <p>
@@ -116,19 +103,10 @@
               number of images on first load.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/filmfeed/Exhibition.jpg?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/filmfeed/Exhibition.jpg?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/filmfeed/Exhibition.jpg"
-            />
-            <figcaption>
-              Light Table at Oakland Museum of California’s Eames exhibit
-            </figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/filmfeed/Exhibition.jpg", "caption":"Light Table at Oakland Museum of California’s Eames exhibit"}'
+          ></module>
           <article>
             <p>
               The grid view is directly inspired by a light table I discovered
@@ -137,17 +115,10 @@
               main feed was loading.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/filmfeed/Grid.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/filmfeed/Grid.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/filmfeed/Grid.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Loading grid</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/filmfeed/Grid.png", "caption":"Loading grid"}'
+          ></module>
           <article>
             <h3>A personal photo feed</h3>
             <p>
@@ -162,39 +133,18 @@
               (web) / tap (mobile) to keep the interface as clean as possible.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/filmfeed/Posts.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/filmfeed/Posts.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/filmfeed/Posts.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Multiple posts</figcaption>
-          </figure>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/filmfeed/Menu.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/filmfeed/Menu.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/filmfeed/Menu.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Side menu</figcaption>
-          </figure>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/filmfeed/Post.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/filmfeed/Post.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/filmfeed/Post.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Anatomy of a post</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/filmfeed/Posts.png", "caption":"Multiple posts"}'
+          ></module>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/filmfeed/Menu.png", "caption":"Side menu"}'
+          ></module>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/filmfeed/Post.png", "caption":"Anatomy of a post"}'
+          ></module>
           <article>
             <h3>Outcome</h3>
             <p>
@@ -217,22 +167,57 @@
       <section>
         <div class="container small">
           <article class="project-preview-container">
-            <a class="project-preview previous" href="./front-quick-reply.html">
+            <a
+              class="project-preview previous"
+              href="./instagram-for-ipad.html"
+            >
               <h4>Previous</h4>
               <div class="image-container">
-                <p>Quick Reply</p>
-                <img
-                  src="assets/images/projects/front/front-for-ios-sharpie.jpg?nf_resize=fit&w=730"
-                />
+                <p>Instagram for iPad</p>
+                <figure>
+                  <source
+                    srcset="
+                      url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=730&quality=100   730w,
+                      url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=1460&quality=100 1460w
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=730&quality=100   730w,
+                      url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=1460&quality=100 1460w
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=730&quality=100"
+                  />
+                </figure>
               </div>
             </a>
             <a class="project-preview next" href="./clear-sky.html">
               <h4>Next</h4>
               <div class="image-container">
                 <p>Clear Sky</p>
-                <img
-                  src="assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?nf_resize=fit&w=730"
-                />
+                <figure>
+                  <source
+                    srcset="
+                      url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=webp&width=730&quality=100   730w,
+                      url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=webp&width=1460&quality=100 1460w
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=730&quality=100   730w,
+                      url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=1460&quality=100 1460w
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=730&quality=100"
+                  />
+                </figure>
               </div>
             </a>
           </article>

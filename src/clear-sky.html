@@ -30,18 +30,33 @@
         </div>
       </div>
       <div class="overlay"></div>
-      <img
-        class="background lazy"
-        src="./assets/images/projects/clear-sky/amsterdam.jpg?nf_resize=fit&w=200"
-        data-srcset="
-          ./assets/images/projects/clear-sky/amsterdam.jpg?nf_resize=fit&w=500   500w,
-          ./assets/images/projects/clear-sky/amsterdam.jpg?nf_resize=fit&w=1000 1000w,
-          ./assets/images/projects/clear-sky/amsterdam.jpg?nf_resize=fit&w=1500 1500w,
-          ./assets/images/projects/clear-sky/amsterdam.jpg?nf_resize=fit&w=2000 2000w,
-          ./assets/images/projects/clear-sky/amsterdam.jpg?nf_resize=fit&w=2500 2500w
-        "
-        alt=""
-      />
+      <picture>
+        <source
+          srcset="
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=webp&width=500&quality=100   500w,
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=webp&width=1000&quality=100 1000w,
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=webp&width=1500&quality=100 1500w,
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=webp&width=2000&quality=100 2000w,
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=webp&width=2500&quality=100 2500w
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=jpg&width=500&quality=100   500w,
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=jpg&width=1000&quality=100 1000w,
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=jpg&width=1500&quality=100 1500w,
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=jpg&width=2000&quality=100 2000w,
+            url:./assets/images/projects/clear-sky/amsterdam.jpg?as=jpg&width=2500&quality=100 2500w
+          "
+          type="image/jpeg"
+        />
+        <img
+          loading="lazy"
+          class="background"
+          src="url:./assets/images/projects/clear-sky/amsterdam.jpg?as=jpg&width=1000&quality=100"
+        />
+      </picture>
     </header>
     <main>
       <section>
@@ -56,21 +71,15 @@
               Framer.
             </p>
           </article>
-          <figure>
-            <img
-              srcset="
-                ./assets/images/projects/clear-sky/potrero.jpg?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/clear-sky/potrero.jpg?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/clear-sky/potrero.jpg"
-            />
-            <figcaption>Testing the prototype in real conditions</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/clear-sky/potrero.jpg", "caption":"Testing the prototype in real conditions"}'
+          ></module>
           <article>
             <h3>Designing with data</h3>
             <p>
               The goal of this project was to design and prototype a simple app
-              that relies on real time data for it's core feature.<br />
+              that relies on real time data for its core feature.<br />
               For the past few years I designed mostly with regular UI design
               tools (Sketch & Figma) and while they are great for building
               functional, beautiful UI, they don't lend themselves well to a use
@@ -83,17 +92,10 @@
               up-to-date information to the user.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/clear-sky/3-Screens.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/clear-sky/3-Screens.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/clear-sky/3-Screens.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Various weather conditions</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/clear-sky/3-Screens.png", "caption":"Various weather conditions"}'
+          ></module>
           <article>
             <p>
               It doesn't rain a lot in San Francisco but during my time in
@@ -106,17 +108,10 @@
               quickly and experiment with different UI concepts.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/clear-sky/Framer.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/clear-sky/Framer.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/clear-sky/Framer.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Realtime data is powering the prototype</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/clear-sky/Framer.png", "caption":"Realtime data is powering the prototype"}'
+          ></module>
           <article>
             <h3>Designing with code</h3>
             <p>
@@ -132,17 +127,10 @@
               designers to get started quickly without feeling intimidated.
             </p>
           </article>
-          <figure>
-            <img
-              data-zoomable
-              srcset="
-                ./assets/images/projects/clear-sky/Lines.png?nf_resize=fit&w=730   730w,
-                ./assets/images/projects/clear-sky/Lines.png?nf_resize=fit&w=1460 1460w
-              "
-              src="./assets/images/projects/clear-sky/Lines.png?nf_resize=fit&w=730"
-            />
-            <figcaption>Predictions visualisation</figcaption>
-          </figure>
+          <module
+            href="src/modules/project-image.html"
+            locals='{"url":"./assets/images/projects/clear-sky/Lines.png", "caption":"Predictions visualisation"}'
+          ></module>
           <article>
             <h3>Outcome</h3>
             <p>
@@ -173,18 +161,50 @@
               <h4>Previous</h4>
               <div class="image-container">
                 <p>FilmFeed</p>
-                <img
-                  src="assets/images/projects/filmfeed/film.jpg?nf_resize=fit&w=730"
-                />
+                <figure>
+                  <source
+                    srcset="
+                      url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=730&quality=100   730w,
+                      url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=1460&quality=100 1460w
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=730&quality=100   730w,
+                      url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1460&quality=100 1460w
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/projects/filmfeed/film.jpg?as=jpg&width=730&quality=100"
+                  />
+                </figure>
               </div>
             </a>
-            <a class="project-preview next" href="./instagram-for-ipad.html">
+            <a class="project-preview next" href="./front-responses.html">
               <h4>Next</h4>
               <div class="image-container">
-                <p>Instagram for iPad</p>
-                <img
-                  src="assets/images/projects/instagram/ipad-desk.jpg?nf_resize=fit&w=730"
-                />
+                <p>Responses</p>
+                <figure>
+                  <source
+                    srcset="
+                      url:./assets/images/projects/front-responses/Illustration.png?as=webp&width=730&quality=100   730w,
+                      url:./assets/images/projects/front-responses/Illustration.png?as=webp&width=1460&quality=100 1460w
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      url:./assets/images/projects/front-responses/Illustration.png?as=jpg&width=730&quality=100   730w,
+                      url:./assets/images/projects/front-responses/Illustration.png?as=jpg&width=1460&quality=100 1460w
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/projects/front-responses/Illustration.png?as=jpg&width=730&quality=100"
+                  />
+                </figure>
               </div>
             </a>
           </article>
