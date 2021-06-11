@@ -4815,11 +4815,6 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-riot-observable@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/riot-observable/-/riot-observable-3.0.0.tgz#8bbd2daf72a2141bb043082df4023dc504bad2eb"
-  integrity sha1-i70tr3KiFBuwQwgt9AI9xQS60us=
-
 ripemd160@^2.0.0, ripemd160@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-2.0.2.tgz#a1c1a6f624751577ba5d07914cbc92850585890c"
@@ -4875,13 +4870,6 @@ saxes@^3.1.9:
   integrity sha512-Ydydq3zC+WYDJK1+gRxRapLIED9PWeSuuS41wqyoRmzvhhh9nc+QQrVMKJYzJFULazeGhzSV0QleN2wD3boh2g==
   dependencies:
     xmlchars "^2.1.1"
-
-scroll-parallax@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/scroll-parallax/-/scroll-parallax-3.0.3.tgz#5219172914808db352eb7f02388ef639d598341e"
-  integrity sha512-hU14erU85cLpW+FQeSOKcmaN/TSCWALHlvV+GQIytjDQHMAfUbGbwkce8zMM/MwZgvEQGhiE5Vchk//joEDv6w==
-  dependencies:
-    riot-observable "^3.0.0"
 
 semver@^5.4.1, semver@^5.5.0, semver@^5.7.0:
   version "5.7.1"
@@ -5585,11 +5573,6 @@ v8-compile-cache@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
-
-vanilla-lazyload@^17.3.2:
-  version "17.3.2"
-  resolved "https://registry.yarnpkg.com/vanilla-lazyload/-/vanilla-lazyload-17.3.2.tgz#4857f4a1b1496bdc717a0cbad715f0fa6f2bbdc6"
-  integrity sha512-8+ezozXpcvOFRzyTpJuyOF5R/jQh4xv//KqdiWLq8t7Ud7fYHjl9PSfwKYZokHXCD/5sIqWr9tUiPxDDM9BbTw==
 
 vendors@^1.0.0:
   version "1.0.4"

@@ -16,9 +16,7 @@
     "animejs": "^3.2.1",
     "medium-zoom": "^1.0.6",
     "reset-css": "^5.0.1",
-    "scroll-parallax": "^3.0.3",
-    "smoothscroll-polyfill": "^0.4.4",
-    "vanilla-lazyload": "^17.3.2"
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "@parcel/transformer-image": "2.0.0-beta.3.1",
