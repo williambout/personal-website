@@ -1,230 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <module href="src/modules/head.html" locals='{"slug":" | FilmFeed"}'></module>
-  <body class="project">
-    <nav>
-      <div class="container large">
-        <ul>
-          <li><a href="./">William Bout</a></li>
-        </ul>
-      </div>
-    </nav>
-    <header>
-      <div class="container small">
-        <div class="heading">
-          <h1>FilmFeed</h1>
-          <h2>Personal project</h2>
-        </div>
-      </div>
-      <div class="container small">
-        <div class="info">
-          <hr />
-          <ul>
-            <li>Branding</li>
-            <li>Photography</li>
-            <li>Front-end development</li>
-            <li>2019</li>
-          </ul>
-        </div>
-      </div>
-      <div class="overlay"></div>
-      <picture>
-        <source
-          srcset="
-            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=500&quality=90   500w,
-            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=1000&quality=90 1000w,
-            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=1500&quality=90 1500w,
-            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=2000&quality=90 2000w,
-            url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=2500&quality=90 2500w
-          "
-          type="image/webp"
-        />
-        <source
-          srcset="
-            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=500&quality=90   500w,
-            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1000&quality=90 1000w,
-            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1500&quality=90 1500w,
-            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=2000&quality=90 2000w,
-            url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=2500&quality=90 2500w
-          "
-          type="image/jpeg"
-        />
-        <img
-          loading="lazy"
-          class="background"
-          src="url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1000&quality=90"
-        />
-      </picture>
-    </header>
-    <main>
-      <section>
-        <div class="container small">
-          <article>
-            <h3>Overview</h3>
-            <p>
-              As I started shooting film in 2018, I needed a way to share my
-              work with others. While Instagram and Flickr are some valid
-              options, I wanted to create a more personal experience. It was
-              also the opportunity for me to combine my 2 passions: photography
-              & design.
-            </p>
-          </article>
-          <module
-            href="src/modules/project-image.html"
-            locals='{"url":"./assets/images/projects/filmfeed/AE-1.jpg", "caption":false}'
-          ></module>
-          <article>
-            <h3>Logo and branding</h3>
-            <p>
-              In order to add some personality to the project, I explored a few
-              ideas for branding. The logo is composed of two “f”, the symbol
-              used to indicate an aperture value in photography. The background
-              showcases a color spectrum with vibrant tones. A subtle noise is
-              present to add more texture and represent the grainy aspect of
-              film.
-            </p>
-          </article>
-          <module
-            href="src/modules/project-image.html"
-            locals='{"url":"./assets/images/projects/filmfeed/logo.png", "caption":"Logo of FilmFeed"}'
-          ></module>
-          <article>
-            <h3>An optimized experience</h3>
-            <p>
-              Personal projects are a great opportunity to focus on delight.
-              Often, projects in a professional context have to follow tight
-              roadmaps and are restricted by technical limitations. Not beholden
-              to anyone but myself, I took my time to focus on the initial
-              loading experience to set the tone for the website to follow.
-              <br />
-              By default browsers will try to load images as fast as they can,
-              not providing the user with a sense of progress. This is
-              especially true here since the browser tries to fetch a large
-              number of images on first load.
-            </p>
-          </article>
-          <module
-            href="src/modules/project-image.html"
-            locals='{"url":"./assets/images/projects/filmfeed/Exhibition.jpg", "caption":"Light Table at Oakland Museum of California’s Eames exhibit"}'
-          ></module>
-          <article>
-            <p>
-              The grid view is directly inspired by a light table I discovered
-              at the Eames exhibit at the Oakland Museum of California. I found
-              it to be a great way to provide a preview of the photos while the
-              main feed was loading.
-            </p>
-          </article>
-          <module
-            href="src/modules/project-image.html"
-            locals='{"url":"./assets/images/projects/filmfeed/Grid.png", "caption":"Loading grid"}'
-          ></module>
-          <article>
-            <h3>A personal photo feed</h3>
-            <p>
-              This website is a very personal project and I didn’t wanted to
-              show too many information that would make the website look complex
-              and busy.<br />
-              By removing distractions, I wanted to convey the simplicity of
-              shooting film with an old camera.<br />
-              Simplicity does not have to come at the cost of information; I
-              wanted to show the location, film stock, and focal length for each
-              of the photos but I made the choice to only showcase them on hover
-              (web) / tap (mobile) to keep the interface as clean as possible.
-            </p>
-          </article>
-          <module
-            href="src/modules/project-image.html"
-            locals='{"url":"./assets/images/projects/filmfeed/Posts.png", "caption":"Multiple posts"}'
-          ></module>
-          <module
-            href="src/modules/project-image.html"
-            locals='{"url":"./assets/images/projects/filmfeed/Menu.png", "caption":"Side menu"}'
-          ></module>
-          <module
-            href="src/modules/project-image.html"
-            locals='{"url":"./assets/images/projects/filmfeed/Post.png", "caption":"Anatomy of a post"}'
-          ></module>
-          <article>
-            <h3>Outcome</h3>
-            <p>
-              This project allowed me to create a very personal and minimalistic
-              experience - It was also for me the opportunity to control the
-              full user experience and make every design decision very
-              intentional, something that's not possible on traditional social
-              media platforms. It also allowed me to improve my rusty front-end
-              skills and use some new layout features (CSS Grids).
-            </p>
-          </article>
-        </div>
-      </section>
-      <section>
-        <div class="container small">
-          <a class="cta-button disabled">Not available anymore</a>
-          <hr />
-        </div>
-      </section>
-      <section>
-        <div class="container small">
-          <article class="project-preview-container">
-            <a
-              class="project-preview previous"
-              href="./instagram-for-ipad.html"
-            >
-              <h4>Previous</h4>
-              <div class="image-container">
-                <p>Instagram for iPad</p>
-                <picture>
-                  <source
-                    srcset="
-                      url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=730&quality=90   730w,
-                      url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=1460&quality=90 1460w
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=730&quality=90   730w,
-                      url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=1460&quality=90 1460w
-                    "
-                    type="image/jpeg"
-                  />
-                  <img
-                    src="./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=730&quality=90"
-                  />
-                </picture>
-              </div>
-            </a>
-            <a class="project-preview next" href="./clear-sky.html">
-              <h4>Next</h4>
-              <div class="image-container">
-                <p>Clear Sky</p>
-                <picture>
-                  <source
-                    srcset="
-                      url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=webp&width=730&quality=90   730w,
-                      url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=webp&width=1460&quality=90 1460w
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=730&quality=90   730w,
-                      url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=1460&quality=90 1460w
-                    "
-                    type="image/jpeg"
-                  />
-                  <img
-                    src="./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=730&quality=90"
-                  />
-                </picture>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-    </main>
-    <module href="src/modules/footer.html"></module>
-    <script src="./assets/scripts/project.js"></script>
-  </body>
+	<module href="src/modules/head.html" locals='{"slug":" | FilmFeed"}'></module>
+	<body class="project">
+		<nav>
+			<div class="container large">
+				<ul>
+					<li><a href="./">William Bout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<header>
+			<div class="container small">
+				<div class="heading">
+					<h1>FilmFeed</h1>
+					<h2>Personal project</h2>
+				</div>
+			</div>
+			<div class="container small">
+				<div class="info">
+					<hr />
+					<ul>
+						<li>Branding</li>
+						<li>Photography</li>
+						<li>Front-end development</li>
+						<li>2019</li>
+					</ul>
+				</div>
+			</div>
+			<div class="overlay"></div>
+			<picture>
+				<source
+					srcset="
+						url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=500&quality=90   500w,
+						url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=1000&quality=90 1000w,
+						url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=1500&quality=90 1500w,
+						url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=2000&quality=90 2000w,
+						url:./assets/images/projects/filmfeed/film.jpg?as=webp&width=2500&quality=90 2500w
+					"
+					type="image/webp"
+				/>
+				<source
+					srcset="
+						url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=500&quality=90   500w,
+						url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1000&quality=90 1000w,
+						url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1500&quality=90 1500w,
+						url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=2000&quality=90 2000w,
+						url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=2500&quality=90 2500w
+					"
+					type="image/jpeg"
+				/>
+				<img
+					loading="lazy"
+					class="background"
+					src="url:./assets/images/projects/filmfeed/film.jpg?as=jpg&width=1000&quality=90"
+				/>
+			</picture>
+		</header>
+		<main>
+			<section>
+				<div class="container small">
+					<article>
+						<h3>Overview</h3>
+						<p>
+							As I started shooting film in 2018, I needed a way to share my
+							work with others. While Instagram and Flickr are some valid
+							options, I wanted to create a more personal experience. It was
+							also the opportunity for me to combine my 2 passions: photography
+							& design.
+						</p>
+					</article>
+					<module
+						href="src/modules/project-image.html"
+						locals='{"url":"./assets/images/projects/filmfeed/AE-1.jpg", "caption":false}'
+					></module>
+					<article>
+						<h3>Logo and branding</h3>
+						<p>
+							In order to add some personality to the project, I explored a few
+							ideas for branding. The logo is composed of two “f”, the symbol
+							used to indicate an aperture value in photography. The background
+							showcases a color spectrum with vibrant tones. A subtle noise is
+							present to add more texture and represent the grainy aspect of
+							film.
+						</p>
+					</article>
+					<module
+						href="src/modules/project-image.html"
+						locals='{"url":"./assets/images/projects/filmfeed/logo.png", "caption":"Logo of FilmFeed"}'
+					></module>
+					<article>
+						<h3>An optimized experience</h3>
+						<p>
+							Personal projects are a great opportunity to focus on delight.
+							Often, projects in a professional context have to follow tight
+							roadmaps and are restricted by technical limitations. Not beholden
+							to anyone but myself, I took my time to focus on the initial
+							loading experience to set the tone for the website to follow.
+							<br />
+							By default browsers will try to load images as fast as they can,
+							not providing the user with a sense of progress. This is
+							especially true here since the browser tries to fetch a large
+							number of images on first load.
+						</p>
+					</article>
+					<module
+						href="src/modules/project-image.html"
+						locals='{"url":"./assets/images/projects/filmfeed/Exhibition.jpg", "caption":"Light Table at Oakland Museum of California’s Eames exhibit"}'
+					></module>
+					<article>
+						<p>
+							The grid view is directly inspired by a light table I discovered
+							at the Eames exhibit at the Oakland Museum of California. I found
+							it to be a great way to provide a preview of the photos while the
+							main feed was loading.
+						</p>
+					</article>
+					<module
+						href="src/modules/project-image.html"
+						locals='{"url":"./assets/images/projects/filmfeed/Grid.png", "caption":"Loading grid"}'
+					></module>
+					<article>
+						<h3>A personal photo feed</h3>
+						<p>
+							This website is a very personal project and I didn’t wanted to
+							show too many information that would make the website look complex
+							and busy.<br />
+							By removing distractions, I wanted to convey the simplicity of
+							shooting film with an old camera.<br />
+							Simplicity does not have to come at the cost of information; I
+							wanted to show the location, film stock, and focal length for each
+							of the photos but I made the choice to only showcase them on hover
+							(web) / tap (mobile) to keep the interface as clean as possible.
+						</p>
+					</article>
+					<module
+						href="src/modules/project-image.html"
+						locals='{"url":"./assets/images/projects/filmfeed/Posts.png", "caption":"Multiple posts"}'
+					></module>
+					<module
+						href="src/modules/project-image.html"
+						locals='{"url":"./assets/images/projects/filmfeed/Menu.png", "caption":"Side menu"}'
+					></module>
+					<module
+						href="src/modules/project-image.html"
+						locals='{"url":"./assets/images/projects/filmfeed/Post.png", "caption":"Anatomy of a post"}'
+					></module>
+					<article>
+						<h3>Outcome</h3>
+						<p>
+							This project allowed me to create a very personal and minimalistic
+							experience - It was also for me the opportunity to control the
+							full user experience and make every design decision very
+							intentional, something that's not possible on traditional social
+							media platforms. It also allowed me to improve my rusty front-end
+							skills and use some new layout features (CSS Grids).
+						</p>
+					</article>
+				</div>
+			</section>
+			<section>
+				<div class="container small">
+					<a class="cta-button disabled">Not available anymore</a>
+					<hr />
+				</div>
+			</section>
+			<section>
+				<div class="container small">
+					<article class="project-preview-container">
+						<a
+							class="project-preview previous"
+							href="./instagram-for-ipad.html"
+						>
+							<h4>Previous</h4>
+							<div class="image-container">
+								<p>Instagram for iPad</p>
+								<picture>
+									<source
+										srcset="
+											url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=730&quality=90   730w,
+											url:./assets/images/projects/instagram/ipad-desk.jpg?as=webp&width=1460&quality=90 1460w
+										"
+										type="image/webp"
+									/>
+									<source
+										srcset="
+											url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=730&quality=90   730w,
+											url:./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=1460&quality=90 1460w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										src="./assets/images/projects/instagram/ipad-desk.jpg?as=jpg&width=730&quality=90"
+									/>
+								</picture>
+							</div>
+						</a>
+						<a class="project-preview next" href="./clear-sky.html">
+							<h4>Next</h4>
+							<div class="image-container">
+								<p>Clear Sky</p>
+								<picture>
+									<source
+										srcset="
+											url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=webp&width=730&quality=90   730w,
+											url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=webp&width=1460&quality=90 1460w
+										"
+										type="image/webp"
+									/>
+									<source
+										srcset="
+											url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=730&quality=90   730w,
+											url:./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=1460&quality=90 1460w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										src="./assets/images/projects/clear-sky/clear-sky-rolls-and-glasses.jpg?as=jpg&width=730&quality=90"
+									/>
+								</picture>
+							</div>
+						</a>
+					</article>
+				</div>
+			</section>
+		</main>
+		<module href="src/modules/footer.html"></module>
+		<script src="./assets/scripts/project.js"></script>
+	</body>
 </html>
