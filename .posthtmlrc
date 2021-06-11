@@ -1,8 +1,7 @@
 {
   "plugins": {
-    "posthtml-modules": {
-      "root": "./modules"
-    },
-    "posthtml-include": {}
-  }
+    "posthtml-modules": { root: "./src/modules" },
+    "posthtml-expressions": { strictMode: false },
+    "posthtml-include": {},
+  },
 }
