@@ -3883,7 +3883,7 @@ parcel-plugin-copy@^1.0.2:
   dependencies:
     recursive-copy "^2.0.9"
 
-parcel@2.0.0-beta.3.1:
+parcel@^2.0.0-beta.3.1:
   version "2.0.0-beta.3.1"
   resolved "https://registry.yarnpkg.com/parcel/-/parcel-2.0.0-beta.3.1.tgz#64284ee21f74fa53d825cbec3634ff1932fe8e36"
   integrity sha512-jwNwDM/OILzzBAIMZZ/b+PA5DFQ+4ZTaINliSslyY/ZOfwjjkHMlmMddyj6iogLq+n74LE8pBGn3+V5ej4CH1Q==

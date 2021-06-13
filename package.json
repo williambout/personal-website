@@ -5,6 +5,9 @@
 		"start": "parcel serve ./src/index.html --open",
 		"build": "parcel build ./src/index.html --detailed-report 10"
 	},
+	"engines": {
+		"node": "16.2.0"
+	},
 	"staticPath": {
 		"source": "static/",
 		"target": "dist/"
@@ -23,7 +26,7 @@
 		"@parcel/transformer-js": "2.0.0-beta.3.1",
 		"@parcel/transformer-sass": "2.0.0-beta.3.1",
 		"autoprefixer": "^10.2.6",
-		"parcel": "2.0.0-beta.3.1",
+		"parcel": "^2.0.0-beta.3.1",
 		"parcel-plugin-copy": "^1.0.2",
 		"postcss": "^8.3.2",
 		"posthtml-expressions": "^1.7.1",
