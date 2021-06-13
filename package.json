@@ -5,9 +5,6 @@
 		"start": "parcel serve ./src/index.html --open",
 		"build": "parcel build ./src/index.html --detailed-report 10"
 	},
-	"engines": {
-		"node": "16.2.0"
-	},
 	"staticPath": {
 		"source": "static/",
 		"target": "dist/"
