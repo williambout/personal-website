@@ -19,9 +19,9 @@
 		"smoothscroll-polyfill": "^0.4.4"
 	},
 	"devDependencies": {
-		"@parcel/transformer-image": "2.0.0-nightly.1981",
-		"@parcel/transformer-js": "2.0.0-beta.3.1",
-		"@parcel/transformer-sass": "2.0.0-beta.3.1",
+		"@parcel/transformer-image": "^2.0.0-beta.3.1",
+		"@parcel/transformer-js": "^2.0.0-beta.3.1",
+		"@parcel/transformer-sass": "^2.0.0-beta.3.1",
 		"autoprefixer": "^10.2.6",
 		"parcel": "^2.0.0-beta.3.1",
 		"parcel-plugin-copy": "^1.0.2",
