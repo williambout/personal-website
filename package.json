@@ -2,8 +2,8 @@
 	"name": "personal-website",
 	"version": "1.0.0",
 	"scripts": {
-		"start": "parcel serve ./src/index.html --open",
-		"build": "parcel build ./src/index.html --detailed-report 10"
+		"start": "parcel serve ./src/index.html",
+		"build": "parcel build ./src/index.html"
 	},
 	"staticPath": {
 		"source": "static/",
