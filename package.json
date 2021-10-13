@@ -19,15 +19,15 @@
 		"smoothscroll-polyfill": "^0.4.4"
 	},
 	"devDependencies": {
-		"@parcel/transformer-image": "2.0.0-nightly.2474",
-		"@parcel/transformer-js": "2.0.0-nightly.852",
-		"@parcel/transformer-sass": "2.0.0-nightly.852",
-		"autoprefixer": "^10.3.6",
-		"parcel": "2.0.0-nightly.850",
+		"@parcel/transformer-image": "2.0.0",
+		"@parcel/transformer-js": "2.0.0",
+		"@parcel/transformer-sass": "2.0.0",
+		"autoprefixer": "^10.3.7",
+		"parcel": "^2.0.0",
 		"parcel-plugin-copy": "^1.0.2",
-		"postcss": "^8.3.8",
+		"postcss": "^8.3.9",
 		"posthtml-expressions": "^1.9.0",
-		"posthtml-include": "^1.7.1",
+		"posthtml-include": "^1.7.2",
 		"posthtml-modules": "^0.7.4",
 		"sass": "^1.42.1",
 		"sharp": "^0.29.1"
