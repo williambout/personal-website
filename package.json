@@ -30,6 +30,6 @@
 		"posthtml-include": "^1.7.2",
 		"posthtml-modules": "^0.7.4",
 		"sass": "^1.42.1",
-		"sharp": "^0.29.1"
+		"sharp": "^0.30.5"
 	}
 }
