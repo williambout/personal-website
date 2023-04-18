@@ -1,0 +1,73 @@
+@font-face {
+	font-family:"iA Writer Quattro V";
+	src: url("./assets/fonts/iAWriterQuattroV-Italic.woff2") format("woff2 supports variations"),
+	url("./assets/fonts/iAWriterQuattroV-Italic.woff") format("woff");
+	font-style: italic;
+	font-weight: 100 1000;
+}
+
+body {
+	background: black;
+}
+
+.content {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+
+span {
+	font-family: "iA Writer Quattro V", monospace;
+	font-style: italic;
+	font-weight: 600;
+	color: white;
+	font-size: 18px;
+	text-shadow: 0 2px 4px rgba(0,0,0,0.55);
+}
+
+.background > img {
+	opacity: 0;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	top: 0;
+	left: 0;
+}
+
+$totalTime: 30s;
+$items: 3;
+$animationSpeed: 5s;
+$animationTime: 0s + $totalTime / ($items * $animationSpeed * 2);
+$showTime: (0s + $totalTime - ($animationTime * $items)) / $items;
+
+@for $i from 1 through $items {
+	.background > img:nth-child(#{$i}) {
+		$delay: -$animationTime + ($animationTime + $showTime) * ($i - 1);
+		animation: fadeinout $totalTime ease-in-out $delay infinite;
+	}
+}
+
+$animationPercentage: 0% + 100 * (($animationTime / $totalTime));
+$showPercentage: 0% + 100 * ($showTime / $totalTime);
+
+@keyframes fadeinout {
+	0% {
+		opacity: 0;
+	}
+	#{$animationPercentage},
+	#{$animationPercentage + $showPercentage} {
+		opacity: 1;
+	}
+	#{$showPercentage + $animationPercentage * 2},
+	100% {
+		opacity: 0;
+	}
+}

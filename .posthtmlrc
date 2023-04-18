@@ -1,7 +1,0 @@
-{
-  "plugins": {
-    "posthtml-modules": { root: "./src/modules" },
-    "posthtml-expressions": { strictMode: false },
-    "posthtml-include": {},
-  },
-}
