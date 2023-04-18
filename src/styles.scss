@@ -42,8 +42,8 @@ span {
 	left: 0;
 }
 
-$totalTime: 30s;
-$items: 3;
+$items: 5;
+$totalTime: $items * 10s;
 $animationSpeed: 5s;
 $animationTime: 0s + $totalTime / ($items * $animationSpeed * 2);
 $showTime: (0s + $totalTime - ($animationTime * $items)) / $items;
